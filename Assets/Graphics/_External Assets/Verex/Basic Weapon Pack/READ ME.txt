@@ -1,0 +1,16 @@
+Author: SirVerex
+
+This bundlepack is completely free to use (CC0) in both personal and commercial projects (no credit required but appreciated).
+
+------------------------------------------------------------------------------------------------------------------------------
+
+License: CC0: https://creativecommons.org/publicdomain/zero/1.0/
+
+------------------------------------------------------------------------------------------------------------------------------
+
+These models use texture coordinates to get their color! Turn off any texture interpolation
+If exporting to Unreal or Unity be sure to set texture filtering (compression) to 0. (Nearest)
+
+For Unity Users: When importing textures change compression to None and Filter Mode to Point (no filter)
+
+-- If you enjoy my work, considering supporting me on my Patreon: https://www.patreon.com/Verex for exclusive models and all the packs in a single file!
