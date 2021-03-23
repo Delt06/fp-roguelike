@@ -10,10 +10,17 @@ namespace Combat.Moves
 		[CanBeNull] public readonly ICombatAction StartAction;
 		public readonly ICombatAction FinishAction;
 
-		public Move(float duration, [NotNull] ICombatAction finishAction, [CanBeNull] ICombatAction startAction = null)
+		public Move(float duration, [NotNull] ICombatAction startAction, [NotNull] ICombatAction finishAction)
 		{
 			Duration = duration;
-			StartAction = startAction;
+			StartAction = startAction ?? throw new ArgumentNullException(nameof(startAction));
+			FinishAction = finishAction ?? throw new ArgumentNullException(nameof(finishAction));
+		}
+		
+		public Move(float duration, [NotNull] ICombatAction finishAction)
+		{
+			Duration = duration;
+			StartAction = null;
 			FinishAction = finishAction ?? throw new ArgumentNullException(nameof(finishAction));
 		}
 	}

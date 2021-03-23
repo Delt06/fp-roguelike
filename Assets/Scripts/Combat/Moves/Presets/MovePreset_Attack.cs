@@ -25,7 +25,7 @@ namespace Combat.Moves.Presets
 					other.Get<IDamageTaker>().Take(10f);
 				}
 			);
-			return new Move(_duration, finishAction, startAction);
+			return new Move(_duration, startAction, finishAction);
 		}
 
 		private static readonly int AttackSpeedId = Animator.StringToHash("Attack Speed");
