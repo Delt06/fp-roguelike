@@ -5,18 +5,17 @@ namespace Controls.Systems
 {
 	public sealed class CharacterRotationSystem : MonoBehaviour
 	{
-		[SerializeField] private Transform _target = default;
-		
-		public void Construct(CharacterControlsData data)
+		public void Construct(CharacterControlsData data, IRotatedTransform rotatedTransform)
 		{
 			_data = data;
+			_rotatedTransform = rotatedTransform;
 		}
 
 		private void Update()
 		{
 			if (Mathf.Approximately(_data.RotationAngle, 0f)) return;
 			
-			_target.Rotate(Vector3.up, _data.RotationAngle);
+			_rotatedTransform.Transform.Rotate(Vector3.up, _data.RotationAngle);
 			_data.RotationAngle = 0f;
 		}
 
@@ -26,5 +25,6 @@ namespace Controls.Systems
 		}
 
 		private CharacterControlsData _data;
+		private IRotatedTransform _rotatedTransform;
 	}
 }

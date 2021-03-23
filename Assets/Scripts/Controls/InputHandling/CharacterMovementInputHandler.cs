@@ -1,4 +1,5 @@
-﻿using Controls.Data;
+﻿using System;
+using Controls.Data;
 using UnityEngine;
 
 namespace Controls.InputHandling
@@ -14,6 +15,11 @@ namespace Controls.InputHandling
 		private void Update()
 		{
 			_data.Move = _holdProvider.IsHolding;
+		}
+
+		private void OnDisable()
+		{
+			_data.Move = false;
 		}
 
 		private IHoldProvider _holdProvider;

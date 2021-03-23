@@ -24,6 +24,7 @@ namespace Controls.InputHandling
 		private void OnDisable()
 		{
 			_dragProvider.OnDragged -= _onDragged;
+			_data.RotationAngle = 0f;
 		}
 
 		private void Awake()
