@@ -16,7 +16,8 @@ namespace Combat.Handlers
 		public override void OnFinished(IEntity thisUnit, IEntity otherUnit)
 		{
 			base.OnFinished(thisUnit, otherUnit);
-			_controls.SetActive(true);
+			if (thisUnit.IsAlive())
+				_controls.SetActive(true);
 		}
 	}
 }
