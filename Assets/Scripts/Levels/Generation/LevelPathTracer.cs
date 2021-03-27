@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using static Levels.LevelTilemapExtensions;
 
 namespace Levels.Generation
 {
@@ -64,10 +65,6 @@ namespace Levels.Generation
 			_pendingPositions.Enqueue(position);
 		}
 
-		private static bool IsInsideBounds(TilePosition position, int width, int height) =>
-			0 <= position.X && position.X < width &&
-			0 <= position.Y && position.Y < height;
-
 		public void GenerateObstacles(TilePosition entryPosition, TilePosition exitPosition, int width, int height)
 		{
 			_obstacles.Clear();
@@ -90,7 +87,6 @@ namespace Levels.Generation
 				return;
 			}
 		}
-
 
 		private readonly int _minObstacles;
 		private readonly int _maxObstacles;

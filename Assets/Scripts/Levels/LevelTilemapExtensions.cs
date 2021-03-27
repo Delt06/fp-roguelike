@@ -1,5 +1,6 @@
 ﻿using System;
 using JetBrains.Annotations;
+using Levels.Generation;
 
 namespace Levels
 {
@@ -31,6 +32,12 @@ namespace Levels
 					tiles[x, y] = tile;
 				}
 			}
+		}
+
+		public static bool IsInsideBounds(TilePosition position, int width, int height)
+		{
+			return 0 <= position.X && position.X < width &&
+			       0 <= position.Y && position.Y < height;
 		}
 	}
 }

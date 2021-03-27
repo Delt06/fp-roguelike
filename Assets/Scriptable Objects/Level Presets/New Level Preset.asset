@@ -19,6 +19,8 @@ MonoBehaviour:
   _minDistanceFromEntryToExit: 7
   _minObstacles: 25
   _maxObstacles: 50
+  _corridorProbability: 0.75
+  _maxCorridorsDepth: 10
   _tiles:
   - Type: 0
     HasNorthDoor: 0
@@ -35,8 +37,8 @@ MonoBehaviour:
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
-  - Type: 0
-    HasNorthDoor: 0
+  - Type: 1
+    HasNorthDoor: 1
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
@@ -85,6 +87,41 @@ MonoBehaviour:
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+  - Type: 1
+    HasNorthDoor: 1
+    HasSouthDoor: 1
+    HasEastDoor: 0
+    HasWestDoor: 0
+  - Type: 0
+    HasNorthDoor: 0
+    HasSouthDoor: 0
+    HasEastDoor: 0
+    HasWestDoor: 0
+  - Type: 1
+    HasNorthDoor: 1
+    HasSouthDoor: 0
+    HasEastDoor: 1
+    HasWestDoor: 0
+  - Type: 1
+    HasNorthDoor: 1
+    HasSouthDoor: 1
+    HasEastDoor: 0
+    HasWestDoor: 1
+  - Type: 0
+    HasNorthDoor: 0
+    HasSouthDoor: 0
+    HasEastDoor: 0
+    HasWestDoor: 0
+  - Type: 0
+    HasNorthDoor: 0
+    HasSouthDoor: 0
+    HasEastDoor: 0
+    HasWestDoor: 0
+  - Type: 0
+    HasNorthDoor: 0
+    HasSouthDoor: 0
+    HasEastDoor: 0
+    HasWestDoor: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
@@ -105,51 +142,16 @@ MonoBehaviour:
     HasSouthDoor: 1
     HasEastDoor: 0
     HasWestDoor: 0
-  - Type: 0
-    HasNorthDoor: 0
+  - Type: 1
+    HasNorthDoor: 1
     HasSouthDoor: 0
-    HasEastDoor: 0
+    HasEastDoor: 1
     HasWestDoor: 0
-  - Type: 0
+  - Type: 1
     HasNorthDoor: 0
-    HasSouthDoor: 0
+    HasSouthDoor: 1
     HasEastDoor: 0
-    HasWestDoor: 0
-  - Type: 0
-    HasNorthDoor: 0
-    HasSouthDoor: 0
-    HasEastDoor: 0
-    HasWestDoor: 0
-  - Type: 0
-    HasNorthDoor: 0
-    HasSouthDoor: 0
-    HasEastDoor: 0
-    HasWestDoor: 0
-  - Type: 0
-    HasNorthDoor: 0
-    HasSouthDoor: 0
-    HasEastDoor: 0
-    HasWestDoor: 0
-  - Type: 0
-    HasNorthDoor: 0
-    HasSouthDoor: 0
-    HasEastDoor: 0
-    HasWestDoor: 0
-  - Type: 0
-    HasNorthDoor: 0
-    HasSouthDoor: 0
-    HasEastDoor: 0
-    HasWestDoor: 0
-  - Type: 0
-    HasNorthDoor: 0
-    HasSouthDoor: 0
-    HasEastDoor: 0
-    HasWestDoor: 0
-  - Type: 0
-    HasNorthDoor: 0
-    HasSouthDoor: 0
-    HasEastDoor: 0
-    HasWestDoor: 0
+    HasWestDoor: 1
   - Type: 1
     HasNorthDoor: 0
     HasSouthDoor: 1
@@ -185,16 +187,16 @@ MonoBehaviour:
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
-  - Type: 0
+  - Type: 1
     HasNorthDoor: 0
-    HasSouthDoor: 0
-    HasEastDoor: 0
+    HasSouthDoor: 1
+    HasEastDoor: 1
     HasWestDoor: 0
-  - Type: 0
+  - Type: 1
     HasNorthDoor: 0
-    HasSouthDoor: 0
+    HasSouthDoor: 1
     HasEastDoor: 0
-    HasWestDoor: 0
+    HasWestDoor: 1
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0

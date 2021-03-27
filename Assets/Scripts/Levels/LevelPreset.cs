@@ -15,6 +15,8 @@ namespace Levels
 		[SerializeField, Min(0)] private int _minDistanceFromEntryToExit = 2;
 		[SerializeField, Min(0)] private int _minObstacles = 1;
 		[SerializeField, Min(0)] private int _maxObstacles = 3;
+		[SerializeField, Range(0f, 1f)] private float _corridorProbability = 1f;
+		[SerializeField, Min(0)] private int _maxCorridorsDepth = 4;
 		[SerializeField, HideInInspector] private LevelTile[] _tiles = Array.Empty<LevelTile>();
 
 		public LevelTile[,] GetTiles() => ToGrid(_tiles, _width, _height);
@@ -33,7 +35,8 @@ namespace Levels
 			var levelEntryGenerator = new LevelEntryGenerator(random, _maxEntryPadding);
 			var levelExitGenerator = new LevelExitGenerator(random, _minDistanceFromEntryToExit);
 			var pathTracer = new LevelPathTracer(random, _minObstacles, _maxObstacles);
-			var generator = new LevelGenerator(levelEntryGenerator, levelExitGenerator, pathTracer);
+			var corridorsGenerator = new LevelCorridorsGenerator(random, _maxCorridorsDepth, _corridorProbability);
+			var generator = new LevelGenerator(levelEntryGenerator, levelExitGenerator, pathTracer, corridorsGenerator);
 			return generator;
 		}
 
