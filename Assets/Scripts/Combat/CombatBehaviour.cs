@@ -14,6 +14,8 @@ namespace Combat
 			if (unit1 == null) throw new ArgumentNullException(nameof(unit1));
 			if (unit2 == null) throw new ArgumentNullException(nameof(unit2));
 			if (_state.IsValid) return;
+			if (!unit1.IsAlive()) return;
+			if (!unit2.IsAlive()) return;
 
 			unit1.Get<ICombatHandler>().OnStarted(unit1, unit2);
 			unit2.Get<ICombatHandler>().OnStarted(unit2, unit1);
@@ -76,7 +78,7 @@ namespace Combat
 
 		private void OnFinishedMove()
 		{
-			if (!OtherUnit.Get<IHealth>().IsAlive)
+			if (!ThisUnit.IsAlive() || !OtherUnit.IsAlive())
 			{
 				Finish();
 			}
@@ -91,8 +93,8 @@ namespace Combat
 		{
 			var unit1 = _state.Unit1;
 			var unit2 = _state.Unit2;
-			unit1.Get<ICombatHandler>().OnStarted(unit1, unit2);
-			unit2.Get<ICombatHandler>().OnStarted(unit2, unit1);
+			unit1.Get<ICombatHandler>().OnFinished(unit1, unit2);
+			unit2.Get<ICombatHandler>().OnFinished(unit2, unit1);
 			
 			_state = default;
 		}

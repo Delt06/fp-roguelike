@@ -1,5 +1,4 @@
-﻿using Combat.Actions;
-using DELTation.Entities;
+﻿using DELTation.Entities;
 using UnityEngine;
 
 namespace Combat.Moves.Presets
@@ -11,8 +10,7 @@ namespace Combat.Moves.Presets
 		
 		public override Move GetMove(IEntity entity)
 		{
-			var emptyAction = new CombatActionFromDelegate((unit, otherUnit) => {});
-			return new Move(_delay, emptyAction);
+			return new Move(_delay, ActionsHelper.NullAction);
 		}
 	}
 }

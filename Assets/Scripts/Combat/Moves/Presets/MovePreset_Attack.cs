@@ -1,6 +1,4 @@
-﻿using Combat.Actions;
-using Combat.Damage;
-using DELTation.Entities;
+﻿using DELTation.Entities;
 using UnityEngine;
 
 namespace Combat.Moves.Presets
@@ -13,22 +11,9 @@ namespace Combat.Moves.Presets
 
 		public override Move GetMove(IEntity entity)
 		{
-			var startAction = new CombatActionFromDelegate((@this, other) =>
-				{
-					var animator = @this.Get<Animator>();
-					animator.SetFloat(AttackSpeedId, 1f / _animationDuration);
-					animator.SetTrigger(AttackId);
-				}
-			);
-			var finishAction = new CombatActionFromDelegate((@this, other) =>
-				{
-					other.Get<IDamageTaker>().Take(10f);
-				}
-			);
+			var startAction = ActionsHelper.GetAttackAnimationAction(_animationDuration);
+			var finishAction = ActionsHelper.DealDamageAction;
 			return new Move(_duration, startAction, finishAction);
 		}
-
-		private static readonly int AttackSpeedId = Animator.StringToHash("Attack Speed");
-		private static readonly int AttackId = Animator.StringToHash("Attack");
 	}
 }
