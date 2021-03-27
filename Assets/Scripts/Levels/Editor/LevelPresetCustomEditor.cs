@@ -81,8 +81,8 @@ namespace Levels.Editor
 			var preset = (LevelPreset) target;
 
 			var tiles = preset.GetTiles();
-			var width = tiles.GetLength(0);
-			var height = tiles.GetLength(1);
+			var width = tiles.GetWidth();
+			var height = tiles.GetHeight();
 
 			for (var y = height - 1; y >= 0; y--)
 			{
