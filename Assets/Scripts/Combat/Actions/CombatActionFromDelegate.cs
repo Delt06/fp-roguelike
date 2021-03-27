@@ -5,13 +5,10 @@ using JetBrains.Annotations;
 namespace Combat.Actions
 {
 	public delegate void CombatAction([NotNull] IEntity thisUnit, [NotNull] IEntity otherUnit);
-	
+
 	public sealed class CombatActionFromDelegate : ICombatAction
 	{
-		public CombatActionFromDelegate(CombatAction perform)
-		{
-			_perform = perform;
-		}
+		public CombatActionFromDelegate(CombatAction perform) => _perform = perform;
 
 		public void Perform(IEntity thisUnit, IEntity otherUnit)
 		{

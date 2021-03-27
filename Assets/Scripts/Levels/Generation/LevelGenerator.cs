@@ -6,19 +6,20 @@ using Random = System.Random;
 namespace Levels.Generation
 {
 	public class LevelGenerator
-	{ 
-		public LevelGenerator(int seed, int maxEntryPadding, int minDistanceFromExitToEntry, int minObstacles, int maxObstacles)
+	{
+		public LevelGenerator(int seed, int maxEntryPadding, int minDistanceFromExitToEntry, int minObstacles,
+			int maxObstacles)
 		{
 			var random = new Random(seed);
 			_levelEntryGenerator = new LevelEntryGenerator(random, maxEntryPadding);
 			_levelExitGenerator = new LevelExitGenerator(random, minDistanceFromExitToEntry);
 			_pathTracer = new LevelPathTracer(random, minObstacles, maxObstacles);
 		}
-		
+
 		public void Generate([NotNull] LevelTile[,] tiles)
 		{
 			if (tiles == null) throw new ArgumentNullException(nameof(tiles));
-			
+
 			var width = tiles.GetLength(0);
 			var height = tiles.GetLength(1);
 			Clear(tiles, width, height);
@@ -36,12 +37,9 @@ namespace Levels.Generation
 				foreach (var position in _path)
 				{
 					tiles[position.X, position.Y] = LevelTile.Room();
-				
-					if (previousPosition.HasValue)
-					{
-						LevelTileConnector.Connect(tiles, previousPosition.Value, position);
-					}
-				
+
+					if (previousPosition.HasValue) LevelTileConnector.Connect(tiles, previousPosition.Value, position);
+
 					previousPosition = position;
 				}
 			}
@@ -60,7 +58,7 @@ namespace Levels.Generation
 				}
 			}
 		}
-		
+
 		private readonly LevelEntryGenerator _levelEntryGenerator;
 		private readonly LevelExitGenerator _levelExitGenerator;
 		private readonly LevelPathTracer _pathTracer;

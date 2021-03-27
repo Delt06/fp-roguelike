@@ -20,7 +20,7 @@ namespace Combat.Moves
 				move = default;
 				return false;
 			}
-			
+
 			move = GetRandomMove();
 			return true;
 		}

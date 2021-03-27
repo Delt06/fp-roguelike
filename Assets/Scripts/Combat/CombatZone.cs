@@ -7,7 +7,7 @@ namespace Combat
 	public sealed class CombatZone : MonoBehaviour
 	{
 		[SerializeField] private bool _startAsSecond = true;
-		
+
 		public void Construct(CombatBehaviour behaviour, IEntity entity)
 		{
 			_behaviour = behaviour;
@@ -18,7 +18,7 @@ namespace Combat
 		{
 			if (!other.TryGetComponent(out IEntity otherEntity)) return;
 			if (!otherEntity.TryGet<ICombatMoveMaker>(out _)) return;
-			
+
 			if (_startAsSecond)
 				_behaviour.TryStart(otherEntity, _entity);
 			else

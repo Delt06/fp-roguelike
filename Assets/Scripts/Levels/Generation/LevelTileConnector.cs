@@ -16,7 +16,7 @@ namespace Levels.Generation
 		{
 			var dx = tile2.X - tile1.X;
 			if (dx == 0) return;
-			
+
 			if (dx > 0)
 			{
 				tiles[tile1.X, tile1.Y].HasEastDoor = true;
@@ -33,7 +33,7 @@ namespace Levels.Generation
 		{
 			var dy = tile2.Y - tile1.Y;
 			if (dy == 0) return;
-			
+
 			if (dy > 0)
 			{
 				tiles[tile1.X, tile1.Y].HasNorthDoor = true;

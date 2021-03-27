@@ -30,7 +30,7 @@ namespace Controls.InputHandling
 		private void Awake()
 		{
 			_camera = Camera.main;
-			
+
 			_onDragged = drag =>
 			{
 				var viewportDrag = _camera.ScreenToViewportPoint(drag);
@@ -44,7 +44,7 @@ namespace Controls.InputHandling
 		}
 
 		private Action<Vector2> _onDragged;
-		
+
 		private DragProvider _dragProvider;
 		private Camera _camera;
 		private CharacterControlsData _data;

@@ -16,7 +16,7 @@ namespace Combat.Moves
 			StartAction = startAction ?? throw new ArgumentNullException(nameof(startAction));
 			FinishAction = finishAction ?? throw new ArgumentNullException(nameof(finishAction));
 		}
-		
+
 		public Move(float duration, [NotNull] ICombatAction finishAction)
 		{
 			Duration = duration;

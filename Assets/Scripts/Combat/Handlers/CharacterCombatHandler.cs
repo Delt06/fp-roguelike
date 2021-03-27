@@ -9,7 +9,7 @@ namespace Combat.Handlers
 	{
 		[SerializeField] private CombatActionAsset[] _startActions = default;
 		[SerializeField] private CombatActionAsset[] _finishActions = default;
-		
+
 		public void Construct(IRotatedTransform rotatedTransform)
 		{
 			_rotatedTransform = rotatedTransform;

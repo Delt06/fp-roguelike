@@ -46,7 +46,7 @@ namespace Combat
 		private void TryStartMove()
 		{
 			if (_state.MoveInProcess) return;
-			
+
 			var thisMoveMaker = ThisUnit.Get<ICombatMoveMaker>();
 			if (!thisMoveMaker.TryMakeMove(out var move)) return;
 
@@ -64,10 +64,10 @@ namespace Combat
 		private void UpdateCurrentMoveTimer()
 		{
 			if (_currentMove == null) return;
-			
+
 			_moveRemainingTime -= Time.deltaTime;
 			if (_moveRemainingTime > 0f) return;
-			
+
 			_currentMove.Value.FinishAction.Perform(ThisUnit, OtherUnit);
 			_currentMove = null;
 			OnFinishedMove();
@@ -95,7 +95,7 @@ namespace Combat
 			var unit2 = _state.Unit2;
 			unit1.Get<ICombatHandler>().OnFinished(unit1, unit2);
 			unit2.Get<ICombatHandler>().OnFinished(unit2, unit1);
-			
+
 			_state = default;
 		}
 

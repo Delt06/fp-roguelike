@@ -14,7 +14,7 @@ namespace Controls.Systems
 		private void Update()
 		{
 			if (Mathf.Approximately(_data.RotationAngle, 0f)) return;
-			
+
 			_rotatedTransform.Transform.Rotate(Vector3.up, _data.RotationAngle);
 			_data.RotationAngle = 0f;
 		}

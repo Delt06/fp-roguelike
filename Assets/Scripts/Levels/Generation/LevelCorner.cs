@@ -4,8 +4,10 @@ namespace Levels.Generation
 {
 	public enum LevelCorner
 	{
-		SouthWest, SouthEast,
-		NorthWest, NorthEast,
+		SouthWest,
+		SouthEast,
+		NorthWest,
+		NorthEast,
 	}
 
 	public static class LevelCornerExt
@@ -23,8 +25,8 @@ namespace Levels.Generation
 				default:
 					throw new ArgumentOutOfRangeException(nameof(corner), corner, null);
 			}
-		} 
-		
+		}
+
 		public static bool IsSouth(this LevelCorner corner)
 		{
 			switch (corner)
@@ -38,8 +40,8 @@ namespace Levels.Generation
 				default:
 					throw new ArgumentOutOfRangeException(nameof(corner), corner, null);
 			}
-		} 
-		
+		}
+
 		public static bool IsEast(this LevelCorner corner)
 		{
 			switch (corner)
@@ -53,8 +55,8 @@ namespace Levels.Generation
 				default:
 					throw new ArgumentOutOfRangeException(nameof(corner), corner, null);
 			}
-		} 
-		
+		}
+
 		public static bool IsWest(this LevelCorner corner)
 		{
 			switch (corner)
@@ -68,6 +70,6 @@ namespace Levels.Generation
 				default:
 					throw new ArgumentOutOfRangeException(nameof(corner), corner, null);
 			}
-		} 
+		}
 	}
 }

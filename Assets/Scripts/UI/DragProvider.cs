@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 
 namespace UI
 {
-	public sealed class DragProvider : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler, IDragProvider
+	public sealed class DragProvider : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler,
+		IPointerExitHandler, IDragProvider
 	{
 		void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
 		{

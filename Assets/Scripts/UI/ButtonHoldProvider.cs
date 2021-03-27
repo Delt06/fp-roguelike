@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 
 namespace UI
 {
-	public sealed class ButtonHoldProvider : MonoBehaviour, IHoldProvider, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler
+	public sealed class ButtonHoldProvider : MonoBehaviour, IHoldProvider, IPointerDownHandler, IPointerUpHandler,
+		IPointerExitHandler
 	{
 		public bool IsHolding => _pointerId.HasValue;
 

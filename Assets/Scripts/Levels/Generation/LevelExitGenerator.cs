@@ -4,13 +4,13 @@ using JetBrains.Annotations;
 namespace Levels.Generation
 {
 	public sealed class LevelExitGenerator
-	{ 
+	{
 		public LevelExitGenerator([NotNull] Random random, int minDistanceFromExitToEntry)
 		{
 			_random = random ?? throw new ArgumentNullException(nameof(random));
 			_minDistanceFromExitToEntry = minDistanceFromExitToEntry;
 		}
-		
+
 		public TilePosition GenerateExitPosition(int width, int height, TilePosition entryPosition)
 		{
 			var minX = entryPosition.X - _minDistanceFromExitToEntry;
@@ -46,10 +46,10 @@ namespace Levels.Generation
 					tileIndex++;
 				}
 			}
-			
+
 			return TilePosition.Zero;
 		}
-		
+
 		private readonly Random _random;
 		private readonly int _minDistanceFromExitToEntry;
 	}

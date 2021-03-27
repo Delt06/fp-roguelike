@@ -43,7 +43,9 @@ namespace Levels.Editor
 			_wallHeight = GUILayout.Height(WallSize);
 			_zeroOffset = new RectOffset(0, 0, 0, 0);
 			_margin = new RectOffset(Margin, Margin, Margin, Margin);
-			_southWallMargin = new RectOffset(_margin.left, _margin.right, _margin.top + TileSize - WallSize, _margin.bottom);
+			_southWallMargin = new RectOffset(_margin.left, _margin.right, _margin.top + TileSize - WallSize,
+				_margin.bottom
+			);
 
 			_noRoomTileTexture = CreateSolidColorTexture(Color.black);
 			_tileTexture = CreateSolidColorTexture(Color.grey);
@@ -63,7 +65,10 @@ namespace Levels.Editor
 
 		public override void OnInspectorGUI()
 		{
-			_tileStyle = new GUIStyle(GUI.skin.box) { normal = { background = _tileTexture }, margin = _margin, padding = _zeroOffset, border = _zeroOffset};
+			_tileStyle = new GUIStyle(GUI.skin.box)
+			{
+				normal = { background = _tileTexture }, margin = _margin, padding = _zeroOffset, border = _zeroOffset,
+			};
 			_noRoomTileStyle = new GUIStyle(_tileStyle) { normal = { background = _noRoomTileTexture } };
 			_entryTileStyle = new GUIStyle(_tileStyle) { normal = { background = _entryTileTexture } };
 			_exitTileStyle = new GUIStyle(_tileStyle) { normal = { background = _exitTileTexture } };
@@ -134,7 +139,7 @@ namespace Levels.Editor
 		{
 			GUILayout.Space(-TileSize - Margin);
 		}
-		
+
 		private GUIStyle GetStyleFor(LevelTile tile) =>
 			tile.Type switch
 			{

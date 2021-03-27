@@ -2,6 +2,9 @@
 {
 	public enum LevelTileType
 	{
-		None, Normal, Entry, Exit,
+		None,
+		Normal,
+		Entry,
+		Exit,
 	}
 }

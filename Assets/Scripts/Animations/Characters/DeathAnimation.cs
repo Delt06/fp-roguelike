@@ -18,7 +18,7 @@ namespace Animations.Characters
 
 		private IHealth _health;
 		private Animator _animator;
-		
+
 		private static readonly int IsDeadId = Animator.StringToHash("Is Dead");
 	}
 }

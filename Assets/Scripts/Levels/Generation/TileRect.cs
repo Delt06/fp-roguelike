@@ -6,7 +6,7 @@ namespace Levels.Generation
 	{
 		public TilePosition Min;
 		public TilePosition Max;
-		
+
 		public int Width => Max.X - Min.X + 1;
 		public int Height => Max.Y - Min.Y + 1;
 		public int Area => Width * Height;

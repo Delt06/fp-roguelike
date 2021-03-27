@@ -13,12 +13,13 @@ namespace Levels.Generation
 			_maxObstacles = maxObstacles;
 		}
 
-		public bool TryTracePath(TilePosition entryPosition, TilePosition exitPosition, int width, int height, LinkedList<TilePosition> path)
+		public bool TryTracePath(TilePosition entryPosition, TilePosition exitPosition, int width, int height,
+			LinkedList<TilePosition> path)
 		{
 			_visited.Clear();
 			_pendingPositions.Clear();
 			_from.Clear();
-			
+
 			_pendingPositions.Enqueue(entryPosition);
 
 			while (_pendingPositions.Count > 0)
@@ -31,8 +32,8 @@ namespace Levels.Generation
 					continue;
 
 				_visited.Add(position);
-				TryAddNeighbor(position, position.Add(x: 1), width, height);
-				TryAddNeighbor(position, position.Add(x: -1), width, height);
+				TryAddNeighbor(position, position.Add(1), width, height);
+				TryAddNeighbor(position, position.Add(-1), width, height);
 				TryAddNeighbor(position, position.Add(y: 1), width, height);
 				TryAddNeighbor(position, position.Add(y: -1), width, height);
 			}
@@ -84,7 +85,7 @@ namespace Levels.Generation
 				_obstacles.Add(position);
 				_path.Clear();
 				if (TryTracePath(entryPosition, exitPosition, width, height, _path)) continue;
-				
+
 				_obstacles.Remove(position);
 				return;
 			}

@@ -7,10 +7,7 @@ namespace Combat.Moves.Presets
 	public sealed class MovePreset_Skip : MovePreset
 	{
 		[SerializeField, Min(0f)] private float _delay = 0.5f;
-		
-		public override Move GetMove(IEntity entity)
-		{
-			return new Move(_delay, ActionsHelper.NullAction);
-		}
+
+		public override Move GetMove(IEntity entity) => new Move(_delay, ActionsHelper.NullAction);
 	}
 }

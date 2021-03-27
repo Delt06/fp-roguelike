@@ -14,13 +14,10 @@ namespace Combat
 				if (!IsAlive) return;
 
 				_value = value;
-				if (_value <= 0f)
-				{
-					IsAlive = false;
-				}
-				
+				if (_value <= 0f) IsAlive = false;
+
 				_value = Mathf.Clamp(_value, 0f, _maxValue);
-			} 
+			}
 		}
 
 		public bool IsAlive { get; private set; } = true;

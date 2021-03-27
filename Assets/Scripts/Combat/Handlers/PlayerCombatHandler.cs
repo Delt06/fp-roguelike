@@ -6,7 +6,7 @@ namespace Combat.Handlers
 	public sealed class PlayerCombatHandler : CharacterCombatHandler
 	{
 		[SerializeField] private GameObject _controls = default;
-		
+
 		public override void OnStarted(IEntity thisUnit, IEntity otherUnit)
 		{
 			base.OnStarted(thisUnit, otherUnit);

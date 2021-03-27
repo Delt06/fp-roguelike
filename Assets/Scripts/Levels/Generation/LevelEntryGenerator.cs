@@ -18,7 +18,7 @@ namespace Levels.Generation
 			var entryPosition = GetRandomPositionIn(rect);
 			return entryPosition;
 		}
-		
+
 		private LevelCorner GetRandomCorner()
 		{
 			var index = _random.Next() % 4;
@@ -31,7 +31,7 @@ namespace Levels.Generation
 			var y = rect.Min.Y + _random.Next() % rect.Height;
 			return new TilePosition(x, y);
 		}
-		
+
 		private static TileRect GetCornerRect(LevelCorner corner, int width, int height, int size)
 		{
 			int minX, maxX, minY, maxY;
@@ -61,8 +61,8 @@ namespace Levels.Generation
 			var rect = new TileRect(minX, minY, maxX, maxY);
 			rect.Clamp(width, height);
 			return rect;
-		} 
-		
+		}
+
 		private readonly Random _random;
 		private readonly int _maxEntryPadding;
 	}

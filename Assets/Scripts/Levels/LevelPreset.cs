@@ -21,7 +21,9 @@ namespace Levels
 		public void Regenerate()
 		{
 			var tiles = new LevelTile[_width, _height];
-			var generator = new LevelGenerator(_seed, _maxEntryPadding, _minDistanceFromEntryToExit, _minObstacles, _maxObstacles);
+			var generator = new LevelGenerator(_seed, _maxEntryPadding, _minDistanceFromEntryToExit, _minObstacles,
+				_maxObstacles
+			);
 			generator.Generate(tiles);
 			_tiles = ToFlatArray(tiles);
 		}
