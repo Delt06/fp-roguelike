@@ -69,6 +69,7 @@ namespace Levels
 		private static T[,] ToGrid<T>(T[] array, int width, int height)
 		{
 			var grid = new T[width, height];
+			if (array.Length != width * height) return grid;
 
 			for (var i = 0; i < array.Length; i++)
 			{
