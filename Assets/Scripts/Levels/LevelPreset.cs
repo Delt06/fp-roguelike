@@ -10,22 +10,30 @@ namespace Levels
 	{
 		[SerializeField] private int _seed = 0;
 
-		[Header("Size")]
-		[SerializeField, Min(1)] private int _width = 5;
+		[Header("Size"), SerializeField, Min(1)]
+		
+		private int _width = 5;
+
 		[SerializeField, Min(1)] private int _height = 5;
+
+		[Header("Entry and Exit"), SerializeField, Min(0)]
 		
-		[Header("Entry and Exit")]
-		[SerializeField, Min(0)] private int _maxEntryPadding = 2;
+		private int _maxEntryPadding = 2;
+
 		[SerializeField, Min(0)] private int _minDistanceFromEntryToExit = 2;
+
+		[Header("Obstacles"), SerializeField, Min(0)]
 		
-		[Header("Obstacles")]
-		[SerializeField, Min(0)] private int _minObstacles = 1;
+		private int _minObstacles = 1;
+
 		[SerializeField, Min(0)] private int _maxObstacles = 3;
+
+		[Header("Corridors"), SerializeField, Range(0f, 1f)]
 		
-		[Header("Corridors")]
-		[SerializeField, Range(0f, 1f)] private float _corridorProbability = 1f;
+		private float _corridorProbability = 1f;
+
 		[SerializeField, Min(0)] private int _maxCorridorsDepth = 4;
-		
+
 		[SerializeField, HideInInspector] private LevelTile[] _tiles = Array.Empty<LevelTile>();
 
 		public LevelTile[,] GetTiles() => ToGrid(_tiles, _width, _height);

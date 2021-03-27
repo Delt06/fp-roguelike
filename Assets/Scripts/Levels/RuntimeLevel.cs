@@ -61,7 +61,7 @@ namespace Levels
 						position.z += _roomsOffset.y * 0.5f;
 						Instantiate(_connectorPrefab, position, Quaternion.identity, transform);
 					}
-					
+
 					if (tile.HasEastDoor)
 					{
 						var position = GetPosition(tx, ty);
