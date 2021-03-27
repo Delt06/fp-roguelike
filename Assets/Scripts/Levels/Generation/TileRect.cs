@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Levels
+namespace Levels.Generation
 {
 	public struct TileRect
 	{

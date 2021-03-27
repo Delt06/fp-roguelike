@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Levels
+namespace Levels.Generation
 {
 	public enum LevelCorner
 	{
