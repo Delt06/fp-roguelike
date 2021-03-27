@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movePresets:
-  - {fileID: 11400000, guid: 0d6d7eda19a225e45aa87f483f7bac05, type: 2}
+  - {fileID: 11400000, guid: fe6d5e3a78d99894684fa2e125070aac, type: 2}
 --- !u!114 &604330443
 MonoBehaviour:
   m_ObjectHideFlags: 0
