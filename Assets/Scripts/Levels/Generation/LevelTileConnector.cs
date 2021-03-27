@@ -8,11 +8,11 @@ namespace Levels.Generation
 		public static void Connect([NotNull] LevelTile[,] tiles, TilePosition tile1, TilePosition tile2)
 		{
 			if (tiles == null) throw new ArgumentNullException(nameof(tiles));
-			ConnectHorizontally(tiles, tile1, tile2);
-			ConnectVertically(tiles, tile1, tile2);
+			TryConnectHorizontally(tiles, tile1, tile2);
+			TryConnectVertically(tiles, tile1, tile2);
 		}
 
-		private static void ConnectHorizontally(LevelTile[,] tiles, TilePosition tile1, TilePosition tile2)
+		private static void TryConnectHorizontally(LevelTile[,] tiles, TilePosition tile1, TilePosition tile2)
 		{
 			var dx = tile2.X - tile1.X;
 			if (dx == 0) return;
@@ -29,7 +29,7 @@ namespace Levels.Generation
 			}
 		}
 
-		private static void ConnectVertically(LevelTile[,] tiles, TilePosition tile1, TilePosition tile2)
+		private static void TryConnectVertically(LevelTile[,] tiles, TilePosition tile1, TilePosition tile2)
 		{
 			var dy = tile2.Y - tile1.Y;
 			if (dy == 0) return;

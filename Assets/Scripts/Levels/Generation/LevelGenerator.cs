@@ -7,14 +7,14 @@ namespace Levels.Generation
 {
 	public sealed class LevelGenerator
 	{
-		public LevelGenerator(int seed, int maxEntryPadding, int minDistanceFromExitToEntry, int minObstacles,
-			int maxObstacles)
+		public LevelGenerator([NotNull] LevelEntryGenerator entryGenerator, [NotNull] LevelExitGenerator exitGenerator,
+			[NotNull] LevelPathTracer pathTracer)
 		{
-			var random = new Random(seed);
-			_levelEntryGenerator = new LevelEntryGenerator(random, maxEntryPadding);
-			_levelExitGenerator = new LevelExitGenerator(random, minDistanceFromExitToEntry);
-			_pathTracer = new LevelPathTracer(random, minObstacles, maxObstacles);
+			_entryGenerator = entryGenerator ?? throw new ArgumentNullException(nameof(entryGenerator));
+			_exitGenerator = exitGenerator ?? throw new ArgumentNullException(nameof(exitGenerator));
+			_pathTracer = pathTracer ?? throw new ArgumentNullException(nameof(pathTracer));
 		}
+
 
 		public void Generate([NotNull] LevelTile[,] tiles)
 		{
@@ -24,8 +24,8 @@ namespace Levels.Generation
 
 			var width = tiles.GetWidth();
 			var height = tiles.GetHeight();
-			var entryPosition = _levelEntryGenerator.GenerateEntryPosition(width, height);
-			var exitPosition = _levelExitGenerator.GenerateExitPosition(width, height, entryPosition);
+			var entryPosition = _entryGenerator.GenerateEntryPosition(width, height);
+			var exitPosition = _exitGenerator.GenerateExitPosition(width, height, entryPosition);
 
 			_pathTracer.GenerateObstacles(entryPosition, exitPosition, width, height);
 
@@ -50,8 +50,8 @@ namespace Levels.Generation
 			}
 		}
 
-		private readonly LevelEntryGenerator _levelEntryGenerator;
-		private readonly LevelExitGenerator _levelExitGenerator;
+		private readonly LevelEntryGenerator _entryGenerator;
+		private readonly LevelExitGenerator _exitGenerator;
 		private readonly LevelPathTracer _pathTracer;
 		private readonly LinkedList<TilePosition> _path = new LinkedList<TilePosition>();
 	}

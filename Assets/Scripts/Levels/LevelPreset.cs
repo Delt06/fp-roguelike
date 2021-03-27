@@ -1,6 +1,7 @@
 ﻿using System;
 using Levels.Generation;
 using UnityEngine;
+using Random = System.Random;
 
 namespace Levels
 {
@@ -20,12 +21,20 @@ namespace Levels
 
 		public void Regenerate()
 		{
+			var generator = CreateGenerator();
 			var tiles = new LevelTile[_width, _height];
-			var generator = new LevelGenerator(_seed, _maxEntryPadding, _minDistanceFromEntryToExit, _minObstacles,
-				_maxObstacles
-			);
 			generator.Generate(tiles);
 			_tiles = ToFlatArray(tiles);
+		}
+
+		private LevelGenerator CreateGenerator()
+		{
+			var random = new Random(_seed);
+			var levelEntryGenerator = new LevelEntryGenerator(random, _maxEntryPadding);
+			var levelExitGenerator = new LevelExitGenerator(random, _minDistanceFromEntryToExit);
+			var pathTracer = new LevelPathTracer(random, _minObstacles, _maxObstacles);
+			var generator = new LevelGenerator(levelEntryGenerator, levelExitGenerator, pathTracer);
+			return generator;
 		}
 
 		private static T[] ToFlatArray<T>(T[,] grid)
