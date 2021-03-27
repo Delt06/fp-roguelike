@@ -40,21 +40,21 @@ namespace Levels.Generation
 			var index = _random.Next(4);
 			return index switch
 			{
-				0 => position.Add(x: 1),
-				1 => position.Add(x: -1),
+				0 => position.Add(1),
+				1 => position.Add(-1),
 				2 => position.Add(y: 1),
 				3 => position.Add(y: -1),
 				_ => position,
 			};
 		}
-		
+
 		public LevelCorridorsGenerator([NotNull] Random random, int maxDepth, float probability)
 		{
 			_random = random ?? throw new ArgumentNullException(nameof(random));
 			_maxDepth = maxDepth;
 			_probability = probability;
 		}
-		
+
 		private readonly Random _random;
 		private readonly int _maxDepth;
 		private readonly float _probability;
