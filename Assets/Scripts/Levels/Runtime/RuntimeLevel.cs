@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Levels
+namespace Levels.Runtime
 {
 	public class RuntimeLevel : MonoBehaviour
 	{
@@ -18,7 +18,16 @@ namespace Levels
 			var height = tiles.GetHeight();
 			SpawnRooms(tiles, width, height);
 			SpawnRoomConnectors(tiles, width, height);
+
+			var builders = GetComponentsInChildren<IRuntimeLevelBuilder>();
+
+			foreach (var builder in builders)
+			{
+				builder.Build(Root);
+			}
 		}
+
+		private Transform Root => transform;
 
 		private void SpawnRooms(LevelTile[,] tiles, int width, int height)
 		{
@@ -39,7 +48,7 @@ namespace Levels
 
 		private void SpawnRoom(LevelTile tile, Vector3 position)
 		{
-			var room = Instantiate(_baseRoomPrefab, position, Quaternion.identity, transform);
+			var room = Instantiate(_baseRoomPrefab, position, Quaternion.identity, Root);
 			Instantiate(tile.HasNorthDoor ? _doorPrefab : _wallPrefab, room.NorthDoor);
 			Instantiate(tile.HasSouthDoor ? _doorPrefab : _wallPrefab, room.SouthDoor);
 			Instantiate(tile.HasEastDoor ? _doorPrefab : _wallPrefab, room.EastDoor);
@@ -59,14 +68,14 @@ namespace Levels
 					{
 						var position = GetPosition(tx, ty);
 						position.z += _roomsOffset.y * 0.5f;
-						Instantiate(_connectorPrefab, position, Quaternion.identity, transform);
+						Instantiate(_connectorPrefab, position, Quaternion.identity, Root);
 					}
 
 					if (tile.HasEastDoor)
 					{
 						var position = GetPosition(tx, ty);
 						position.x += _roomsOffset.x * 0.5f;
-						Instantiate(_connectorPrefab, position, Quaternion.Euler(0f, 90f, 0f), transform);
+						Instantiate(_connectorPrefab, position, Quaternion.Euler(0f, 90f, 0f), Root);
 					}
 				}
 			}
