@@ -18,10 +18,14 @@ namespace Controls.Systems
 
 			var motion = _velocity * deltaTime;
 
-			if (_data.Move)
+			if (_data.Direction.HasValue)
 			{
-				var forward = _characterController.transform.forward;
-				motion += _data.Speed * deltaTime * forward;
+				var characterTransform = _characterController.transform;
+				var forward = characterTransform.forward;
+				var right = characterTransform.right;
+				var direction = forward * _data.Direction.Value.y + right * _data.Direction.Value.x;
+				var velocity = direction * _data.Speed;
+				motion += velocity * deltaTime;
 			}
 
 			_characterController.Move(motion);

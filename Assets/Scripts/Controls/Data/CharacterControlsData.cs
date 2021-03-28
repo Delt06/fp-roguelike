@@ -8,7 +8,7 @@ namespace Controls.Data
 
 		public float RotationAngle { get; set; }
 
-		public bool Move { get; set; }
+		public Vector2? Direction { get; set; }
 
 		public float Speed => _speed;
 	}
