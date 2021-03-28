@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using JetBrains.Annotations;
-using static Levels.LevelTilemapExtensions;
+using static Levels.LevelTilemapExt;
 
 namespace Levels.Generation
 {

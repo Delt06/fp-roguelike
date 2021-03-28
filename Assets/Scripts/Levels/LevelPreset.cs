@@ -1,5 +1,6 @@
 ﻿using System;
 using Levels.Generation;
+using Levels.Generation.Monsters;
 using UnityEngine;
 using Random = System.Random;
 
@@ -30,6 +31,8 @@ namespace Levels
 
 		[SerializeField, Min(0)] private int _maxCorridorsDepth = 4;
 
+		[SerializeField] private MonsterPositionProbabilities _monsterPositionProbabilities = default;
+
 		[SerializeField, HideInInspector] private LevelTile[] _tiles = Array.Empty<LevelTile>();
 		[SerializeField, HideInInspector] private TilePosition _entryPosition = TilePosition.Zero;
 		[SerializeField, HideInInspector] private TilePosition _exitPosition = TilePosition.Zero;
@@ -42,21 +45,33 @@ namespace Levels
 
 		public void Regenerate()
 		{
-			var generator = CreateGenerator();
 			var tiles = new LevelTile[_width, _height];
-			generator.Generate(tiles, out _entryPosition, out _exitPosition);
+			var random = new Random(_seed);
+			GenerateMap(tiles, random);
+			GenerateMonsters(tiles, random);
 			_tiles = ToFlatArray(tiles);
 		}
 
-		private LevelGenerator CreateGenerator()
+		private void GenerateMap(LevelTile[,] tiles, Random random)
 		{
-			var random = new Random(_seed);
+			var generator = CreateGenerator(random);
+			generator.Generate(tiles, out _entryPosition, out _exitPosition);
+		}
+
+		private LevelGenerator CreateGenerator(Random random)
+		{
 			var levelEntryGenerator = new LevelEntryGenerator(random, _maxEntryPadding);
 			var levelExitGenerator = new LevelExitGenerator(random, _minDistanceFromEntryToExit);
 			var pathTracer = new LevelPathTracer(random, _minObstacles, _maxObstacles);
 			var corridorsGenerator = new LevelCorridorsGenerator(random, _maxCorridorsDepth, _corridorProbability);
 			var generator = new LevelGenerator(levelEntryGenerator, levelExitGenerator, pathTracer, corridorsGenerator);
 			return generator;
+		}
+
+		private void GenerateMonsters(LevelTile[,] tiles, Random random)
+		{
+			var monsterGenerator = new LevelMonsterGenerator(random, _monsterPositionProbabilities);
+			monsterGenerator.Generate(tiles);
 		}
 
 		private static T[] ToFlatArray<T>(T[,] grid)

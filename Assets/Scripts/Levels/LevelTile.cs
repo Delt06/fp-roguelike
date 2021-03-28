@@ -1,4 +1,5 @@
 ﻿using System;
+using Levels.Generation.Monsters;
 
 namespace Levels
 {
@@ -10,6 +11,7 @@ namespace Levels
 		public bool HasSouthDoor;
 		public bool HasEastDoor;
 		public bool HasWestDoor;
+		public MonsterData MonsterData;
 
 		public static LevelTile Empty => new LevelTile
 		{

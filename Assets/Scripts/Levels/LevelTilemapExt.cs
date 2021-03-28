@@ -4,7 +4,7 @@ using Levels.Generation;
 
 namespace Levels
 {
-	public static class LevelTilemapExtensions
+	public static class LevelTilemapExt
 	{
 		public static int GetWidth([NotNull] this LevelTile[,] tiles)
 		{

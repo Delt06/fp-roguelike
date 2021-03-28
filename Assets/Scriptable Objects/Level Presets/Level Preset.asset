@@ -21,6 +21,9 @@ MonoBehaviour:
   _maxObstacles: 50
   _corridorProbability: 0.75
   _maxCorridorsDepth: 10
+  _monsterPositionProbabilities:
+    DoorProbability: 0.25
+    CenterProbability: 0.5
   _tiles:
   - Type: 3
     HasNorthDoor: 0
@@ -267,3 +270,9 @@ MonoBehaviour:
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 1
+  _entryPosition:
+    X: 5
+    Y: 6
+  _exitPosition:
+    X: 0
+    Y: 0

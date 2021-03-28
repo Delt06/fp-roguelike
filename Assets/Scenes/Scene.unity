@@ -1222,6 +1222,7 @@ GameObject:
   - component: {fileID: 1222328722}
   - component: {fileID: 1222328723}
   - component: {fileID: 1222328724}
+  - component: {fileID: 1222328725}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -1274,6 +1275,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1699034954}
+--- !u!114 &1222328725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222328721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a9f1016df6c4c50a6f767d3c4743192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _monsterPrefab: {fileID: 8494829606162591062, guid: d154dbbfd656f114fb13254d15b120dd, type: 3}
 --- !u!1001 &1606355006
 PrefabInstance:
   m_ObjectHideFlags: 0

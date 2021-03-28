@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Levels.Runtime
+﻿namespace Levels.Runtime
 {
 	public interface IRuntimeLevelBuilder
 	{
