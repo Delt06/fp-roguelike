@@ -16,7 +16,8 @@ namespace Levels.Generation
 		}
 
 
-		public void Generate([NotNull] LevelTile[,] tiles, out TilePosition entryPosition, out TilePosition exitPosition)
+		public void Generate([NotNull] LevelTile[,] tiles, out TilePosition entryPosition,
+			out TilePosition exitPosition)
 		{
 			if (tiles == null) throw new ArgumentNullException(nameof(tiles));
 

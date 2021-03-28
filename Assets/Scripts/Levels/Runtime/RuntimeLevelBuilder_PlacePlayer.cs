@@ -6,13 +6,13 @@ namespace Levels.Runtime
 	public sealed class RuntimeLevelBuilder_PlacePlayer : MonoBehaviour, IRuntimeLevelBuilder
 	{
 		[SerializeField] private Transform _player = default;
-		
+
 		public void Build(in RuntimeLevelData data)
 		{
 			var entryPosition = data.LevelPreset.EntryPosition;
 			var entryRoom = data.Rooms[entryPosition.X, entryPosition.Y];
 			_player.position = entryRoom.SpawnPoint.position;
-			
+
 			var entryTile = data.Tiles[entryPosition.X, entryPosition.Y];
 			SetLookDirection(entryTile);
 		}
