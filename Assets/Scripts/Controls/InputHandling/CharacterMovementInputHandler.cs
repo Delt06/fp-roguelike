@@ -1,5 +1,4 @@
-﻿using System;
-using Controls.Data;
+﻿using Controls.Data;
 using UnityEngine;
 
 namespace Controls.InputHandling
@@ -50,10 +49,16 @@ namespace Controls.InputHandling
 		private bool IsAboveNullThreshold(Vector2 direction) =>
 			direction.sqrMagnitude >= _nullThreshold * _nullThreshold;
 
+		private void OnEnable()
+		{
+			_movementInputProvider.Show();
+		}
+
 		private void OnDisable()
 		{
 			_data.Direction = null;
 			_changeVelocity = Vector2.zero;
+			_movementInputProvider.Hide();
 		}
 
 		private IMovementInputProvider _movementInputProvider;

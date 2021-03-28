@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e6ec8710734f0e882506b14a7ab6a5, type: 3}
   m_Name: Move Preset.Attack
   m_EditorClassIdentifier: 
-  _duration: 0.75
+  _duration: 0.85
   _animationDuration: 1
