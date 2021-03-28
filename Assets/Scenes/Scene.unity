@@ -1221,6 +1221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1222328722}
   - component: {fileID: 1222328723}
+  - component: {fileID: 1222328724}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -1260,6 +1261,19 @@ MonoBehaviour:
   _wallPrefab: {fileID: 2960583888517333071, guid: cd04d255d339bb64598cccbd77fc190c, type: 3}
   _doorPrefab: {fileID: 7428938289964267359, guid: cb9cb1a69f8521e4385f88936b37d8bd, type: 3}
   _connectorPrefab: {fileID: 6194571474184801410, guid: 88178ed715054814a87c198562ef9b26, type: 3}
+--- !u!114 &1222328724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222328721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6614877e514bb8b5b2a908eb0c7cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 1699034954}
 --- !u!1001 &1606355006
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,9 +4,9 @@ namespace Levels.Runtime
 {
 	public sealed class RuntimeLevelBuilder_CombineMesh : MonoBehaviour, IRuntimeLevelBuilder
 	{
-		public void Build(Transform root)
+		public void Build(in RuntimeLevelData data)
 		{
-			StaticBatchingUtility.Combine(root.gameObject);
+			StaticBatchingUtility.Combine(data.Root.gameObject);
 		}
 	}
 }

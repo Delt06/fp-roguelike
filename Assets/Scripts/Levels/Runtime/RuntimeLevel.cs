@@ -16,14 +16,23 @@ namespace Levels.Runtime
 			var tiles = _preset.GetTiles();
 			var width = tiles.GetWidth();
 			var height = tiles.GetHeight();
+			_rooms = new Room[width, height];
 			SpawnRooms(tiles, width, height);
 			SpawnRoomConnectors(tiles, width, height);
 
+			var data = new RuntimeLevelData
+			{
+				Root = Root,
+				Tiles = tiles,
+				LevelPreset = _preset,
+				Rooms = _rooms,
+			};
+			
 			var builders = GetComponentsInChildren<IRuntimeLevelBuilder>();
 
 			foreach (var builder in builders)
 			{
-				builder.Build(Root);
+				builder.Build(data);
 			}
 		}
 
@@ -39,20 +48,21 @@ namespace Levels.Runtime
 					if (tile.Type == LevelTileType.None) continue;
 
 					var position = GetPosition(tx, ty);
-					SpawnRoom(tile, position);
+					_rooms[tx, ty] = SpawnRoom(tile, position);
 				}
 			}
 		}
 
 		private Vector3 GetPosition(int tx, int ty) => new Vector3(_roomsOffset.x * tx, 0f, _roomsOffset.y * ty);
 
-		private void SpawnRoom(LevelTile tile, Vector3 position)
+		private Room SpawnRoom(LevelTile tile, Vector3 position)
 		{
 			var room = Instantiate(_baseRoomPrefab, position, Quaternion.identity, Root);
 			Instantiate(tile.HasNorthDoor ? _doorPrefab : _wallPrefab, room.NorthDoor);
 			Instantiate(tile.HasSouthDoor ? _doorPrefab : _wallPrefab, room.SouthDoor);
 			Instantiate(tile.HasEastDoor ? _doorPrefab : _wallPrefab, room.EastDoor);
 			Instantiate(tile.HasWestDoor ? _doorPrefab : _wallPrefab, room.WestDoor);
+			return room;
 		}
 
 		private void SpawnRoomConnectors(LevelTile[,] tiles, int width, int height)
@@ -80,5 +90,7 @@ namespace Levels.Runtime
 				}
 			}
 		}
+
+		private Room[,] _rooms;
 	}
 }

@@ -4,6 +4,6 @@ namespace Levels.Runtime
 {
 	public interface IRuntimeLevelBuilder
 	{
-		void Build(Transform root);
+		void Build(in RuntimeLevelData data);
 	}
 }

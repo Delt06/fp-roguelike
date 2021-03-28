@@ -16,7 +16,7 @@ namespace Levels.Generation
 		}
 
 
-		public void Generate([NotNull] LevelTile[,] tiles)
+		public void Generate([NotNull] LevelTile[,] tiles, out TilePosition entryPosition, out TilePosition exitPosition)
 		{
 			if (tiles == null) throw new ArgumentNullException(nameof(tiles));
 
@@ -24,8 +24,8 @@ namespace Levels.Generation
 
 			var width = tiles.GetWidth();
 			var height = tiles.GetHeight();
-			var entryPosition = _entryGenerator.GenerateEntryPosition(width, height);
-			var exitPosition = _exitGenerator.GenerateExitPosition(width, height, entryPosition);
+			entryPosition = _entryGenerator.GenerateEntryPosition(width, height);
+			exitPosition = _exitGenerator.GenerateExitPosition(width, height, entryPosition);
 
 			_pathTracer.GenerateObstacles(entryPosition, exitPosition, width, height);
 

@@ -6,7 +6,7 @@ using Random = System.Random;
 namespace Levels
 {
 	[CreateAssetMenu]
-	public sealed class LevelPreset : ScriptableObject
+	public sealed class LevelPreset : ScriptableObject, ILevelPreset
 	{
 		[SerializeField] private int _seed = 0;
 
@@ -31,14 +31,20 @@ namespace Levels
 		[SerializeField, Min(0)] private int _maxCorridorsDepth = 4;
 
 		[SerializeField, HideInInspector] private LevelTile[] _tiles = Array.Empty<LevelTile>();
+		[SerializeField, HideInInspector] private TilePosition _entryPosition = TilePosition.Zero;
+		[SerializeField, HideInInspector] private TilePosition _exitPosition = TilePosition.Zero;
 
 		public LevelTile[,] GetTiles() => ToGrid(_tiles, _width, _height);
+
+		public TilePosition EntryPosition => _entryPosition;
+
+		public TilePosition ExitPosition => _exitPosition;
 
 		public void Regenerate()
 		{
 			var generator = CreateGenerator();
 			var tiles = new LevelTile[_width, _height];
-			generator.Generate(tiles);
+			generator.Generate(tiles, out _entryPosition, out _exitPosition);
 			_tiles = ToFlatArray(tiles);
 		}
 

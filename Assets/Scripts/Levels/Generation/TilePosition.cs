@@ -2,6 +2,7 @@
 
 namespace Levels.Generation
 {
+	[Serializable]
 	public struct TilePosition : IEquatable<TilePosition>
 	{
 		public int X;
