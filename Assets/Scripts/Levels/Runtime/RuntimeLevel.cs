@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Levels.Runtime
 {
@@ -11,12 +12,16 @@ namespace Levels.Runtime
 		[SerializeField] private GameObject _doorPrefab = default;
 		[SerializeField] private GameObject _connectorPrefab = default;
 
+		public IReadOnlyList<Room> AllRooms => _allRooms;
+		public IReadOnlyList<GameObject> AllRoomConnectors => _allRoomConnectors;
+		
+
 		private void Start()
 		{
 			var tiles = _preset.GetTiles();
 			var width = tiles.GetWidth();
 			var height = tiles.GetHeight();
-			_rooms = new Room[width, height];
+			_roomsGrid = new Room[width, height];
 			SpawnRooms(tiles, width, height);
 			SpawnRoomConnectors(tiles, width, height);
 
@@ -25,7 +30,7 @@ namespace Levels.Runtime
 				Root = Root,
 				Tiles = tiles,
 				LevelPreset = _preset,
-				Rooms = _rooms,
+				Rooms = _roomsGrid,
 			};
 
 			var builders = GetComponentsInChildren<IRuntimeLevelBuilder>();
@@ -48,7 +53,9 @@ namespace Levels.Runtime
 					if (tile.Type == LevelTileType.None) continue;
 
 					var position = GetPosition(tx, ty);
-					_rooms[tx, ty] = SpawnRoom(tile, position);
+					var room = SpawnRoom(tile, position);
+					_roomsGrid[tx, ty] = room;
+					_allRooms.Add(room);
 				}
 			}
 		}
@@ -78,19 +85,23 @@ namespace Levels.Runtime
 					{
 						var position = GetPosition(tx, ty);
 						position.z += _roomsOffset.y * 0.5f;
-						Instantiate(_connectorPrefab, position, Quaternion.identity, Root);
+						var connector = Instantiate(_connectorPrefab, position, Quaternion.identity, Root);
+						_allRoomConnectors.Add(connector);
 					}
 
 					if (tile.HasEastDoor)
 					{
 						var position = GetPosition(tx, ty);
 						position.x += _roomsOffset.x * 0.5f;
-						Instantiate(_connectorPrefab, position, Quaternion.Euler(0f, 90f, 0f), Root);
+						var connector = Instantiate(_connectorPrefab, position, Quaternion.Euler(0f, 90f, 0f), Root);
+						_allRoomConnectors.Add(connector);
 					}
 				}
 			}
 		}
 
-		private Room[,] _rooms;
+		private Room[,] _roomsGrid;
+		private readonly List<Room> _allRooms = new List<Room>();
+		private readonly List<GameObject> _allRoomConnectors = new List<GameObject>();
 	}
 }

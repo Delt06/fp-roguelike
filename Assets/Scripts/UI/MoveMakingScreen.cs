@@ -18,6 +18,7 @@ namespace UI
 
 		private void OnEnable()
 		{
+			Refresh();
 			MoveMaker.MoveDemandBegan += _refresh;
 			MoveMaker.MoveDemandEnded += _refresh;
 		}

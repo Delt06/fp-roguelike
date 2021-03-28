@@ -13,7 +13,11 @@ namespace UI
 
 		public void Show() => JoystickSetActive(true);
 
-		private void JoystickSetActive(bool active) => _joystick.gameObject.SetActive(active);
+		private void JoystickSetActive(bool active)
+		{
+			if (_joystick)
+				_joystick.gameObject.SetActive(active);
+		}
 
 		private float DeadZone => _joystick.DeadZone * _joystick.DeadZone;
 	}
