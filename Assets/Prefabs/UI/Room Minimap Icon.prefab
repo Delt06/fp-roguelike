@@ -37,11 +37,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926415455312524082, guid: c7f77acd9bbd9f141a7c579ca2b41a99, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 75
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7926415455312524082, guid: c7f77acd9bbd9f141a7c579ca2b41a99, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 75
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7926415455312524082, guid: c7f77acd9bbd9f141a7c579ca2b41a99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -93,7 +93,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926415455312524083, guid: c7f77acd9bbd9f141a7c579ca2b41a99, type: 3}
       propertyPath: m_Name
-      value: Icon
+      value: Room Minimap Icon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926415455312524085, guid: c7f77acd9bbd9f141a7c579ca2b41a99, type: 3}
+      propertyPath: m_Color.b
+      value: 0.36862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926415455312524085, guid: c7f77acd9bbd9f141a7c579ca2b41a99, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926415455312524085, guid: c7f77acd9bbd9f141a7c579ca2b41a99, type: 3}
+      propertyPath: m_Color.r
+      value: 0.59766954
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7f77acd9bbd9f141a7c579ca2b41a99, type: 3}
