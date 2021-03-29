@@ -360,6 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4239314324509193450}
   - component: {fileID: 6373296768831834978}
+  - component: {fileID: 6705018902878566752}
   m_Layer: 0
   m_Name: Room.Base
   m_TagString: Untagged
@@ -385,6 +386,7 @@ Transform:
   - {fileID: 878591542508433573}
   - {fileID: 3513867952181384190}
   - {fileID: 3784474468512187125}
+  - {fileID: 2950726703204084080}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -416,6 +418,20 @@ MonoBehaviour:
     Position: 2
   - SpawnPoint: {fileID: 4826111018656258988}
     Position: 3
+--- !u!114 &6705018902878566752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4239314324509193451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b266d9fa71224f25b6c769e0f142795c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _searchInInactiveChildren: 0
+  _removeDestroyedComponents: 0
 --- !u!1 &4341003624824413094
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,6 +780,84 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3317455638173100428, guid: 81234ac18fc595149b7ac11b341dbf5b, type: 3}
   m_PrefabInstance: {fileID: 1503333357324514495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3411633403861793706
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4239314324509193450}
+    m_Modifications:
+    - target: {fileID: 552703384859497178, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 552703384859497178, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552703384859497178, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552703384859497178, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552703384859497178, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 552703384859497178, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552703384859497178, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552703384859497178, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552703384859497178, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552703384859497178, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552703384859497178, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353659581729373, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_Size.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353659581729373, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353659581729373, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_Size.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722353659581729373, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5019030356334803970, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+      propertyPath: m_Name
+      value: Fog Of War Object
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+--- !u!4 &2950726703204084080 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 552703384859497178, guid: d748e0c36055dec489b55783a5c6ed49, type: 3}
+  m_PrefabInstance: {fileID: 3411633403861793706}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4239314323139052347
 PrefabInstance:

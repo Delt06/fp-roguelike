@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI
@@ -13,9 +14,17 @@ namespace UI
 
 		public RectTransform RectTransform { get; private set; }
 
+		public void ResetColor()
+		{
+			Image.color = _initialColor;
+		}
+
 		private void Awake()
 		{
 			RectTransform = GetComponent<RectTransform>();
+			_initialColor = Image.color;
 		}
+
+		private Color _initialColor;
 	}
 }

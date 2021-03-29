@@ -10,10 +10,10 @@ namespace Levels.Runtime
 		[SerializeField] private Room _baseRoomPrefab = default;
 		[SerializeField] private GameObject _wallPrefab = default;
 		[SerializeField] private GameObject _doorPrefab = default;
-		[SerializeField] private GameObject _connectorPrefab = default;
+		[SerializeField] private RoomConnector _connectorPrefab = default;
 
 		public IReadOnlyList<Room> AllRooms => _allRooms;
-		public IReadOnlyList<GameObject> AllRoomConnectors => _allRoomConnectors;
+		public IReadOnlyList<RoomConnector> AllRoomConnectors => _allRoomConnectors;
 		
 
 		private void Start()
@@ -102,6 +102,6 @@ namespace Levels.Runtime
 
 		private Room[,] _roomsGrid;
 		private readonly List<Room> _allRooms = new List<Room>();
-		private readonly List<GameObject> _allRoomConnectors = new List<GameObject>();
+		private readonly List<RoomConnector> _allRoomConnectors = new List<RoomConnector>();
 	}
 }

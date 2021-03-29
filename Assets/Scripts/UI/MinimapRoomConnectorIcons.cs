@@ -15,9 +15,9 @@ namespace UI
 		{
 			_iconDrawer.Clear();
 
-			foreach (var room in _runtimeLevel.AllRoomConnectors)
+			foreach (var connector in _runtimeLevel.AllRoomConnectors)
 			{
-				_iconDrawer.DrawIcon(room.transform.position);
+				_iconDrawer.TryDrawIcon(connector.transform.position, connector.Entity);
 			}
 		}
 

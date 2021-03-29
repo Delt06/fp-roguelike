@@ -1,9 +1,11 @@
 ﻿using System;
+using DELTation.Entities;
 using Levels.Generation.Monsters;
 using UnityEngine;
 
 namespace Levels
 {
+	[RequireComponent(typeof(IEntity))]
 	public sealed class Room : MonoBehaviour
 	{
 		[SerializeField] private Transform _spawnPoint = default;
@@ -40,7 +42,14 @@ namespace Levels
 			spawnPoint = default;
 			return false;
 		}
-		
+
+		public IEntity Entity { get; private set; }
+
+		private void Awake()
+		{
+			Entity = GetComponent<IEntity>();
+		}
+
 		[Serializable]
 		private struct MonsterSpawnPoint
 		{

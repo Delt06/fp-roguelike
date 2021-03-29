@@ -23,7 +23,7 @@ namespace UI
 
 		private float GetReferenceViewAngle()
 		{
-			return _referencePoint.eulerAngles.y;
+			return -_referencePoint.eulerAngles.y;
 		}
 
 		public Vector2 WorldToLocalPosition(Vector3 worldPosition)
@@ -36,10 +36,10 @@ namespace UI
 
 		public bool IsVisible(Vector2 localPosition, Vector2 size)
 		{
-			var rect = new Rect()
+			var rect = new Rect
 			{
-				center = localPosition,
 				size = size,
+				center = localPosition,
 			};
 			return _mapRect.Overlaps(rect);
 		}

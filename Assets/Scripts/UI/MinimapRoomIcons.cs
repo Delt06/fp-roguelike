@@ -1,4 +1,5 @@
-﻿using Levels.Runtime;
+﻿using FogOfWar;
+using Levels.Runtime;
 using UnityEngine;
 
 namespace UI
@@ -17,7 +18,7 @@ namespace UI
 
 			foreach (var room in _runtimeLevel.AllRooms)
 			{
-				_iconDrawer.DrawIcon(room.transform.position);
+				_iconDrawer.TryDrawIcon(room.transform.position, room.Entity);
 			}
 		}
 
