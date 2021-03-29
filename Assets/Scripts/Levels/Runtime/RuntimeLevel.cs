@@ -8,6 +8,7 @@ namespace Levels.Runtime
 		[SerializeField] private LevelPreset _preset = default;
 		[SerializeField] private Vector2 _roomsOffset = Vector3.one;
 		[SerializeField] private Room _baseRoomPrefab = default;
+		[SerializeField] private Room _exitRoomPrefab = default;
 		[SerializeField] private GameObject _wallPrefab = default;
 		[SerializeField] private GameObject _doorPrefab = default;
 		[SerializeField] private RoomConnector _connectorPrefab = default;
@@ -64,13 +65,21 @@ namespace Levels.Runtime
 
 		private Room SpawnRoom(LevelTile tile, Vector3 position)
 		{
-			var room = Instantiate(_baseRoomPrefab, position, Quaternion.identity, Root);
+			var roomPrefab = GetRoomPrefab(tile.Type);
+			var room = Instantiate(roomPrefab, position, Quaternion.identity, Root);
 			Instantiate(tile.HasNorthDoor ? _doorPrefab : _wallPrefab, room.NorthDoor);
 			Instantiate(tile.HasSouthDoor ? _doorPrefab : _wallPrefab, room.SouthDoor);
 			Instantiate(tile.HasEastDoor ? _doorPrefab : _wallPrefab, room.EastDoor);
 			Instantiate(tile.HasWestDoor ? _doorPrefab : _wallPrefab, room.WestDoor);
 			return room;
 		}
+
+		private Room GetRoomPrefab(LevelTileType type) =>
+			type switch
+			{
+				LevelTileType.Exit => _exitRoomPrefab,
+				_ => _baseRoomPrefab,
+			};
 
 		private void SpawnRoomConnectors(LevelTile[,] tiles, int width, int height)
 		{

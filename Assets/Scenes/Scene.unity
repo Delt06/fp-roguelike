@@ -952,6 +952,7 @@ GameObject:
   - component: {fileID: 783861346}
   - component: {fileID: 783861349}
   - component: {fileID: 783861348}
+  - component: {fileID: 783861350}
   m_Layer: 0
   m_Name: Minimap
   m_TagString: Untagged
@@ -1107,6 +1108,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05bc1fff494d425a9593498b4e3ad102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &783861350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783861340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2929aec00d5a45bc90f765c597526d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _color: {r: 0.22352941, g: 0.83137256, b: 0.627451, a: 1}
 --- !u!1 &820237097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,6 +1900,7 @@ MonoBehaviour:
   _preset: {fileID: 11400000, guid: a069186c91f56794fb147cfdcd4fe193, type: 2}
   _roomsOffset: {x: 9, y: 9}
   _baseRoomPrefab: {fileID: 6373296768831834978, guid: edfed8db0c19ead4b9587c3db47aeeae, type: 3}
+  _exitRoomPrefab: {fileID: 1150263674853363992, guid: 547257e0d4ae0bc4094050163f60b8a2, type: 3}
   _wallPrefab: {fileID: 2960583888517333071, guid: cd04d255d339bb64598cccbd77fc190c, type: 3}
   _doorPrefab: {fileID: 7428938289964267359, guid: cb9cb1a69f8521e4385f88936b37d8bd, type: 3}
   _connectorPrefab: {fileID: 3763929387690712972, guid: 88178ed715054814a87c198562ef9b26, type: 3}
