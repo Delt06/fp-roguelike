@@ -9,6 +9,8 @@ namespace UI
 
 		public Image Image => _image;
 
+		public Vector2 Size => RectTransform.rect.size;
+
 		public RectTransform RectTransform { get; private set; }
 
 		private void Awake()

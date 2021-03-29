@@ -33,6 +33,8 @@ namespace UI
 			var lastFreeImageIndex = _freeIcons.Count - 1;
 			var icon = _freeIcons[lastFreeImageIndex];
 			var position = _minimap.WorldToLocalPosition(worldPosition);
+			if (!_minimap.IsVisible(position, icon.Size)) return;
+
 			icon.RectTransform.anchoredPosition = position;
 			icon.Image.enabled = true;
 			_freeIcons.RemoveAt(lastFreeImageIndex);

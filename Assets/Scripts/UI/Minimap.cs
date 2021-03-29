@@ -15,8 +15,28 @@ namespace UI
 
 		public Vector2 WorldToLocalPosition(Vector3 worldPosition)
 		{
-			var offset = worldPosition - _referencePoint.position;
+			var offset = worldPosition - ReferencePosition;
 			return new Vector2(offset.x, offset.z) * _scale;
 		}
+
+		private Vector3 ReferencePosition => _referencePoint.position;
+
+		public bool IsVisible(Vector2 localPosition, Vector2 size)
+		{
+			var rect = new Rect()
+			{
+				center = localPosition,
+				size = size,
+			};
+			return _mapRect.Overlaps(rect);
+		}
+
+		private void Awake()
+		{
+			_mapRect = GetComponent<RectTransform>().rect;
+			_mapRect.center = Vector2.zero;
+		}
+
+		private Rect _mapRect;
 	}
 }
