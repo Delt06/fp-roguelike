@@ -17,8 +17,9 @@ namespace UI.Minimaps
 
 			_iconDrawer.Clear();
 
-			foreach (var monster in monsters.AllMonsters)
+			for (var index = 0; index < monsters.AllMonsters.Count; index++)
 			{
+				var monster = monsters.AllMonsters[index];
 				_iconDrawer.TryDrawIcon(monster.GetPosition(), monster);
 			}
 		}

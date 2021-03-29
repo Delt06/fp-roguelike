@@ -15,8 +15,9 @@ namespace UI.Minimaps
 		{
 			_iconDrawer.Clear();
 
-			foreach (var room in _runtimeLevel.AllRooms)
+			for (var index = 0; index < _runtimeLevel.AllRooms.Count; index++)
 			{
+				var room = _runtimeLevel.AllRooms[index];
 				_iconDrawer.TryDrawIcon(room.transform.position, room.Entity);
 			}
 		}
