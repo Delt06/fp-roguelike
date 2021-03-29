@@ -10,7 +10,20 @@ namespace UI
 
 		private void Update()
 		{
-			_referencePointIcon.RectTransform.anchoredPosition = WorldToLocalPosition(_referencePoint.position);
+			var anchoredPosition = WorldToLocalPosition(ReferencePosition);
+			var viewAngle = GetReferenceViewAngle();
+			UpdateReferenceIcon(anchoredPosition, viewAngle);
+		}
+
+		private void UpdateReferenceIcon(Vector2 anchoredPosition, float viewAngle)
+		{
+			_referencePointIcon.RectTransform.anchoredPosition = anchoredPosition;
+			_referencePointIcon.RectTransform.eulerAngles = new Vector3(0, 0, viewAngle);
+		}
+
+		private float GetReferenceViewAngle()
+		{
+			return _referencePoint.eulerAngles.y;
 		}
 
 		public Vector2 WorldToLocalPosition(Vector3 worldPosition)
