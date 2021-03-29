@@ -1,4 +1,5 @@
-﻿using DELTation.Entities;
+﻿using System.Collections.Generic;
+using DELTation.Entities;
 using Levels.Generation.Monsters;
 using UnityEngine;
 using static Levels.Generation.Monsters.MonsterPositionsExt;
@@ -8,6 +9,8 @@ namespace Levels.Runtime
 	public sealed class RuntimeLevelBuilder_SpawnMonsters : MonoBehaviour, IRuntimeLevelBuilder
 	{
 		[SerializeField] private EntityBase _monsterPrefab = default;
+
+		public IReadOnlyList<IEntity> AllMonsters => _allMonsters;
 
 		public void Build(in RuntimeLevelData data)
 		{
@@ -46,7 +49,8 @@ namespace Levels.Runtime
 			if (position == MonsterPosition.Center)
 				spawnRotation = GetRandomRotationAroundY();
 
-			Instantiate(_monsterPrefab, spawnPosition, spawnRotation, root);
+			var monster = Instantiate(_monsterPrefab, spawnPosition, spawnRotation, root);
+			_allMonsters.Add(monster);
 		}
 
 		private static Quaternion GetRandomRotationAroundY()
@@ -54,5 +58,7 @@ namespace Levels.Runtime
 			var angle = Random.Range(0f, 360f);
 			return Quaternion.AngleAxis(angle, Vector3.up);
 		}
+
+		private readonly List<IEntity> _allMonsters = new List<IEntity>();
 	}
 }

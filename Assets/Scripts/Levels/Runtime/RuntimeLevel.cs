@@ -16,6 +16,19 @@ namespace Levels.Runtime
 		public IReadOnlyList<Room> AllRooms => _allRooms;
 		public IReadOnlyList<RoomConnector> AllRoomConnectors => _allRoomConnectors;
 
+		public bool TryGetBuilder<T>(out T foundBuilder) where T : IRuntimeLevelBuilder
+		{
+			foreach (var builder in _builders)
+			{
+				if (!(builder is T castedBuilder)) continue;
+				
+				foundBuilder = castedBuilder;
+				return true;
+			}
+
+			foundBuilder = default;
+			return false;
+		}
 
 		private void Start()
 		{
@@ -39,6 +52,7 @@ namespace Levels.Runtime
 			foreach (var builder in builders)
 			{
 				builder.Build(data);
+				_builders.Add(builder);
 			}
 		}
 
@@ -110,6 +124,7 @@ namespace Levels.Runtime
 		}
 
 		private Room[,] _roomsGrid;
+		private readonly List<IRuntimeLevelBuilder> _builders = new List<IRuntimeLevelBuilder>();
 		private readonly List<Room> _allRooms = new List<Room>();
 		private readonly List<RoomConnector> _allRoomConnectors = new List<RoomConnector>();
 	}
