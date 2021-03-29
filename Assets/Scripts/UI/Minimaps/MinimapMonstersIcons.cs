@@ -14,7 +14,7 @@ namespace UI.Minimaps
 		private void Update()
 		{
 			if (!_runtimeLevel.TryGetBuilder(out RuntimeLevelBuilder_SpawnMonsters monsters)) return;
-			
+
 			_iconDrawer.Clear();
 
 			foreach (var monster in monsters.AllMonsters)

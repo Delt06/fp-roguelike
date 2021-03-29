@@ -6,7 +6,7 @@ namespace UI.Minimaps.Extensions
 	public sealed class MinimapExtension_ExitRoom : MinimapExtensionBase, IMinimapDrawHandler
 	{
 		[SerializeField] private Color _color = Color.cyan;
-		
+
 		public void OnDrawn(in MinimapDrawArgs args)
 		{
 			if (args.ReferenceEntity == null) return;

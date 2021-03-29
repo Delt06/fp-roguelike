@@ -2,8 +2,5 @@
 
 namespace Levels
 {
-	public class ExitRoomTag : MonoBehaviour
-	{
-		
-	}
+	public class ExitRoomTag : MonoBehaviour { }
 }

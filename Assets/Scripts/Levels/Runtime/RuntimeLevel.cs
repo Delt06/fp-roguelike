@@ -21,7 +21,7 @@ namespace Levels.Runtime
 			foreach (var builder in _builders)
 			{
 				if (!(builder is T castedBuilder)) continue;
-				
+
 				foundBuilder = castedBuilder;
 				return true;
 			}
