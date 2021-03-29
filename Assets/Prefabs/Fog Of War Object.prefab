@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _revealDuration: 0.5
+  _revealingEase: 7
 --- !u!65 &4722353659581729373
 BoxCollider:
   m_ObjectHideFlags: 0

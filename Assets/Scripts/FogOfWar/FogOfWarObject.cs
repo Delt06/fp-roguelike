@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using DG.Tweening.Core;
+using UnityEngine;
 
 namespace FogOfWar
 {
 	public sealed class FogOfWarObject : MonoBehaviour
 	{
 		[SerializeField, Min(0f)] private float _revealDuration = 1f;
+		[SerializeField] private Ease _revealingEase = Ease.Linear;
 
 		public bool IsRevealed { get; private set; }
 		public float RevealingProgress { get; private set; }
@@ -15,20 +18,17 @@ namespace FogOfWar
 		{
 			if (IsRevealed) return;
 			IsRevealed = true;
+			DOTween.To(_progressGetter, _progressSetter, MaxRevealingProgress, _revealDuration)
+				.SetEase(_revealingEase);
 		}
 
-		private void Update()
+		private void Awake()
 		{
-			if (!IsRevealed) return;
-			if (RevealingProgress >= MaxRevealingProgress) return;
-			UpdateRevealingProgress(Time.deltaTime);
+			_progressGetter = () => RevealingProgress;
+			_progressSetter = value => RevealingProgress = value;
 		}
 
-		private void UpdateRevealingProgress(float deltaTime)
-		{
-			var revealSpeed = MaxRevealingProgress / _revealDuration;
-			var maxDelta = revealSpeed * deltaTime;
-			RevealingProgress = Mathf.MoveTowards(RevealingProgress, MaxRevealingProgress, maxDelta);
-		}
+		private DOGetter<float> _progressGetter;
+		private DOSetter<float> _progressSetter;
 	}
 }
