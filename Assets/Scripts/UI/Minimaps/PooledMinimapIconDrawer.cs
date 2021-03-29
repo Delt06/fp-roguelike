@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
 using DELTation.Entities;
-using FogOfWar;
 using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace UI
+namespace UI.Minimaps
 {
 	public sealed class PooledMinimapIconDrawer : MonoBehaviour
 	{
@@ -34,33 +32,18 @@ namespace UI
 			var lastFreeImageIndex = _freeIcons.Count - 1;
 			var icon = _freeIcons[lastFreeImageIndex];
 			var position = _minimap.WorldToLocalPosition(worldPosition);
-			if (!_minimap.IsVisible(position, icon.Size))
-				return false;
-			if (IsNotRevealed(referenceEntity))
+
+			var args = new MinimapDrawArgs(icon, position, referenceEntity);
+			if (!_minimap.ShouldBeDrawn(args))
 				return false;
 
 			icon.RectTransform.anchoredPosition = position;
 			icon.ResetColor();
-			ApplyFogOfWar(icon.Image, referenceEntity);
+			_minimap.OnDrawn(args);
 			icon.Image.enabled = true;
 			_freeIcons.RemoveAt(lastFreeImageIndex);
 			_busyIcons.Add(icon);
 			return true;
-		}
-
-		private static bool IsNotRevealed([CanBeNull] IEntity referenceEntity) =>
-			referenceEntity != null &&
-			referenceEntity.TryGet(out FogOfWarObject fogOfWarObject) &&
-			!fogOfWarObject.IsRevealed;
-
-		private static void ApplyFogOfWar(Image image, [CanBeNull] IEntity referenceEntity)
-		{
-			if (referenceEntity == null) return;
-			if (!referenceEntity.TryGet(out FogOfWarObject fogOfWarObject)) return;
-
-			var color = image.color;
-			color.a *= fogOfWarObject.RevealingProgress;
-			image.color = color;
 		}
 
 		private void CreateNewIcon()

@@ -1,8 +1,7 @@
-﻿using FogOfWar;
-using Levels.Runtime;
+﻿using Levels.Runtime;
 using UnityEngine;
 
-namespace UI
+namespace UI.Minimaps
 {
 	[RequireComponent(typeof(PooledMinimapIconDrawer))]
 	public sealed class MinimapRoomIcons : MonoBehaviour
