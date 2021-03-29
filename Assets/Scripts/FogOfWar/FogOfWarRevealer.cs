@@ -2,8 +2,5 @@
 
 namespace FogOfWar
 {
-	public sealed class FogOfWarRevealer : MonoBehaviour
-	{
-		
-	}
+	public sealed class FogOfWarRevealer : MonoBehaviour { }
 }

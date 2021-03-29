@@ -10,9 +10,7 @@ namespace Levels
 	{
 		[SerializeField] private Transform _spawnPoint = default;
 
-		[Header("Doors"), SerializeField]
-		
-		private Transform _northDoor = default;
+		[Header("Doors"), SerializeField] private Transform _northDoor = default;
 
 		[SerializeField] private Transform _southDoor = default;
 		[SerializeField] private Transform _westDoor = default;

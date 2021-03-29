@@ -40,7 +40,7 @@ namespace UI
 		}
 
 		private ManualMoveMaker MoveMaker => _entity.Get<ManualMoveMaker>();
-		
+
 		private Action _refresh;
 	}
 }

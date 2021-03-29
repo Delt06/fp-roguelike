@@ -8,7 +8,7 @@ namespace UI
 		[SerializeField] private Joystick _joystick = default;
 
 		public Vector2? Input => _joystick.Direction.sqrMagnitude >= DeadZone ? _joystick.Direction : (Vector2?) null;
-		
+
 		public void Hide() => JoystickSetActive(false);
 
 		public void Show() => JoystickSetActive(true);

@@ -8,7 +8,7 @@ namespace Levels.Runtime
 	public sealed class RuntimeLevelBuilder_SpawnMonsters : MonoBehaviour, IRuntimeLevelBuilder
 	{
 		[SerializeField] private EntityBase _monsterPrefab = default;
-		
+
 		public void Build(in RuntimeLevelData data)
 		{
 			var width = data.Tiles.GetWidth();

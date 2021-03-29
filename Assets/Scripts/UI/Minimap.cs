@@ -21,10 +21,7 @@ namespace UI
 			_referencePointIcon.RectTransform.eulerAngles = new Vector3(0, 0, viewAngle);
 		}
 
-		private float GetReferenceViewAngle()
-		{
-			return -_referencePoint.eulerAngles.y;
-		}
+		private float GetReferenceViewAngle() => -_referencePoint.eulerAngles.y;
 
 		public Vector2 WorldToLocalPosition(Vector3 worldPosition)
 		{

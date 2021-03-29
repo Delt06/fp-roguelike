@@ -18,7 +18,7 @@ namespace FogOfWar
 		}
 
 		private void Update()
-		{ 
+		{
 			if (!IsRevealed) return;
 			if (RevealingProgress >= MaxRevealingProgress) return;
 			UpdateRevealingProgress(Time.deltaTime);

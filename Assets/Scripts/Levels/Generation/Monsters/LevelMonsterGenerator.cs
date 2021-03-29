@@ -11,7 +11,7 @@ namespace Levels.Generation.Monsters
 		public void Generate([NotNull] LevelTile[,] tiles)
 		{
 			if (tiles == null) throw new ArgumentNullException(nameof(tiles));
-			
+
 			var width = tiles.GetWidth();
 			var height = tiles.GetHeight();
 
@@ -45,7 +45,7 @@ namespace Levels.Generation.Monsters
 			var randomValue = _random.NextDouble();
 			var probability = _probabilities.GetProbability(position);
 			if (randomValue > probability) return;
-				
+
 			data.Add(position);
 		}
 
@@ -57,7 +57,7 @@ namespace Levels.Generation.Monsters
 				MonsterPosition.West => tile.HasWestDoor,
 				MonsterPosition.East => tile.HasEastDoor,
 				MonsterPosition.Center => true,
-				_ => throw new ArgumentOutOfRangeException(nameof(position), position, null)
+				_ => throw new ArgumentOutOfRangeException(nameof(position), position, null),
 			};
 
 		public LevelMonsterGenerator([NotNull] Random random, MonsterPositionProbabilities probabilities)

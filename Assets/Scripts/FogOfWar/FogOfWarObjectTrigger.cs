@@ -10,7 +10,7 @@ namespace FogOfWar
 		private void OnTriggerEnter(Collider other)
 		{
 			if (!other.TryGetInEntity(out FogOfWarRevealer _)) return;
-			
+
 			_object.Reveal();
 			enabled = false;
 		}

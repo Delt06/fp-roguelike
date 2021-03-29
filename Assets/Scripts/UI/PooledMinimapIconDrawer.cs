@@ -23,16 +23,13 @@ namespace UI
 				busyIcon.Image.enabled = false;
 				_freeIcons.Add(busyIcon);
 			}
-			
+
 			_busyIcons.Clear();
 		}
 
 		public bool TryDrawIcon(Vector3 worldPosition, [CanBeNull] IEntity referenceEntity = null)
 		{
-			if (_freeIcons.Count == 0)
-			{
-				CreateNewIcon();
-			}
+			if (_freeIcons.Count == 0) CreateNewIcon();
 
 			var lastFreeImageIndex = _freeIcons.Count - 1;
 			var icon = _freeIcons[lastFreeImageIndex];
@@ -52,7 +49,7 @@ namespace UI
 		}
 
 		private static bool IsNotRevealed([CanBeNull] IEntity referenceEntity) =>
-			referenceEntity != null && 
+			referenceEntity != null &&
 			referenceEntity.TryGet(out FogOfWarObject fogOfWarObject) &&
 			!fogOfWarObject.IsRevealed;
 
