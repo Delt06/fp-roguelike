@@ -29,6 +29,12 @@ jobs:
         uses: mattnotmitt/doxygen-action@v1
         with:
           working-directory: './'
-          doxyfile-path: 'Documentation/Doxygen'
+          doxyfile-path: './Documentation/Doxygen'
+          
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: './Documentation/html'
           
         
