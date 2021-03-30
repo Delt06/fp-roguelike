@@ -1,0 +1,4 @@
+<map id="Combat.Damage.IDamageDealer" name="Combat.Damage.IDamageDealer">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,216,32"/>
+<area shape="rect" id="node2" href="$class_combat_1_1_damage_1_1_damage_dealer.html" title=" " alt="" coords="7,80,214,107"/>
+</map>

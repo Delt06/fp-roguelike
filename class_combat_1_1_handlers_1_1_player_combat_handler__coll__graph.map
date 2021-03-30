@@ -1,0 +1,6 @@
+<map id="Combat.Handlers.PlayerCombatHandler" name="Combat.Handlers.PlayerCombatHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="27,155,234,196"/>
+<area shape="rect" id="node2" href="$class_combat_1_1_handlers_1_1_character_combat_handler.html" title=" " alt="" coords="47,80,215,107"/>
+<area shape="rect" id="node3" href="$class_mono_behaviour.html" title=" " alt="" coords="5,5,117,32"/>
+<area shape="rect" id="node4" href="$interface_combat_1_1_handlers_1_1_i_combat_handler.html" title=" " alt="" coords="142,5,258,32"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="UI.Minimaps.Extensions.MinimapExtension_DeadCulling" name="UI.Minimaps.Extensions.MinimapExtension_DeadCulling">
+<area shape="rect" id="node1" title=" " alt="" coords="117,155,331,196"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension_base.html" title=" " alt="" coords="55,80,212,107"/>
+<area shape="rect" id="node3" href="$class_mono_behaviour.html" title=" " alt="" coords="5,5,117,32"/>
+<area shape="rect" id="node4" href="$interface_u_i_1_1_minimaps_1_1_extensions_1_1_i_minimap_extension.html" title=" " alt="" coords="141,5,272,32"/>
+<area shape="rect" id="node5" href="$interface_u_i_1_1_minimaps_1_1_extensions_1_1_i_minimap_draw_condition.html" title=" " alt="" coords="237,80,395,107"/>
+</map>

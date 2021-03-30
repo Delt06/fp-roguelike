@@ -1,0 +1,6 @@
+<map id="Combat.Actions.CombatActionAsset" name="Combat.Actions.CombatActionAsset">
+<area shape="rect" id="node1" title=" " alt="" coords="33,80,232,121"/>
+<area shape="rect" id="node4" href="$class_combat_1_1_actions_1_1_combat_action___look_at_opponent.html" title=" " alt="" coords="33,169,232,211"/>
+<area shape="rect" id="node2" href="$class_scriptable_object.html" title=" " alt="" coords="5,5,124,32"/>
+<area shape="rect" id="node3" href="$interface_combat_1_1_actions_1_1_i_combat_action.html" title=" " alt="" coords="148,5,256,32"/>
+</map>

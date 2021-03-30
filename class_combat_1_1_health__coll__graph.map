@@ -1,0 +1,6 @@
+<map id="Combat.Health" name="Combat.Health">
+<area shape="rect" id="node1" title=" " alt="" coords="78,155,186,181"/>
+<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="5,80,117,107"/>
+<area shape="rect" id="node3" href="$interface_combat_1_1_i_modifiable_health.html" title=" " alt="" coords="141,80,264,107"/>
+<area shape="rect" id="node4" href="$interface_combat_1_1_i_health.html" title=" " alt="" coords="171,5,235,32"/>
+</map>

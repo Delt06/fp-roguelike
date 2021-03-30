@@ -1,0 +1,10 @@
+<map id="ScriptableObject" name="ScriptableObject">
+<area shape="rect" id="node1" title=" " alt="" coords="5,127,124,154"/>
+<area shape="rect" id="node2" href="$class_combat_1_1_actions_1_1_combat_action_asset.html" title=" " alt="" coords="172,23,371,64"/>
+<area shape="rect" id="node4" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset.html" title=" " alt="" coords="175,120,367,161"/>
+<area shape="rect" id="node8" href="$class_levels_1_1_level_preset.html" title=" " alt="" coords="204,186,339,213"/>
+<area shape="rect" id="node3" href="$class_combat_1_1_actions_1_1_combat_action___look_at_opponent.html" title=" " alt="" coords="419,5,617,47"/>
+<area shape="rect" id="node5" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___attack.html" title=" " alt="" coords="422,71,614,112"/>
+<area shape="rect" id="node6" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___simple.html" title=" " alt="" coords="422,136,614,177"/>
+<area shape="rect" id="node7" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___skip.html" title=" " alt="" coords="422,201,614,243"/>
+</map>

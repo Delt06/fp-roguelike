@@ -1,0 +1,5 @@
+<map id="Combat.Handlers.ICombatHandler" name="Combat.Handlers.ICombatHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,224,32"/>
+<area shape="rect" id="node2" href="$class_combat_1_1_handlers_1_1_character_combat_handler.html" title=" " alt="" coords="24,80,205,121"/>
+<area shape="rect" id="node3" href="$class_combat_1_1_handlers_1_1_player_combat_handler.html" title=" " alt="" coords="11,169,218,211"/>
+</map>

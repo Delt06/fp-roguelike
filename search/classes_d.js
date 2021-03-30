@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['weaponwalkanimation_421',['WeaponWalkAnimation',['../class_animations_1_1_weapons_1_1_weapon_walk_animation.html',1,'Animations::Weapons']]]
+  ['tileposition_435',['TilePosition',['../struct_levels_1_1_generation_1_1_tile_position.html',1,'Levels::Generation']]],
+  ['tilerect_436',['TileRect',['../struct_levels_1_1_generation_1_1_tile_rect.html',1,'Levels::Generation']]]
 ];

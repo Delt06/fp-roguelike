@@ -1,0 +1,6 @@
+<map id="UI.Minimaps.Extensions.IMinimapDrawCondition" name="UI.Minimaps.Extensions.IMinimapDrawCondition">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,223,112"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension___culling.html" title=" " alt="" coords="271,5,484,47"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension___dead_culling.html" title=" " alt="" coords="271,71,484,112"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension___fog_of_war.html" title=" " alt="" coords="271,136,484,177"/>
+</map>

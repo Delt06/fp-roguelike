@@ -1,0 +1,5 @@
+<map id="Combat.Moves.Presets.MovePreset_Attack" name="Combat.Moves.Presets.MovePreset_Attack">
+<area shape="rect" id="node1" title=" " alt="" coords="5,155,197,196"/>
+<area shape="rect" id="node2" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset.html" title=" " alt="" coords="55,80,147,107"/>
+<area shape="rect" id="node3" href="$class_scriptable_object.html" title=" " alt="" coords="42,5,161,32"/>
+</map>

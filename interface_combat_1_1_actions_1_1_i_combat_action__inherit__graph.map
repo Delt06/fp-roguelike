@@ -1,0 +1,6 @@
+<map id="Combat.Actions.ICombatAction" name="Combat.Actions.ICombatAction">
+<area shape="rect" id="node1" title=" " alt="" coords="114,5,317,32"/>
+<area shape="rect" id="node2" href="$class_combat_1_1_actions_1_1_combat_action_asset.html" title=" " alt="" coords="5,80,204,121"/>
+<area shape="rect" id="node4" href="$class_combat_1_1_actions_1_1_combat_action_from_delegate.html" title=" " alt="" coords="228,80,427,121"/>
+<area shape="rect" id="node3" href="$class_combat_1_1_actions_1_1_combat_action___look_at_opponent.html" title=" " alt="" coords="5,169,204,211"/>
+</map>
