@@ -1,18 +1,16 @@
 var searchData=
 [
-  ['east_66',['East',['../namespace_levels_1_1_generation_1_1_monsters.html#a6c55ded4c669f9228df6715446f2b9dbaa99dc62d017d04cf67266593f9c3761e',1,'Levels.Generation.Monsters.East()'],['../namespace_levels_1_1_generation_1_1_monsters.html#acfcff0597ffbfa1b635b60c856a6d2adaa99dc62d017d04cf67266593f9c3761e',1,'Levels.Generation.Monsters.East()']]],
-  ['eastdoor_67',['EastDoor',['../class_levels_1_1_room.html#ad06ad3c192340afc14e227804e4dde80',1,'Levels::Room']]],
-  ['editor_68',['Editor',['../class_editor.html',1,'']]],
-  ['empty_69',['Empty',['../struct_levels_1_1_level_tile.html#a7ace37a2731b81e930341ebd44d343a1',1,'Levels::LevelTile']]],
-  ['entities_70',['Entities',['../namespace_entities.html',1,'']]],
-  ['entity_71',['Entity',['../class_levels_1_1_room.html#a991f89078ecc083048cb7db45481ae2c',1,'Levels.Room.Entity()'],['../class_levels_1_1_room_connector.html#a14c69bd9536281803ace8cadc5ee98ad',1,'Levels.RoomConnector.Entity()']]],
-  ['entitypositionext_2ecs_72',['EntityPositionExt.cs',['../_entity_position_ext_8cs.html',1,'']]],
-  ['entry_73',['Entry',['../namespace_levels.html#acb3709e5cf3dfcef3b9701890aba7ae2ab948e8a02a7f8dc9f098c89e8df9892c',1,'Levels']]],
-  ['entryposition_74',['EntryPosition',['../interface_levels_1_1_i_level_preset.html#a6436fb62b0497ce29bf677e42bd9b14f',1,'Levels.ILevelPreset.EntryPosition()'],['../class_levels_1_1_level_preset.html#a4198d431e31e017003a7f09ffe06ca52',1,'Levels.LevelPreset.EntryPosition()']]],
-  ['equals_75',['Equals',['../struct_levels_1_1_generation_1_1_tile_position.html#ae5e96ba5e4551b8104f99c67274ae874',1,'Levels.Generation.TilePosition.Equals(TilePosition other)'],['../struct_levels_1_1_generation_1_1_tile_position.html#a03470875b7c5b04031a5e9bd91cec794',1,'Levels.Generation.TilePosition.Equals(object obj)']]],
-  ['exit_76',['Exit',['../namespace_levels.html#acb3709e5cf3dfcef3b9701890aba7ae2afef46e5063ce3dc78b8ae64fa474241d',1,'Levels']]],
-  ['exitposition_77',['ExitPosition',['../class_levels_1_1_level_preset.html#a192378cb37c6fb3405d8d9ebe5284900',1,'Levels.LevelPreset.ExitPosition()'],['../interface_levels_1_1_i_level_preset.html#a597916da7be48e4c141dc4ea26f391c4',1,'Levels.ILevelPreset.ExitPosition()']]],
-  ['exitroomtag_78',['ExitRoomTag',['../class_levels_1_1_exit_room_tag.html',1,'Levels']]],
-  ['exitroomtag_2ecs_79',['ExitRoomTag.cs',['../_exit_room_tag_8cs.html',1,'']]],
-  ['extensions_80',['Extensions',['../class_levels_1_1_custom_editors_1_1_level_preset_custom_editor.html#ad9d3df1f04adb5da86cb065a2ab524b1',1,'Levels.CustomEditors.LevelPresetCustomEditor.Extensions()'],['../class_levels_1_1_custom_editors_1_1_level_preset_custom_editor_base.html#af3a30dad8ddbd3f4462d3f01d67713fb',1,'Levels.CustomEditors.LevelPresetCustomEditorBase.Extensions()']]]
+  ['damagedealer_54',['DamageDealer',['../class_combat_1_1_damage_1_1_damage_dealer.html',1,'Combat::Damage']]],
+  ['damagedealer_2ecs_55',['DamageDealer.cs',['../_damage_dealer_8cs.html',1,'']]],
+  ['dealdamageaction_56',['DealDamageAction',['../class_combat_1_1_moves_1_1_presets_1_1_actions_helper.html#ab370957721c295ae6d2a91ceb7a800f7',1,'Combat::Moves::Presets::ActionsHelper']]],
+  ['dealdamageto_57',['DealDamageTo',['../interface_combat_1_1_damage_1_1_i_damage_dealer.html#a57dce0f32e1cec4db97a39471a77468d',1,'Combat.Damage.IDamageDealer.DealDamageTo()'],['../class_combat_1_1_damage_1_1_damage_dealer.html#a87422bce3b1393c9e1b1a4b25f0f6dcb',1,'Combat.Damage.DamageDealer.DealDamageTo()']]],
+  ['deathanimation_58',['DeathAnimation',['../class_animations_1_1_characters_1_1_death_animation.html',1,'Animations::Characters']]],
+  ['deathanimation_2ecs_59',['DeathAnimation.cs',['../_death_animation_8cs.html',1,'']]],
+  ['demandmove_60',['DemandMove',['../class_combat_1_1_moves_1_1_manual_move_maker.html#aa99f569a44f0af5399500a30cf915f75',1,'Combat::Moves::ManualMoveMaker']]],
+  ['direction_61',['Direction',['../class_controls_1_1_data_1_1_character_controls_data.html#ae3e3d87505780d27348a29dd376705d3',1,'Controls::Data::CharacterControlsData']]],
+  ['doorprobability_62',['DoorProbability',['../struct_levels_1_1_generation_1_1_monsters_1_1_monster_position_probabilities.html#a7785e44bfd4d4f2feea5750b373ccfc2',1,'Levels::Generation::Monsters::MonsterPositionProbabilities']]],
+  ['dragprovider_63',['DragProvider',['../class_u_i_1_1_drag_provider.html',1,'UI']]],
+  ['dragprovider_2ecs_64',['DragProvider.cs',['../_drag_provider_8cs.html',1,'']]],
+  ['draw_65',['Draw',['../interface_levels_1_1_custom_editors_1_1_extensions_1_1_i_level_preset_editor_extension.html#a552e6eea0a15c668114ae719ce9ffaa6',1,'Levels.CustomEditors.Extensions.ILevelPresetEditorExtension.Draw()'],['../class_levels_1_1_custom_editors_1_1_extensions_1_1_level_preset_editor_extension___monsters.html#aff88d4b25af4d9db0eafc21739d00c28',1,'Levels.CustomEditors.Extensions.LevelPresetEditorExtension_Monsters.Draw()'],['../class_levels_1_1_custom_editors_1_1_extensions_1_1_level_preset_editor_extension___tiles.html#a630657092c9bdfc14716bd11dfc7ac2d',1,'Levels.CustomEditors.Extensions.LevelPresetEditorExtension_Tiles.Draw()'],['../class_levels_1_1_custom_editors_1_1_extensions_1_1_level_preset_editor_extension___walls.html#aff4128e0e074b9cfd037257fd110b043',1,'Levels.CustomEditors.Extensions.LevelPresetEditorExtension_Walls.Draw()']]],
+  ['duration_66',['Duration',['../struct_combat_1_1_moves_1_1_move.html#aadb24a85e4a991e10234f691ecc4360e',1,'Combat::Moves::Move']]]
 ];
