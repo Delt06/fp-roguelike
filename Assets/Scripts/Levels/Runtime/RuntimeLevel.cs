@@ -32,6 +32,7 @@ namespace Levels.Runtime
 
 		private void Start()
 		{
+			_preset.Regenerate();
 			var tiles = _preset.GetTiles();
 			var width = tiles.GetWidth();
 			var height = tiles.GetHeight();

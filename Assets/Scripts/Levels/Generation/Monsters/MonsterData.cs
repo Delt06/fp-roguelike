@@ -1,5 +1,8 @@
-﻿namespace Levels.Generation.Monsters
+﻿using System;
+
+namespace Levels.Generation.Monsters
 {
+	[Serializable]
 	public struct MonsterData
 	{
 		public MonsterPositions Positions;
