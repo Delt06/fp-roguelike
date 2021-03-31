@@ -1,5 +1,4 @@
-﻿using System;
-using Combat.Moves.Presets;
+﻿using Combat.Moves.Presets;
 using DELTation.Entities;
 using UnityEngine;
 using Random = UnityEngine.Random;

@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73b93072efb4a15aeb57e2f2c09c4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
+  _damage: 1
 --- !u!114 &8494829605033920211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePresets:
   - {fileID: 11400000, guid: fe6d5e3a78d99894684fa2e125070aac, type: 2}
+  _delay: 0.5
 --- !u!1 &8494829605611348608
 GameObject:
   m_ObjectHideFlags: 0
