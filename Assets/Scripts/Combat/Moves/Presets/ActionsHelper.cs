@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Combat.Moves.Presets
 {
-	public sealed class ActionsHelper : MonoBehaviour
+	public static class ActionsHelper
 	{
 		public static ICombatAction GetAttackAnimationAction(float duration)
 		{

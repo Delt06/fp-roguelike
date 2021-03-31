@@ -1,11 +1,14 @@
 ﻿using System;
 using Combat;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Magic.Concrete.Healing
 {
 	public sealed class HealingComponent : MonoBehaviour
 	{
+		[SerializeField] private UnityEvent _onHealed = default;
+		
 		public void Construct(Health health)
 		{
 			_health = health;
@@ -15,6 +18,7 @@ namespace Magic.Concrete.Healing
 		{
 			if (amount < 0) throw new ArgumentOutOfRangeException(nameof(amount));
 			_health.Value += amount;
+			_onHealed?.Invoke();
 		}
 
 		private Health _health;

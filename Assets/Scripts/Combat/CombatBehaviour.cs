@@ -90,6 +90,7 @@ namespace Combat
 			{
 				_state.MoveInProcess = false;
 				_state.TurnIndex = (_state.TurnIndex + 1) % 2;
+				ThisUnit.Get<ICombatMoveMaker>().OnReadyToMakeMove();
 			}
 		}
 

@@ -24,6 +24,8 @@ namespace Combat.Moves
 		public event Action MoveDemandBegan;
 		public event Action MoveDemandEnded;
 
+		public void OnReadyToMakeMove() { }
+
 		public bool TryMakeMove(out Move move)
 		{
 			if (PendingMove.HasValue)
