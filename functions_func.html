@@ -83,6 +83,15 @@ $(function() {
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>CanCast()
+: <a class="el" href="interface_magic_1_1_i_spell_caster.html#a9b0e0f8c1b093fa1be0170b78e734394">Magic.ISpellCaster</a>
+, <a class="el" href="class_magic_1_1_spell_caster.html#a3ac1715e1d4885afaa8263eb746106fd">Magic.SpellCaster</a>
+</li>
+<li>Cast()
+: <a class="el" href="class_magic_1_1_concrete_1_1_healing_1_1_spell_asset___healing.html#a000c3a7b01c22794263b8124a82f86ac">Magic.Concrete.Healing.SpellAsset_Healing</a>
+, <a class="el" href="interface_magic_1_1_spells_1_1_i_spell.html#ac180050326748b37067c4682ddd11a0f">Magic.Spells.ISpell</a>
+, <a class="el" href="class_magic_1_1_spells_1_1_spell_asset.html#a54fa8d4b58ad11a06ac54317a6cf49e6">Magic.Spells.SpellAsset</a>
+</li>
 <li>Clamp()
 : <a class="el" href="struct_levels_1_1_generation_1_1_tile_rect.html#a028d249712f44a0dc1f0c19ef1a89f07">Levels.Generation.TileRect</a>
 </li>
@@ -106,6 +115,8 @@ $(function() {
 , <a class="el" href="class_controls_1_1_input_handling_1_1_character_rotation_input_handler.html#a1611f9f58683d912d5149780970811da">Controls.InputHandling.CharacterRotationInputHandler</a>
 , <a class="el" href="class_controls_1_1_systems_1_1_character_movement_system.html#aa33d77bdc70ef549a24ad11257a76c38">Controls.Systems.CharacterMovementSystem</a>
 , <a class="el" href="class_controls_1_1_systems_1_1_character_rotation_system.html#a84d4c0865d83338f732b439ac05e8cbe">Controls.Systems.CharacterRotationSystem</a>
+, <a class="el" href="class_magic_1_1_concrete_1_1_healing_1_1_healing_component.html#a5fd77e4d706357080abee8abe3bd33b8">Magic.Concrete.Healing.HealingComponent</a>
+, <a class="el" href="class_magic_1_1_spell_caster.html#a123272350ff33b5a11e8ce0cb0c82959">Magic.SpellCaster</a>
 , <a class="el" href="class_u_i_1_1_bars_1_1_opponent_indicators.html#af3a824bea8f88ec1f484e20b37065a53">UI.Bars.OpponentIndicators</a>
 , <a class="el" href="class_u_i_1_1_bars_1_1_player_bar.html#a5f745fd755a3e8daf03c1fd849d2f12c">UI.Bars.PlayerBar&lt; T &gt;</a>
 , <a class="el" href="class_u_i_1_1_minimaps_1_1_minimap_monsters_icons.html#a4027d07709f70e8b5aa9a79cb56a687e">UI.Minimaps.MinimapMonstersIcons</a>
@@ -166,6 +177,7 @@ $(function() {
 , <a class="el" href="class_combat_1_1_moves_1_1_presets_1_1_move_preset___attack.html#ab7b5ed17a3fc20f18e183980faa49c42">Combat.Moves.Presets.MovePreset_Attack</a>
 , <a class="el" href="class_combat_1_1_moves_1_1_presets_1_1_move_preset___simple.html#ab927312d20ff191c287099c368ea76be">Combat.Moves.Presets.MovePreset_Simple</a>
 , <a class="el" href="class_combat_1_1_moves_1_1_presets_1_1_move_preset___skip.html#abefa9b68ad1443364bb4325c082f8bce">Combat.Moves.Presets.MovePreset_Skip</a>
+, <a class="el" href="class_magic_1_1_moves_1_1_move_preset___cast_spell.html#a43d8fc114a4b283abdd4d832bc4d91b9">Magic.Moves.MovePreset_CastSpell</a>
 </li>
 <li>GetProbability()
 : <a class="el" href="struct_levels_1_1_generation_1_1_monsters_1_1_monster_position_probabilities.html#ab0b1a70deeb29e42a1d01311e33edcfb">Levels.Generation.Monsters.MonsterPositionProbabilities</a>
@@ -178,6 +190,9 @@ $(function() {
 
 
 <h3><a id="index_h"></a>- h -</h3><ul>
+<li>Heal()
+: <a class="el" href="class_magic_1_1_concrete_1_1_healing_1_1_healing_component.html#a880984d55b84b75ce90710b43f5fc250">Magic.Concrete.Healing.HealingComponent</a>
+</li>
 <li>Hide()
 : <a class="el" href="interface_controls_1_1_i_movement_input_provider.html#a759c677d89b79467189cb7536485aae5">Controls.IMovementInputProvider</a>
 , <a class="el" href="class_u_i_1_1_joystick_movement_input_provider.html#a225bbe7dda1a505628514129be6de5c1">UI.JoystickMovementInputProvider</a>
@@ -192,6 +207,10 @@ $(function() {
 <li>Initialize()
 : <a class="el" href="interface_u_i_1_1_minimaps_1_1_extensions_1_1_i_minimap_extension.html#a5655eeb34cc4ea4ce57f82f3cd1e6393">UI.Minimaps.Extensions.IMinimapExtension</a>
 , <a class="el" href="class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension_base.html#a9ba0c556b4f2ca4235325e07ef43ffbe">UI.Minimaps.Extensions.MinimapExtensionBase</a>
+</li>
+<li>IsApplicable()
+: <a class="el" href="class_combat_1_1_moves_1_1_presets_1_1_move_preset.html#a5a34064cf5435ff25ef8860d4a9f7df4">Combat.Moves.Presets.MovePreset</a>
+, <a class="el" href="class_magic_1_1_moves_1_1_move_preset___cast_spell.html#a7b7ac7a41a794a14fa9bc7198aef4317">Magic.Moves.MovePreset_CastSpell</a>
 </li>
 <li>IsMet()
 : <a class="el" href="interface_u_i_1_1_minimaps_1_1_extensions_1_1_i_minimap_draw_condition.html#aa8a116af99a3bf5d0258a458596317e2">UI.Minimaps.Extensions.IMinimapDrawCondition</a>
@@ -275,10 +294,12 @@ $(function() {
 
 <h3><a id="index_p"></a>- p -</h3><ul>
 <li>Perform()
-: <a class="el" href="class_combat_1_1_actions_1_1_combat_action___look_at_opponent.html#acf15b4accada7cbc1d1a3a2d9885e5bc">Combat.Actions.CombatAction_LookAtOpponent</a>
+: <a class="el" href="class_animations_1_1_weapons_1_1_combat_action_asset___set_trigger.html#a1fa8f30c7d0f27fab46d4b6d45acc96d">Animations.Weapons.CombatActionAsset_SetTrigger</a>
 , <a class="el" href="class_combat_1_1_actions_1_1_combat_action_asset.html#ac5a1d013c5f087cf602b68341fe5e8ab">Combat.Actions.CombatActionAsset</a>
+, <a class="el" href="class_combat_1_1_actions_1_1_combat_action_asset___look_at_opponent.html#a1f557987f6393ad556a9a7eacd3484df">Combat.Actions.CombatActionAsset_LookAtOpponent</a>
 , <a class="el" href="class_combat_1_1_actions_1_1_combat_action_from_delegate.html#a43e90866c0712f9138daec8226cd18bc">Combat.Actions.CombatActionFromDelegate</a>
 , <a class="el" href="interface_combat_1_1_actions_1_1_i_combat_action.html#a6f978c0d8b59d38a67e59b0f7ae66a8c">Combat.Actions.ICombatAction</a>
+, <a class="el" href="class_magic_1_1_actions_1_1_spell_combat_action.html#a0d59f48de816f74721b38262dd29b350">Magic.Actions.SpellCombatAction</a>
 </li>
 </ul>
 
@@ -307,6 +328,9 @@ $(function() {
 : <a class="el" href="interface_controls_1_1_i_movement_input_provider.html#ad34994149a81e14620679ef530e6ac9a">Controls.IMovementInputProvider</a>
 , <a class="el" href="class_u_i_1_1_joystick_movement_input_provider.html#a580a65e7ec89ca98e438ed5267b3c85a">UI.JoystickMovementInputProvider</a>
 </li>
+<li>SpellCombatAction()
+: <a class="el" href="class_magic_1_1_actions_1_1_spell_combat_action.html#a90311c4eacb8843f0e49e609877e26cc">Magic.Actions.SpellCombatAction</a>
+</li>
 <li>Start()
 : <a class="el" href="class_u_i_1_1_bars_1_1_player_bar.html#aca0c94b9d563bcb0c5c6e48c8b410766">UI.Bars.PlayerBar&lt; T &gt;</a>
 </li>
@@ -323,6 +347,10 @@ $(function() {
 </li>
 <li>TileRect()
 : <a class="el" href="struct_levels_1_1_generation_1_1_tile_rect.html#a76e6f084d5fd76e90db5e749e5a96b3c">Levels.Generation.TileRect</a>
+</li>
+<li>TryCast()
+: <a class="el" href="interface_magic_1_1_i_spell_caster.html#a1e5b70c668c7b5e11d8853a02970c601">Magic.ISpellCaster</a>
+, <a class="el" href="class_magic_1_1_spell_caster.html#a2a8c31eeccf5d684a623f650c72175c5">Magic.SpellCaster</a>
 </li>
 <li>TryDrawIcon()
 : <a class="el" href="class_u_i_1_1_minimaps_1_1_pooled_minimap_icon_drawer.html#a6962b33aeed8494dfc38cea4bf7e5a12">UI.Minimaps.PooledMinimapIconDrawer</a>
