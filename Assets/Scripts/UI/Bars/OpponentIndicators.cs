@@ -11,10 +11,10 @@ namespace UI.Bars
 		[SerializeField] private GameObject _contents = default;
 		[SerializeField] private TMP_Text _name = default;
 
-		public void Construct(HealthBar healthBar, CombatBehaviour combatBehaviour)
+		public void Construct(Bar bar, CombatBehaviour combatBehaviour)
 		{
 			_combatBehaviour = combatBehaviour;
-			_healthBar = healthBar;
+			_bar = bar;
 		}
 
 		private void OnEnable()
@@ -40,19 +40,19 @@ namespace UI.Bars
 			if (_combatBehaviour.InInProgress(out var state))
 			{
 				var opponent = state.Unit2;
-				_healthBar.Health = opponent.Get<IHealth>();
+				_bar.ChangingValue = opponent.Get<IHealth>();
 				_name.text = opponent.Get<INamed>().Name;
 				_contents.SetActive(true);
 			}
 			else
 			{
-				_healthBar.Health = null;
+				_bar.ChangingValue = null;
 				_contents.SetActive(false);
 			}
 		}
 
 		private Action _refresh;
 		private CombatBehaviour _combatBehaviour;
-		private HealthBar _healthBar;
+		private Bar _bar;
 	}
 }

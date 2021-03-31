@@ -1,12 +1,7 @@
-﻿using System;
-
-namespace Combat
+﻿namespace Combat
 {
-	public interface IHealth
+	public interface IHealth : IChangingValue
 	{
-		float Value { get; }
-		float MaxValue { get; }
 		bool IsAlive { get; }
-		event Action ValueChanged;
 	}
 }

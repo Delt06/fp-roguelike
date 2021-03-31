@@ -6,20 +6,20 @@ using UnityEngine.UI;
 
 namespace UI.Bars
 {
-	public sealed class HealthBar : MonoBehaviour
+	public sealed class Bar : MonoBehaviour
 	{
 		[SerializeField] private Image _fill = default;
 
 		[CanBeNull]
-		public IHealth Health
+		public IChangingValue ChangingValue
 		{
-			get => _health;
+			get => _changingValue;
 			set
 			{
-				if (_health == value) return;
+				if (_changingValue == value) return;
 
 				TryUnsubscribe();
-				_health = value;
+				_changingValue = value;
 				TrySubscribe();
 				Refresh();
 			}
@@ -27,14 +27,14 @@ namespace UI.Bars
 
 		private void TrySubscribe()
 		{
-			if (_health != null)
-				_health.ValueChanged += _onValueChanged;
+			if (_changingValue != null)
+				_changingValue.ValueChanged += _onValueChanged;
 		}
 
 		private void TryUnsubscribe()
 		{
-			if (_health != null)
-				_health.ValueChanged -= _onValueChanged;
+			if (_changingValue != null)
+				_changingValue.ValueChanged -= _onValueChanged;
 		}
 
 		private void OnEnable()
@@ -60,9 +60,9 @@ namespace UI.Bars
 			_fill.fillAmount = fillAmount;
 		}
 
-		private float GetFillAmount() => Health == null ? 0f : Mathf.Clamp01(Health.Value / Health.MaxValue);
+		private float GetFillAmount() => ChangingValue == null ? 0f : Mathf.Clamp01(ChangingValue.Value / ChangingValue.MaxValue);
 
-		[CanBeNull] private IHealth _health;
+		[CanBeNull] private IChangingValue _changingValue;
 
 		private Action _onValueChanged;
 	}
