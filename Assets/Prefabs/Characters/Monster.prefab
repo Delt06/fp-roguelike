@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f688550f816444b3a64bb5ce39838e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxValue: 1
+  _maxValue: 30
   _onDied:
     m_PersistentCalls:
       m_Calls:
@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 8494829606162591066}
   - component: {fileID: 6913055936285395665}
   - component: {fileID: 8494829606162591063}
+  - component: {fileID: 7651559167722009670}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -366,6 +367,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transform: {fileID: 8494829606162591069}
+--- !u!114 &7651559167722009670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8494829606162591068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffdd5ae673242c5ad4914a8f2da1c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Goblin
 --- !u!1 &8494829606243610010
 GameObject:
   m_ObjectHideFlags: 0

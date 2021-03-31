@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Combat
@@ -7,6 +8,8 @@ namespace Combat
 	{
 		[SerializeField, Min(0f)] private float _maxValue = 100f;
 		[SerializeField] private UnityEvent _onDied;
+
+		public float MaxValue => _maxValue;
 
 		public float Value
 		{
@@ -23,10 +26,12 @@ namespace Combat
 				}
 
 				_value = Mathf.Clamp(_value, 0f, _maxValue);
+				ValueChanged?.Invoke();
 			}
 		}
 
 		public bool IsAlive { get; private set; } = true;
+		public event Action ValueChanged;
 
 		private void OnEnable()
 		{

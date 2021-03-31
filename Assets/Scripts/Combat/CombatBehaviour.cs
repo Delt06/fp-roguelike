@@ -20,7 +20,11 @@ namespace Combat
 			unit1.Get<ICombatHandler>().OnStarted(unit1, unit2);
 			unit2.Get<ICombatHandler>().OnStarted(unit2, unit1);
 			_state = new CombatState(unit1, unit2);
+			Started?.Invoke();
 		}
+
+		public event Action Started;
+		public event Action Finished;
 
 		public bool InInProgress(out CombatState state)
 		{
@@ -97,6 +101,7 @@ namespace Combat
 			unit2.Get<ICombatHandler>().OnFinished(unit2, unit1);
 
 			_state = default;
+			Finished?.Invoke();
 		}
 
 		private CombatState _state;
