@@ -1,5 +1,4 @@
-﻿using System;
-using DELTation.Entities;
+﻿using DELTation.Entities;
 using JetBrains.Annotations;
 
 namespace Combat.Actions

@@ -12,10 +12,6 @@ namespace Combat.Damage
 		public void Take(float damage)
 		{
 			_health.Value -= damage;
-
-			Debug.Log($"{_health} took {damage}.");
-			if (!_health.IsAlive)
-				Debug.Log($"{_health} is dead.");
 		}
 
 		private IModifiableHealth _health;

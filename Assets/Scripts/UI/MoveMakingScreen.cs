@@ -13,7 +13,8 @@ namespace UI
 
 		public void OnClick(MovePreset move)
 		{
-			MoveMaker.PendingMove = move.GetMove(_entity);
+			if (move.IsApplicable(_entity))
+				MoveMaker.PendingMove = move.GetMove(_entity);
 		}
 
 		private void OnEnable()
