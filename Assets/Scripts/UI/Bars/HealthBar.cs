@@ -9,7 +9,7 @@ namespace UI.Bars
 	public sealed class HealthBar : MonoBehaviour
 	{
 		[SerializeField] private Image _fill = default;
-		
+
 		[CanBeNull]
 		public IHealth Health
 		{
@@ -17,7 +17,7 @@ namespace UI.Bars
 			set
 			{
 				if (_health == value) return;
-				
+
 				TryUnsubscribe();
 				_health = value;
 				TrySubscribe();
@@ -60,13 +60,10 @@ namespace UI.Bars
 			_fill.fillAmount = fillAmount;
 		}
 
-		private float GetFillAmount()
-		{
-			return Health == null ? 0f : Mathf.Clamp01(Health.Value / Health.MaxValue);
-		}
+		private float GetFillAmount() => Health == null ? 0f : Mathf.Clamp01(Health.Value / Health.MaxValue);
 
 		[CanBeNull] private IHealth _health;
-		
+
 		private Action _onValueChanged;
 	}
 }

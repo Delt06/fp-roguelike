@@ -1,7 +1,4 @@
 ﻿namespace Tags
 {
-	public sealed class PlayerTag : Tag
-	{
-		
-	}
+	public sealed class PlayerTag : Tag { }
 }

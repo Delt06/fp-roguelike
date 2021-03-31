@@ -10,7 +10,7 @@ namespace UI.Bars
 	{
 		[SerializeField] private GameObject _contents = default;
 		[SerializeField] private TMP_Text _name = default;
-		
+
 		public void Construct(HealthBar healthBar, CombatBehaviour combatBehaviour)
 		{
 			_combatBehaviour = combatBehaviour;
