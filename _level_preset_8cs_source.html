@@ -74,7 +74,7 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_levels.html">Levels</a>.<a class="code" href="namespace_levels_1_1_generation.html">Generation</a>;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_levels.html">Levels</a>.<a class="code" href="namespace_levels_1_1_generation.html">Generation</a>.<a class="code" href="namespace_levels_1_1_generation_1_1_monsters.html">Monsters</a>;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="_level_preset_8cs.html#a24953b19d956caa76c403684c71b4e5b">    5</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_level_preset_8cs.html#a24953b19d956caa76c403684c71b4e5b">Random</a> = System.Random;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="_level_preset_8cs.html#a24953b19d956caa76c403684c71b4e5b">    5</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_random_move_maker_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a> = System.Random;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_levels.html">Levels</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
@@ -124,13 +124,13 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            _tiles = ToFlatArray(tiles);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> GenerateMap(<a class="code" href="struct_levels_1_1_level_tile.html">LevelTile</a>[,] tiles, <a class="code" href="_level_preset_8cs.html#a24953b19d956caa76c403684c71b4e5b">Random</a> random)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> GenerateMap(<a class="code" href="struct_levels_1_1_level_tile.html">LevelTile</a>[,] tiles, <a class="code" href="_random_move_maker_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a> random)</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            var generator = CreateGenerator(random);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            generator.Generate(tiles, out _entryPosition, out _exitPosition);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">private</span> <a class="code" href="class_levels_1_1_generation_1_1_level_generator.html">LevelGenerator</a> CreateGenerator(<a class="code" href="_level_preset_8cs.html#a24953b19d956caa76c403684c71b4e5b">Random</a> random)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">private</span> <a class="code" href="class_levels_1_1_generation_1_1_level_generator.html">LevelGenerator</a> CreateGenerator(<a class="code" href="_random_move_maker_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a> random)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            var levelEntryGenerator = <span class="keyword">new</span> <a class="code" href="class_levels_1_1_generation_1_1_level_entry_generator.html">LevelEntryGenerator</a>(random, _maxEntryPadding);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            var levelExitGenerator = <span class="keyword">new</span> <a class="code" href="class_levels_1_1_generation_1_1_level_exit_generator.html">LevelExitGenerator</a>(random, _minDistanceFromEntryToExit);</div>
@@ -140,7 +140,7 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span> generator;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> GenerateMonsters(LevelTile[,] tiles, <a class="code" href="_level_preset_8cs.html#a24953b19d956caa76c403684c71b4e5b">Random</a> random)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> GenerateMonsters(LevelTile[,] tiles, <a class="code" href="_random_move_maker_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a> random)</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            var monsterGenerator = <span class="keyword">new</span> <a class="code" href="class_levels_1_1_generation_1_1_monsters_1_1_level_monster_generator.html">LevelMonsterGenerator</a>(random, _monsterPositionProbabilities);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            monsterGenerator.Generate(tiles);</div>
@@ -186,6 +186,7 @@ $(function() {
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
 <div class="ttc" id="a_level_preset_8cs_html_a24953b19d956caa76c403684c71b4e5b"><div class="ttname"><a href="_level_preset_8cs.html#a24953b19d956caa76c403684c71b4e5b">Random</a></div><div class="ttdeci">System.Random Random</div><div class="ttdef"><b>Definition:</b> <a href="_level_preset_8cs_source.html#l00005">LevelPreset.cs:5</a></div></div>
+<div class="ttc" id="a_random_move_maker_8cs_html_a832e8f52fca5a678819ec96269dcb532"><div class="ttname"><a href="_random_move_maker_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a></div><div class="ttdeci">UnityEngine.Random Random</div><div class="ttdef"><b>Definition:</b> <a href="_random_move_maker_8cs_source.html#l00004">RandomMoveMaker.cs:4</a></div></div>
 <div class="ttc" id="aclass_levels_1_1_generation_1_1_level_corridors_generator_html"><div class="ttname"><a href="class_levels_1_1_generation_1_1_level_corridors_generator.html">Levels.Generation.LevelCorridorsGenerator</a></div><div class="ttdef"><b>Definition:</b> <a href="_level_corridors_generator_8cs_source.html#l00008">LevelCorridorsGenerator.cs:9</a></div></div>
 <div class="ttc" id="aclass_levels_1_1_generation_1_1_level_entry_generator_html"><div class="ttname"><a href="class_levels_1_1_generation_1_1_level_entry_generator.html">Levels.Generation.LevelEntryGenerator</a></div><div class="ttdef"><b>Definition:</b> <a href="_level_entry_generator_8cs_source.html#l00006">LevelEntryGenerator.cs:7</a></div></div>
 <div class="ttc" id="aclass_levels_1_1_generation_1_1_level_exit_generator_html"><div class="ttname"><a href="class_levels_1_1_generation_1_1_level_exit_generator.html">Levels.Generation.LevelExitGenerator</a></div><div class="ttdef"><b>Definition:</b> <a href="_level_exit_generator_8cs_source.html#l00006">LevelExitGenerator.cs:7</a></div></div>

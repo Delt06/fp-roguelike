@@ -73,45 +73,59 @@ $(function() {
 <a href="_random_move_maker_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_combat.html">Combat</a>.<a class="code" href="namespace_combat_1_1_moves.html">Moves</a>.<a class="code" href="namespace_combat_1_1_moves_1_1_presets.html">Presets</a>;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> DELTation.Entities;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_combat_1_1_moves.html">Combat.Moves</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_combat_1_1_moves_1_1_random_move_maker.html">    7</a></span>&#160;    <span class="keyword">public</span> sealed <span class="keyword">class </span><a class="code" href="class_combat_1_1_moves_1_1_random_move_maker.html">RandomMoveMaker</a> : <a class="code" href="class_mono_behaviour.html">MonoBehaviour</a>, <a class="code" href="interface_combat_1_1_moves_1_1_i_combat_move_maker.html">ICombatMoveMaker</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        [SerializeField] <span class="keyword">private</span> <a class="code" href="class_combat_1_1_moves_1_1_presets_1_1_move_preset.html">MovePreset</a>[] _movePresets = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_combat_1_1_moves_1_1_random_move_maker.html#a5b85365836856f42367f7011b9515c03">   11</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_combat_1_1_moves_1_1_random_move_maker.html#a5b85365836856f42367f7011b9515c03">Construct</a>(IEntity entity)</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            _entity = entity;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        }</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_combat_1_1_moves_1_1_random_move_maker.html#a68dc20c1f5ce627df988c2b68f8e4f14">   16</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_combat_1_1_moves_1_1_random_move_maker.html#a68dc20c1f5ce627df988c2b68f8e4f14">TryMakeMove</a>(out <a class="code" href="struct_combat_1_1_moves_1_1_move.html">Move</a> move)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">if</span> (_movePresets.Length == 0)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                move = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            move = GetRandomMove();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">private</span> <a class="code" href="struct_combat_1_1_moves_1_1_move.html">Move</a> GetRandomMove()</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            var index = <a class="code" href="_level_preset_8cs.html#a24953b19d956caa76c403684c71b4e5b">Random</a>.Range(0, _movePresets.Length);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            var preset = _movePresets[index];</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">return</span> preset.GetMove(_entity);</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="_random_move_maker_8cs.html#a832e8f52fca5a678819ec96269dcb532">    4</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_random_move_maker_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a> = UnityEngine.Random;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_combat_1_1_moves.html">Combat.Moves</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_combat_1_1_moves_1_1_random_move_maker.html">    8</a></span>&#160;    <span class="keyword">public</span> sealed <span class="keyword">class </span><a class="code" href="class_combat_1_1_moves_1_1_random_move_maker.html">RandomMoveMaker</a> : <a class="code" href="class_mono_behaviour.html">MonoBehaviour</a>, <a class="code" href="interface_combat_1_1_moves_1_1_i_combat_move_maker.html">ICombatMoveMaker</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        [SerializeField] <span class="keyword">private</span> <a class="code" href="class_combat_1_1_moves_1_1_presets_1_1_move_preset.html">MovePreset</a>[] _movePresets = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        [SerializeField, Min(0f)] <span class="keyword">private</span> <span class="keywordtype">float</span> _delay = 0.5f;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_combat_1_1_moves_1_1_random_move_maker.html#a5b85365836856f42367f7011b9515c03">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_combat_1_1_moves_1_1_random_move_maker.html#a5b85365836856f42367f7011b9515c03">Construct</a>(IEntity entity)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            _entity = entity;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_combat_1_1_moves_1_1_random_move_maker.html#ab4e56df171481b8efe6930abe6f03b75">   18</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_combat_1_1_moves_1_1_random_move_maker.html#ab4e56df171481b8efe6930abe6f03b75">OnReadyToMakeMove</a>()</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            _remainingTime = _delay;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_combat_1_1_moves_1_1_random_move_maker.html#a68dc20c1f5ce627df988c2b68f8e4f14">   23</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_combat_1_1_moves_1_1_random_move_maker.html#a68dc20c1f5ce627df988c2b68f8e4f14">TryMakeMove</a>(out <a class="code" href="struct_combat_1_1_moves_1_1_move.html">Move</a> move)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">if</span> (_remainingTime &gt; 0f || _movePresets.Length == 0)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                move = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            move = GetRandomMove();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">private</span> IEntity _entity;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="ttc" id="a_level_preset_8cs_html_a24953b19d956caa76c403684c71b4e5b"><div class="ttname"><a href="_level_preset_8cs.html#a24953b19d956caa76c403684c71b4e5b">Random</a></div><div class="ttdeci">System.Random Random</div><div class="ttdef"><b>Definition:</b> <a href="_level_preset_8cs_source.html#l00005">LevelPreset.cs:5</a></div></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">private</span> <a class="code" href="struct_combat_1_1_moves_1_1_move.html">Move</a> GetRandomMove()</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            var index = <a class="code" href="_random_move_maker_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(0, _movePresets.Length);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            var preset = _movePresets[index];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">return</span> preset.GetMove(_entity);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Update()</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            _remainingTime -= Time.deltaTime;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">private</span> IEntity _entity;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span> _remainingTime;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="ttc" id="a_random_move_maker_8cs_html_a832e8f52fca5a678819ec96269dcb532"><div class="ttname"><a href="_random_move_maker_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a></div><div class="ttdeci">UnityEngine.Random Random</div><div class="ttdef"><b>Definition:</b> <a href="_random_move_maker_8cs_source.html#l00004">RandomMoveMaker.cs:4</a></div></div>
 <div class="ttc" id="aclass_combat_1_1_moves_1_1_presets_1_1_move_preset_html"><div class="ttname"><a href="class_combat_1_1_moves_1_1_presets_1_1_move_preset.html">Combat.Moves.Presets.MovePreset</a></div><div class="ttdef"><b>Definition:</b> <a href="_move_preset_8cs_source.html#l00007">MovePreset.cs:8</a></div></div>
-<div class="ttc" id="aclass_combat_1_1_moves_1_1_random_move_maker_html"><div class="ttname"><a href="class_combat_1_1_moves_1_1_random_move_maker.html">Combat.Moves.RandomMoveMaker</a></div><div class="ttdef"><b>Definition:</b> <a href="_random_move_maker_8cs_source.html#l00007">RandomMoveMaker.cs:8</a></div></div>
-<div class="ttc" id="aclass_combat_1_1_moves_1_1_random_move_maker_html_a5b85365836856f42367f7011b9515c03"><div class="ttname"><a href="class_combat_1_1_moves_1_1_random_move_maker.html#a5b85365836856f42367f7011b9515c03">Combat.Moves.RandomMoveMaker.Construct</a></div><div class="ttdeci">void Construct(IEntity entity)</div><div class="ttdef"><b>Definition:</b> <a href="_random_move_maker_8cs_source.html#l00011">RandomMoveMaker.cs:11</a></div></div>
-<div class="ttc" id="aclass_combat_1_1_moves_1_1_random_move_maker_html_a68dc20c1f5ce627df988c2b68f8e4f14"><div class="ttname"><a href="class_combat_1_1_moves_1_1_random_move_maker.html#a68dc20c1f5ce627df988c2b68f8e4f14">Combat.Moves.RandomMoveMaker.TryMakeMove</a></div><div class="ttdeci">bool TryMakeMove(out Move move)</div><div class="ttdef"><b>Definition:</b> <a href="_random_move_maker_8cs_source.html#l00016">RandomMoveMaker.cs:16</a></div></div>
+<div class="ttc" id="aclass_combat_1_1_moves_1_1_random_move_maker_html"><div class="ttname"><a href="class_combat_1_1_moves_1_1_random_move_maker.html">Combat.Moves.RandomMoveMaker</a></div><div class="ttdef"><b>Definition:</b> <a href="_random_move_maker_8cs_source.html#l00008">RandomMoveMaker.cs:9</a></div></div>
+<div class="ttc" id="aclass_combat_1_1_moves_1_1_random_move_maker_html_a5b85365836856f42367f7011b9515c03"><div class="ttname"><a href="class_combat_1_1_moves_1_1_random_move_maker.html#a5b85365836856f42367f7011b9515c03">Combat.Moves.RandomMoveMaker.Construct</a></div><div class="ttdeci">void Construct(IEntity entity)</div><div class="ttdef"><b>Definition:</b> <a href="_random_move_maker_8cs_source.html#l00013">RandomMoveMaker.cs:13</a></div></div>
+<div class="ttc" id="aclass_combat_1_1_moves_1_1_random_move_maker_html_a68dc20c1f5ce627df988c2b68f8e4f14"><div class="ttname"><a href="class_combat_1_1_moves_1_1_random_move_maker.html#a68dc20c1f5ce627df988c2b68f8e4f14">Combat.Moves.RandomMoveMaker.TryMakeMove</a></div><div class="ttdeci">bool TryMakeMove(out Move move)</div><div class="ttdef"><b>Definition:</b> <a href="_random_move_maker_8cs_source.html#l00023">RandomMoveMaker.cs:23</a></div></div>
+<div class="ttc" id="aclass_combat_1_1_moves_1_1_random_move_maker_html_ab4e56df171481b8efe6930abe6f03b75"><div class="ttname"><a href="class_combat_1_1_moves_1_1_random_move_maker.html#ab4e56df171481b8efe6930abe6f03b75">Combat.Moves.RandomMoveMaker.OnReadyToMakeMove</a></div><div class="ttdeci">void OnReadyToMakeMove()</div><div class="ttdef"><b>Definition:</b> <a href="_random_move_maker_8cs_source.html#l00018">RandomMoveMaker.cs:18</a></div></div>
 <div class="ttc" id="aclass_mono_behaviour_html"><div class="ttname"><a href="class_mono_behaviour.html">MonoBehaviour</a></div></div>
 <div class="ttc" id="ainterface_combat_1_1_moves_1_1_i_combat_move_maker_html"><div class="ttname"><a href="interface_combat_1_1_moves_1_1_i_combat_move_maker.html">Combat.Moves.ICombatMoveMaker</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_combat_move_maker_8cs_source.html#l00003">ICombatMoveMaker.cs:4</a></div></div>
 <div class="ttc" id="anamespace_combat_1_1_moves_1_1_presets_html"><div class="ttname"><a href="namespace_combat_1_1_moves_1_1_presets.html">Combat.Moves.Presets</a></div><div class="ttdef"><b>Definition:</b> <a href="_actions_helper_8cs_source.html#l00005">ActionsHelper.cs:6</a></div></div>

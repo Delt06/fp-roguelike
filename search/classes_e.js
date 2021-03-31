@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['randommovemaker_510',['RandomMoveMaker',['../class_combat_1_1_moves_1_1_random_move_maker.html',1,'Combat::Moves']]],
-  ['room_511',['Room',['../class_levels_1_1_room.html',1,'Levels']]],
-  ['roomconnector_512',['RoomConnector',['../class_levels_1_1_room_connector.html',1,'Levels']]],
-  ['rotatedtransform_513',['RotatedTransform',['../class_controls_1_1_rotated_transform.html',1,'Controls']]],
-  ['runtimelevel_514',['RuntimeLevel',['../class_levels_1_1_runtime_1_1_runtime_level.html',1,'Levels::Runtime']]],
-  ['runtimelevelbuilder_5fcombinemesh_515',['RuntimeLevelBuilder_CombineMesh',['../class_levels_1_1_runtime_1_1_runtime_level_builder___combine_mesh.html',1,'Levels::Runtime']]],
-  ['runtimelevelbuilder_5fplaceplayer_516',['RuntimeLevelBuilder_PlacePlayer',['../class_levels_1_1_runtime_1_1_runtime_level_builder___place_player.html',1,'Levels::Runtime']]],
-  ['runtimelevelbuilder_5fspawnmonsters_517',['RuntimeLevelBuilder_SpawnMonsters',['../class_levels_1_1_runtime_1_1_runtime_level_builder___spawn_monsters.html',1,'Levels::Runtime']]],
-  ['runtimeleveldata_518',['RuntimeLevelData',['../struct_levels_1_1_runtime_1_1_runtime_level_data.html',1,'Levels::Runtime']]]
+  ['scriptableobject_515',['ScriptableObject',['../class_scriptable_object.html',1,'']]],
+  ['spellasset_516',['SpellAsset',['../class_magic_1_1_spells_1_1_spell_asset.html',1,'Magic::Spells']]],
+  ['spellasset_5fhealing_517',['SpellAsset_Healing',['../class_magic_1_1_concrete_1_1_healing_1_1_spell_asset___healing.html',1,'Magic::Concrete::Healing']]],
+  ['spellcaster_518',['SpellCaster',['../class_magic_1_1_spell_caster.html',1,'Magic']]],
+  ['spellcombataction_519',['SpellCombatAction',['../class_magic_1_1_actions_1_1_spell_combat_action.html',1,'Magic::Actions']]]
 ];
