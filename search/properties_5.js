@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['margin_683',['Margin',['../class_levels_1_1_custom_editors_1_1_level_preset_custom_editor.html#ad19c444f95aac98d1fee9695729bab0a',1,'Levels.CustomEditors.LevelPresetCustomEditor.Margin()'],['../class_levels_1_1_custom_editors_1_1_level_preset_custom_editor_base.html#a40f735d3189e4113411a83d05d35fc81',1,'Levels.CustomEditors.LevelPresetCustomEditorBase.Margin()']]],
-  ['minimap_684',['Minimap',['../class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension_base.html#a817810e7c50eda78fc2bfc55abdd59d3',1,'UI::Minimaps::Extensions::MinimapExtensionBase']]]
+  ['image_746',['Image',['../class_u_i_1_1_minimaps_1_1_minimap_icon.html#aff3d3aa9ad1e93c842c8661c05afcc76',1,'UI::Minimaps::MinimapIcon']]],
+  ['input_747',['Input',['../interface_controls_1_1_i_movement_input_provider.html#a55cf590bf1f1ffaa161df332c65d547e',1,'Controls.IMovementInputProvider.Input()'],['../class_u_i_1_1_joystick_movement_input_provider.html#a1c30c470bcdbf3aca53cb39d5b286216',1,'UI.JoystickMovementInputProvider.Input()']]],
+  ['isalive_748',['IsAlive',['../class_combat_1_1_health.html#acc302b549e80879770b424386062b576',1,'Combat.Health.IsAlive()'],['../interface_combat_1_1_i_health.html#aff7c1e03772f994bbbe3058a3e91ddb9',1,'Combat.IHealth.IsAlive()']]],
+  ['isrevealed_749',['IsRevealed',['../class_fog_of_war_1_1_fog_of_war_object.html#aa1e82961714c26e17701ff7f06fff7a8',1,'FogOfWar::FogOfWarObject']]]
 ];

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['size_693',['Size',['../class_u_i_1_1_minimaps_1_1_minimap_icon.html#a9ef619ce80ead840ac62d6c4dd2ef4d4',1,'UI::Minimaps::MinimapIcon']]],
-  ['southdoor_694',['SouthDoor',['../class_levels_1_1_room.html#aa20dfe823f600e17a18dd49f6ed4ee5e',1,'Levels::Room']]],
-  ['spawnpoint_695',['SpawnPoint',['../class_levels_1_1_room.html#a134b02b625f12e2b5b74f6ebcd560b02',1,'Levels::Room']]],
-  ['speed_696',['Speed',['../class_controls_1_1_data_1_1_character_controls_data.html#a60b2b8f9771866397e8421d0061470c5',1,'Controls::Data::CharacterControlsData']]]
+  ['recttransform_757',['RectTransform',['../class_u_i_1_1_minimaps_1_1_minimap_icon.html#a2b38b69d1c06bf5ad601dfbf94fb4f88',1,'UI::Minimaps::MinimapIcon']]],
+  ['referenceposition_758',['ReferencePosition',['../class_u_i_1_1_minimaps_1_1_minimap.html#a8047f0b143b1b942c040907b8077f384',1,'UI::Minimaps::Minimap']]],
+  ['referencerotation_759',['ReferenceRotation',['../class_u_i_1_1_minimaps_1_1_minimap.html#af413cb0b1f6fac97f97c31189f6c8d28',1,'UI::Minimaps::Minimap']]],
+  ['revealingprogress_760',['RevealingProgress',['../class_fog_of_war_1_1_fog_of_war_object.html#ab9a16c04fa211129d9090ae3a8ef694b',1,'FogOfWar::FogOfWarObject']]],
+  ['rotationangle_761',['RotationAngle',['../class_controls_1_1_data_1_1_character_controls_data.html#ae884704f93829547c038707ed443ceaf',1,'Controls::Data::CharacterControlsData']]]
 ];

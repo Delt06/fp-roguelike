@@ -92,93 +92,100 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            unit1.Get&lt;<a class="code" href="interface_combat_1_1_handlers_1_1_i_combat_handler.html">ICombatHandler</a>&gt;().OnStarted(unit1, unit2);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            unit2.Get&lt;<a class="code" href="interface_combat_1_1_handlers_1_1_i_combat_handler.html">ICombatHandler</a>&gt;().OnStarted(unit2, unit1);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            _state = <span class="keyword">new</span> <a class="code" href="struct_combat_1_1_combat_state.html">CombatState</a>(unit1, unit2);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_combat_1_1_combat_behaviour.html#a45c71db70219b6ce358725919581c5f8">   25</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_combat_1_1_combat_behaviour.html#a45c71db70219b6ce358725919581c5f8">InInProgress</a>(out <a class="code" href="struct_combat_1_1_combat_state.html">CombatState</a> state)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">if</span> (_state.<a class="code" href="struct_combat_1_1_combat_state.html#a9d7cfa9414827cd280cc34015ac090a6">IsValid</a>)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                state = _state;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            state = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <a class="code" href="class_combat_1_1_combat_behaviour.html#af474d7e688304972fb67c50542bccc6f">Started</a>?.Invoke();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_combat_1_1_combat_behaviour.html#af474d7e688304972fb67c50542bccc6f">   26</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">event</span> Action <a class="code" href="class_combat_1_1_combat_behaviour.html#af474d7e688304972fb67c50542bccc6f">Started</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_combat_1_1_combat_behaviour.html#a39bcea830ce1d67c991b8441ad2c40a8">   27</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">event</span> Action <a class="code" href="class_combat_1_1_combat_behaviour.html#a39bcea830ce1d67c991b8441ad2c40a8">Finished</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_combat_1_1_combat_behaviour.html#a45c71db70219b6ce358725919581c5f8">   29</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_combat_1_1_combat_behaviour.html#a45c71db70219b6ce358725919581c5f8">InInProgress</a>(out <a class="code" href="struct_combat_1_1_combat_state.html">CombatState</a> state)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> (_state.<a class="code" href="struct_combat_1_1_combat_state.html#a9d7cfa9414827cd280cc34015ac090a6">IsValid</a>)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                state = _state;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Update()</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">if</span> (_state.<a class="code" href="struct_combat_1_1_combat_state.html#a9d7cfa9414827cd280cc34015ac090a6">IsValid</a>)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                TryStartMove();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                UpdateCurrentMoveTimer();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> TryStartMove()</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (_state.<a class="code" href="struct_combat_1_1_combat_state.html#ac772b7ba174766d47d208caadadc17cc">MoveInProcess</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            state = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Update()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (_state.<a class="code" href="struct_combat_1_1_combat_state.html#a9d7cfa9414827cd280cc34015ac090a6">IsValid</a>)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                TryStartMove();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                UpdateCurrentMoveTimer();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            var thisMoveMaker = ThisUnit.Get&lt;<a class="code" href="interface_combat_1_1_moves_1_1_i_combat_move_maker.html">ICombatMoveMaker</a>&gt;();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">if</span> (!thisMoveMaker.TryMakeMove(out var move)) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            _moveRemainingTime = move.Duration;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            _currentMove = move;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            move.<a class="code" href="struct_combat_1_1_moves_1_1_move.html#a7beee4a9bd1b810e3e67d96346a56842">StartAction</a>?.Perform(ThisUnit, OtherUnit);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            OnStartedMove();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnStartedMove()</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            _state.<a class="code" href="struct_combat_1_1_combat_state.html#ac772b7ba174766d47d208caadadc17cc">MoveInProcess</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> UpdateCurrentMoveTimer()</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">if</span> (_currentMove == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> TryStartMove()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">if</span> (_state.<a class="code" href="struct_combat_1_1_combat_state.html#ac772b7ba174766d47d208caadadc17cc">MoveInProcess</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            var thisMoveMaker = ThisUnit.Get&lt;<a class="code" href="interface_combat_1_1_moves_1_1_i_combat_move_maker.html">ICombatMoveMaker</a>&gt;();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">if</span> (!thisMoveMaker.TryMakeMove(out var move)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            _moveRemainingTime = move.Duration;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            _currentMove = move;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            move.<a class="code" href="struct_combat_1_1_moves_1_1_move.html#a7beee4a9bd1b810e3e67d96346a56842">StartAction</a>?.Perform(ThisUnit, OtherUnit);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            OnStartedMove();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnStartedMove()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            _state.<a class="code" href="struct_combat_1_1_combat_state.html#ac772b7ba174766d47d208caadadc17cc">MoveInProcess</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            _moveRemainingTime -= Time.deltaTime;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">if</span> (_moveRemainingTime &gt; 0f) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            _currentMove.Value.<a class="code" href="struct_combat_1_1_moves_1_1_move.html#aee7be63e01c8531f5e06678ab68ef791">FinishAction</a>.Perform(ThisUnit, OtherUnit);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            _currentMove = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            OnFinishedMove();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">private</span> IEntity ThisUnit =&gt; _state.TurnIndex == 0 ? _state.Unit1 : _state.Unit2;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">private</span> IEntity OtherUnit =&gt; _state.TurnIndex == 0 ? _state.Unit2 : _state.Unit1;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnFinishedMove()</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">if</span> (!ThisUnit.IsAlive() || !OtherUnit.IsAlive())</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                Finish();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> UpdateCurrentMoveTimer()</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">if</span> (_currentMove == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            _moveRemainingTime -= Time.deltaTime;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">if</span> (_moveRemainingTime &gt; 0f) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            _currentMove.Value.<a class="code" href="struct_combat_1_1_moves_1_1_move.html#aee7be63e01c8531f5e06678ab68ef791">FinishAction</a>.Perform(ThisUnit, OtherUnit);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            _currentMove = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            OnFinishedMove();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">private</span> IEntity ThisUnit =&gt; _state.TurnIndex == 0 ? _state.Unit1 : _state.Unit2;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">private</span> IEntity OtherUnit =&gt; _state.TurnIndex == 0 ? _state.Unit2 : _state.Unit1;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnFinishedMove()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">if</span> (!ThisUnit.IsAlive() || !OtherUnit.IsAlive())</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                _state.<a class="code" href="struct_combat_1_1_combat_state.html#ac772b7ba174766d47d208caadadc17cc">MoveInProcess</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                _state.<a class="code" href="struct_combat_1_1_combat_state.html#a3223f390fe360be6b7d5fdf81edbf909">TurnIndex</a> = (_state.<a class="code" href="struct_combat_1_1_combat_state.html#a3223f390fe360be6b7d5fdf81edbf909">TurnIndex</a> + 1) % 2;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Finish()</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            var unit1 = _state.<a class="code" href="struct_combat_1_1_combat_state.html#a8cf50823e905b61746414acce9f99e1f">Unit1</a>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            var unit2 = _state.<a class="code" href="struct_combat_1_1_combat_state.html#a60ecdbeba18e75d621dac88d9f905114">Unit2</a>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            unit1.Get&lt;<a class="code" href="interface_combat_1_1_handlers_1_1_i_combat_handler.html">ICombatHandler</a>&gt;().OnFinished(unit1, unit2);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            unit2.Get&lt;<a class="code" href="interface_combat_1_1_handlers_1_1_i_combat_handler.html">ICombatHandler</a>&gt;().OnFinished(unit2, unit1);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            _state = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">private</span> CombatState _state;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span> _moveRemainingTime;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">private</span> <a class="code" href="struct_combat_1_1_moves_1_1_move.html">Move</a>? _currentMove;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                Finish();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                _state.<a class="code" href="struct_combat_1_1_combat_state.html#ac772b7ba174766d47d208caadadc17cc">MoveInProcess</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                _state.<a class="code" href="struct_combat_1_1_combat_state.html#a3223f390fe360be6b7d5fdf81edbf909">TurnIndex</a> = (_state.<a class="code" href="struct_combat_1_1_combat_state.html#a3223f390fe360be6b7d5fdf81edbf909">TurnIndex</a> + 1) % 2;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Finish()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            var unit1 = _state.<a class="code" href="struct_combat_1_1_combat_state.html#a8cf50823e905b61746414acce9f99e1f">Unit1</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            var unit2 = _state.<a class="code" href="struct_combat_1_1_combat_state.html#a60ecdbeba18e75d621dac88d9f905114">Unit2</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            unit1.Get&lt;<a class="code" href="interface_combat_1_1_handlers_1_1_i_combat_handler.html">ICombatHandler</a>&gt;().OnFinished(unit1, unit2);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            unit2.Get&lt;<a class="code" href="interface_combat_1_1_handlers_1_1_i_combat_handler.html">ICombatHandler</a>&gt;().OnFinished(unit2, unit1);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            _state = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <a class="code" href="class_combat_1_1_combat_behaviour.html#a39bcea830ce1d67c991b8441ad2c40a8">Finished</a>?.Invoke();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keyword">private</span> CombatState _state;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span> _moveRemainingTime;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">private</span> <a class="code" href="struct_combat_1_1_moves_1_1_move.html">Move</a>? _currentMove;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
 <div class="ttc" id="aclass_combat_1_1_combat_behaviour_html"><div class="ttname"><a href="class_combat_1_1_combat_behaviour.html">Combat.CombatBehaviour</a></div><div class="ttdef"><b>Definition:</b> <a href="_combat_behaviour_8cs_source.html#l00010">CombatBehaviour.cs:11</a></div></div>
-<div class="ttc" id="aclass_combat_1_1_combat_behaviour_html_a45c71db70219b6ce358725919581c5f8"><div class="ttname"><a href="class_combat_1_1_combat_behaviour.html#a45c71db70219b6ce358725919581c5f8">Combat.CombatBehaviour.InInProgress</a></div><div class="ttdeci">bool InInProgress(out CombatState state)</div><div class="ttdef"><b>Definition:</b> <a href="_combat_behaviour_8cs_source.html#l00025">CombatBehaviour.cs:25</a></div></div>
+<div class="ttc" id="aclass_combat_1_1_combat_behaviour_html_a39bcea830ce1d67c991b8441ad2c40a8"><div class="ttname"><a href="class_combat_1_1_combat_behaviour.html#a39bcea830ce1d67c991b8441ad2c40a8">Combat.CombatBehaviour.Finished</a></div><div class="ttdeci">Action Finished</div><div class="ttdef"><b>Definition:</b> <a href="_combat_behaviour_8cs_source.html#l00027">CombatBehaviour.cs:27</a></div></div>
+<div class="ttc" id="aclass_combat_1_1_combat_behaviour_html_a45c71db70219b6ce358725919581c5f8"><div class="ttname"><a href="class_combat_1_1_combat_behaviour.html#a45c71db70219b6ce358725919581c5f8">Combat.CombatBehaviour.InInProgress</a></div><div class="ttdeci">bool InInProgress(out CombatState state)</div><div class="ttdef"><b>Definition:</b> <a href="_combat_behaviour_8cs_source.html#l00029">CombatBehaviour.cs:29</a></div></div>
 <div class="ttc" id="aclass_combat_1_1_combat_behaviour_html_abfdc1121fb13e308bb529454eac265ca"><div class="ttname"><a href="class_combat_1_1_combat_behaviour.html#abfdc1121fb13e308bb529454eac265ca">Combat.CombatBehaviour.TryStart</a></div><div class="ttdeci">void TryStart([NotNull] IEntity unit1, [NotNull] IEntity unit2)</div><div class="ttdef"><b>Definition:</b> <a href="_combat_behaviour_8cs_source.html#l00012">CombatBehaviour.cs:12</a></div></div>
+<div class="ttc" id="aclass_combat_1_1_combat_behaviour_html_af474d7e688304972fb67c50542bccc6f"><div class="ttname"><a href="class_combat_1_1_combat_behaviour.html#af474d7e688304972fb67c50542bccc6f">Combat.CombatBehaviour.Started</a></div><div class="ttdeci">Action Started</div><div class="ttdef"><b>Definition:</b> <a href="_combat_behaviour_8cs_source.html#l00026">CombatBehaviour.cs:26</a></div></div>
 <div class="ttc" id="aclass_mono_behaviour_html"><div class="ttname"><a href="class_mono_behaviour.html">MonoBehaviour</a></div></div>
 <div class="ttc" id="ainterface_combat_1_1_handlers_1_1_i_combat_handler_html"><div class="ttname"><a href="interface_combat_1_1_handlers_1_1_i_combat_handler.html">Combat.Handlers.ICombatHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_combat_handler_8cs_source.html#l00006">ICombatHandler.cs:7</a></div></div>
 <div class="ttc" id="ainterface_combat_1_1_moves_1_1_i_combat_move_maker_html"><div class="ttname"><a href="interface_combat_1_1_moves_1_1_i_combat_move_maker.html">Combat.Moves.ICombatMoveMaker</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_combat_move_maker_8cs_source.html#l00003">ICombatMoveMaker.cs:4</a></div></div>

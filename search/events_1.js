@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ondragged_705',['OnDragged',['../interface_controls_1_1_i_drag_provider.html#a26378b29df1c1affac2bf480602e2d70',1,'Controls.IDragProvider.OnDragged()'],['../class_u_i_1_1_drag_provider.html#a97d911e7851c0a82afb032edaaf97ae9',1,'UI.DragProvider.OnDragged()']]]
+  ['movedemandbegan_773',['MoveDemandBegan',['../class_combat_1_1_moves_1_1_manual_move_maker.html#a82c8b8b8eebe88ddaeeea4f60968e5d7',1,'Combat::Moves::ManualMoveMaker']]],
+  ['movedemandended_774',['MoveDemandEnded',['../class_combat_1_1_moves_1_1_manual_move_maker.html#a65bdf30ed2fb6a13a3c9f3a55edff24b',1,'Combat::Moves::ManualMoveMaker']]]
 ];

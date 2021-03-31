@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['health_365',['Health',['../class_combat_1_1_health.html',1,'Combat']]],
-  ['healthdamagetaker_366',['HealthDamageTaker',['../class_combat_1_1_damage_1_1_health_damage_taker.html',1,'Combat::Damage']]]
+  ['fogofwarobject_399',['FogOfWarObject',['../class_fog_of_war_1_1_fog_of_war_object.html',1,'FogOfWar']]],
+  ['fogofwarobjecttrigger_400',['FogOfWarObjectTrigger',['../class_fog_of_war_1_1_fog_of_war_object_trigger.html',1,'FogOfWar']]],
+  ['fogofwarrevealer_401',['FogOfWarRevealer',['../class_fog_of_war_1_1_fog_of_war_revealer.html',1,'FogOfWar']]]
 ];

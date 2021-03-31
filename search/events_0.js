@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['movedemandbegan_703',['MoveDemandBegan',['../class_combat_1_1_moves_1_1_manual_move_maker.html#a82c8b8b8eebe88ddaeeea4f60968e5d7',1,'Combat::Moves::ManualMoveMaker']]],
-  ['movedemandended_704',['MoveDemandEnded',['../class_combat_1_1_moves_1_1_manual_move_maker.html#a65bdf30ed2fb6a13a3c9f3a55edff24b',1,'Combat::Moves::ManualMoveMaker']]]
+  ['finished_772',['Finished',['../class_combat_1_1_combat_behaviour.html#a39bcea830ce1d67c991b8441ad2c40a8',1,'Combat::CombatBehaviour']]]
 ];

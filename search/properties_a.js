@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['tilesize_697',['TileSize',['../class_levels_1_1_custom_editors_1_1_level_preset_custom_editor.html#a2de0fdfaf57739a3e0df04658b8b0c27',1,'Levels.CustomEditors.LevelPresetCustomEditor.TileSize()'],['../class_levels_1_1_custom_editors_1_1_level_preset_custom_editor_base.html#af3e78151768cb686687806fc3a0fd503',1,'Levels.CustomEditors.LevelPresetCustomEditorBase.TileSize()']]],
-  ['transform_698',['Transform',['../interface_controls_1_1_i_rotated_transform.html#a325bbaedaac5abb6a60957c808f465e8',1,'Controls.IRotatedTransform.Transform()'],['../class_controls_1_1_rotated_transform.html#a8ab08f7818aab1e427c8e5c2640c8c02',1,'Controls.RotatedTransform.Transform()']]]
+  ['size_762',['Size',['../class_u_i_1_1_minimaps_1_1_minimap_icon.html#a9ef619ce80ead840ac62d6c4dd2ef4d4',1,'UI::Minimaps::MinimapIcon']]],
+  ['southdoor_763',['SouthDoor',['../class_levels_1_1_room.html#aa20dfe823f600e17a18dd49f6ed4ee5e',1,'Levels::Room']]],
+  ['spawnpoint_764',['SpawnPoint',['../class_levels_1_1_room.html#a134b02b625f12e2b5b74f6ebcd560b02',1,'Levels::Room']]],
+  ['speed_765',['Speed',['../class_controls_1_1_data_1_1_character_controls_data.html#a60b2b8f9771866397e8421d0061470c5',1,'Controls::Data::CharacterControlsData']]]
 ];

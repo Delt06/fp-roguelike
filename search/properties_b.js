@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['value_699',['Value',['../class_combat_1_1_health.html#a6fa622a9316fe5374506d60a33834a3a',1,'Combat.Health.Value()'],['../interface_combat_1_1_i_health.html#a7c4bb4e9209b36da8d4704ef159210e4',1,'Combat.IHealth.Value()'],['../interface_combat_1_1_i_modifiable_health.html#ae1489370be563a004c4da5584fd5e7b9',1,'Combat.IModifiableHealth.Value()']]]
+  ['tilesize_766',['TileSize',['../class_levels_1_1_custom_editors_1_1_level_preset_custom_editor.html#a2de0fdfaf57739a3e0df04658b8b0c27',1,'Levels.CustomEditors.LevelPresetCustomEditor.TileSize()'],['../class_levels_1_1_custom_editors_1_1_level_preset_custom_editor_base.html#af3e78151768cb686687806fc3a0fd503',1,'Levels.CustomEditors.LevelPresetCustomEditorBase.TileSize()']]],
+  ['transform_767',['Transform',['../interface_controls_1_1_i_rotated_transform.html#a325bbaedaac5abb6a60957c808f465e8',1,'Controls.IRotatedTransform.Transform()'],['../class_controls_1_1_rotated_transform.html#a8ab08f7818aab1e427c8e5c2640c8c02',1,'Controls.RotatedTransform.Transform()']]]
 ];
