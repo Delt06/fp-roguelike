@@ -1,5 +1,6 @@
 ﻿using System;
 using Combat;
+using Events;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,7 +8,7 @@ namespace Magic.Concrete.Healing
 {
 	public sealed class HealingComponent : MonoBehaviour
 	{
-		[SerializeField] private UnityEvent _onHealed = default;
+		[SerializeField] private SimpleUnityEvent _onHealed = default;
 		
 		public void Construct(Health health)
 		{

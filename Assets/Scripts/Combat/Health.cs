@@ -1,13 +1,13 @@
 ﻿using System;
+using Events;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Combat
 {
 	public sealed class Health : MonoBehaviour, IModifiableHealth
 	{
 		[SerializeField, Min(0f)] private float _maxValue = 100f;
-		[SerializeField] private UnityEvent _onDied;
+		[SerializeField] private SimpleUnityEvent _onDied = default;
 
 		public float MaxValue => _maxValue;
 
@@ -22,7 +22,7 @@ namespace Combat
 				if (_value <= 0f)
 				{
 					IsAlive = false;
-					_onDied.Invoke();
+					_onDied?.Invoke();
 				}
 
 				_value = Mathf.Clamp(_value, 0f, _maxValue);
