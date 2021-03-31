@@ -71,19 +71,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="_health_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine.Events;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_events.html">Events</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_combat.html">Combat</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_combat_1_1_health.html">    7</a></span>&#160;    <span class="keyword">public</span> sealed <span class="keyword">class </span><a class="code" href="class_combat_1_1_health.html">Health</a> : <a class="code" href="class_mono_behaviour.html">MonoBehaviour</a>, <a class="code" href="interface_combat_1_1_i_modifiable_health.html">IModifiableHealth</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        [SerializeField, Min(0f)] <span class="keyword">private</span> <span class="keywordtype">float</span> _maxValue = 100f;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        [SerializeField] <span class="keyword">private</span> UnityEvent _onDied;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        [SerializeField] <span class="keyword">private</span> <a class="code" href="class_events_1_1_simple_unity_event.html">SimpleUnityEvent</a> _onDied = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_combat_1_1_health.html#afe12c8036fe6627d92c4dc3b77946f22">   12</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_combat_1_1_health.html#afe12c8036fe6627d92c4dc3b77946f22">MaxValue</a> =&gt; _maxValue;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_combat_1_1_health.html#aef8c6c03b635344b19de4ff8829cd2bf">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_combat_1_1_health.html#aef8c6c03b635344b19de4ff8829cd2bf">Value</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_combat_1_1_health.html#aaf4e3a6b7f4c8caa29e2e77c719f9f80">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_combat_1_1_health.html#aaf4e3a6b7f4c8caa29e2e77c719f9f80">Value</a></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">get</span> =&gt; <a class="code" href="class_combat_1_1_health.html#acc302b549e80879770b424386062b576">IsAlive</a> ? _value : 0f;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">set</span></div>
@@ -94,7 +94,7 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="keywordflow">if</span> (_value &lt;= 0f)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                    <a class="code" href="class_combat_1_1_health.html#acc302b549e80879770b424386062b576">IsAlive</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                    _onDied.Invoke();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                    _onDied?.Invoke();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                }</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                _value = Mathf.Clamp(_value, 0f, _maxValue);</div>
@@ -108,7 +108,7 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnEnable()</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <a class="code" href="class_combat_1_1_health.html#acc302b549e80879770b424386062b576">IsAlive</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="class_combat_1_1_health.html#aef8c6c03b635344b19de4ff8829cd2bf">Value</a> = _maxValue;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="class_combat_1_1_health.html#aaf4e3a6b7f4c8caa29e2e77c719f9f80">Value</a> = _maxValue;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span> _value;</div>
@@ -116,12 +116,14 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 <div class="ttc" id="aclass_combat_1_1_health_html"><div class="ttname"><a href="class_combat_1_1_health.html">Combat.Health</a></div><div class="ttdef"><b>Definition:</b> <a href="_health_8cs_source.html#l00007">Health.cs:8</a></div></div>
 <div class="ttc" id="aclass_combat_1_1_health_html_a581fceedef715899c694d69e5d2006b7"><div class="ttname"><a href="class_combat_1_1_health.html#a581fceedef715899c694d69e5d2006b7">Combat.Health.ValueChanged</a></div><div class="ttdeci">Action ValueChanged</div><div class="ttdef"><b>Definition:</b> <a href="_health_8cs_source.html#l00034">Health.cs:34</a></div></div>
+<div class="ttc" id="aclass_combat_1_1_health_html_aaf4e3a6b7f4c8caa29e2e77c719f9f80"><div class="ttname"><a href="class_combat_1_1_health.html#aaf4e3a6b7f4c8caa29e2e77c719f9f80">Combat.Health.Value</a></div><div class="ttdeci">float??? Value</div><div class="ttdef"><b>Definition:</b> <a href="_health_8cs_source.html#l00014">Health.cs:15</a></div></div>
 <div class="ttc" id="aclass_combat_1_1_health_html_acc302b549e80879770b424386062b576"><div class="ttname"><a href="class_combat_1_1_health.html#acc302b549e80879770b424386062b576">Combat.Health.IsAlive</a></div><div class="ttdeci">bool IsAlive</div><div class="ttdef"><b>Definition:</b> <a href="_health_8cs_source.html#l00033">Health.cs:33</a></div></div>
-<div class="ttc" id="aclass_combat_1_1_health_html_aef8c6c03b635344b19de4ff8829cd2bf"><div class="ttname"><a href="class_combat_1_1_health.html#aef8c6c03b635344b19de4ff8829cd2bf">Combat.Health.Value</a></div><div class="ttdeci">float?? Value</div><div class="ttdef"><b>Definition:</b> <a href="_health_8cs_source.html#l00014">Health.cs:15</a></div></div>
 <div class="ttc" id="aclass_combat_1_1_health_html_afe12c8036fe6627d92c4dc3b77946f22"><div class="ttname"><a href="class_combat_1_1_health.html#afe12c8036fe6627d92c4dc3b77946f22">Combat.Health.MaxValue</a></div><div class="ttdeci">float MaxValue</div><div class="ttdef"><b>Definition:</b> <a href="_health_8cs_source.html#l00012">Health.cs:12</a></div></div>
+<div class="ttc" id="aclass_events_1_1_simple_unity_event_html"><div class="ttname"><a href="class_events_1_1_simple_unity_event.html">Events.SimpleUnityEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="_simple_unity_event_8cs_source.html#l00007">SimpleUnityEvent.cs:8</a></div></div>
 <div class="ttc" id="aclass_mono_behaviour_html"><div class="ttname"><a href="class_mono_behaviour.html">MonoBehaviour</a></div></div>
 <div class="ttc" id="ainterface_combat_1_1_i_modifiable_health_html"><div class="ttname"><a href="interface_combat_1_1_i_modifiable_health.html">Combat.IModifiableHealth</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_modifiable_health_8cs_source.html#l00003">IModifiableHealth.cs:4</a></div></div>
 <div class="ttc" id="anamespace_combat_html"><div class="ttname"><a href="namespace_combat.html">Combat</a></div><div class="ttdef"><b>Definition:</b> <a href="_combat_action_asset_8cs_source.html#l00004">CombatActionAsset.cs:5</a></div></div>
+<div class="ttc" id="anamespace_events_html"><div class="ttname"><a href="namespace_events.html">Events</a></div><div class="ttdef"><b>Definition:</b> <a href="_simple_unity_event_8cs_source.html#l00004">SimpleUnityEvent.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
