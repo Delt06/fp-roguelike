@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Combat.Actions
 {
 	[CreateAssetMenu(menuName = AssetPath + "Look At Opponent")]
-	public sealed class CombatAction_LookAtOpponent : CombatActionAsset
+	public sealed class CombatActionAsset_LookAtOpponent : CombatActionAsset
 	{
 		[SerializeField] private float _lookSnapDuration = 1f;
 		[SerializeField] private Ease _lookEase = Ease.Unset;

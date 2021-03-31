@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34be4d1b9b92416f9c724c3ecafdf103, type: 3}
   m_Name: Move Preset.Healing
   m_EditorClassIdentifier: 
-  _startActions: []
+  _startActions:
+  - {fileID: 11400000, guid: 8f84f2e0f21371840865d3b1d4e2c6a7, type: 2}
   _spell: {fileID: 11400000, guid: 9621ca07a91c23c4085dd26859fec1ee, type: 2}
-  _duration: 0.25
+  _duration: 1
