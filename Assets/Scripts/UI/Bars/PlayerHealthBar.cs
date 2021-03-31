@@ -2,7 +2,5 @@
 
 namespace UI.Bars
 {
-	public sealed class PlayerHealthBar : PlayerBar<IHealth>
-	{
-	}
+	public sealed class PlayerHealthBar : PlayerBar<IHealth> { }
 }

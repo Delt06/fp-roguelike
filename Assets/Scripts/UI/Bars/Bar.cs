@@ -60,7 +60,8 @@ namespace UI.Bars
 			_fill.fillAmount = fillAmount;
 		}
 
-		private float GetFillAmount() => ChangingValue == null ? 0f : Mathf.Clamp01(ChangingValue.Value / ChangingValue.MaxValue);
+		private float GetFillAmount() =>
+			ChangingValue == null ? 0f : Mathf.Clamp01(ChangingValue.Value / ChangingValue.MaxValue);
 
 		[CanBeNull] private IChangingValue _changingValue;
 

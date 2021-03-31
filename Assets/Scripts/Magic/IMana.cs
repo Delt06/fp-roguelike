@@ -2,8 +2,5 @@
 
 namespace Magic
 {
-	public interface IMana : IChangingValue
-	{
-		
-	}
+	public interface IMana : IChangingValue { }
 }
