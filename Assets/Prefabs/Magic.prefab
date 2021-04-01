@@ -68,6 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1955278524631483266}
   - component: {fileID: 7842078340336098361}
+  - component: {fileID: 7194276025513439528}
   m_Layer: 0
   m_Name: Healing
   m_TagString: Untagged
@@ -102,21 +103,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05ed721bd984c78b57ec0d6baa3ed8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onHealed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4975491860795257073}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &7194276025513439528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955278524631483267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0b6d91cd714b879a1967623ba706c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effect: {fileID: 4975491860795257073}
 --- !u!1 &6425897837093473183
 GameObject:
   m_ObjectHideFlags: 0

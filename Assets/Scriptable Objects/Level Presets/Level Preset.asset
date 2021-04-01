@@ -30,246 +30,344 @@ MonoBehaviour:
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 1
     HasNorthDoor: 1
     HasSouthDoor: 0
     HasEastDoor: 1
     HasWestDoor: 0
+    MonsterData:
+      Positions: 16
   - Type: 1
     HasNorthDoor: 1
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 1
+    MonsterData:
+      Positions: 16
   - Type: 1
     HasNorthDoor: 1
     HasSouthDoor: 0
     HasEastDoor: 1
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 1
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 1
     HasWestDoor: 1
+    MonsterData:
+      Positions: 24
   - Type: 1
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 1
     HasWestDoor: 1
+    MonsterData:
+      Positions: 0
   - Type: 1
     HasNorthDoor: 1
     HasSouthDoor: 0
     HasEastDoor: 1
     HasWestDoor: 1
+    MonsterData:
+      Positions: 28
   - Type: 1
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 1
+    MonsterData:
+      Positions: 16
   - Type: 3
     HasNorthDoor: 1
     HasSouthDoor: 1
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 1
     HasNorthDoor: 0
     HasSouthDoor: 1
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 16
   - Type: 1
     HasNorthDoor: 1
     HasSouthDoor: 1
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 1
     HasNorthDoor: 1
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 16
   - Type: 1
     HasNorthDoor: 1
     HasSouthDoor: 1
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 1
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 1
     HasNorthDoor: 0
     HasSouthDoor: 1
     HasEastDoor: 1
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 1
     HasNorthDoor: 1
     HasSouthDoor: 0
     HasEastDoor: 1
     HasWestDoor: 1
+    MonsterData:
+      Positions: 16
   - Type: 1
     HasNorthDoor: 0
     HasSouthDoor: 1
     HasEastDoor: 0
     HasWestDoor: 1
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 1
     HasNorthDoor: 0
     HasSouthDoor: 1
     HasEastDoor: 1
     HasWestDoor: 0
+    MonsterData:
+      Positions: 16
   - Type: 1
     HasNorthDoor: 1
     HasSouthDoor: 1
     HasEastDoor: 0
     HasWestDoor: 1
+    MonsterData:
+      Positions: 2
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 1
     HasNorthDoor: 0
     HasSouthDoor: 1
     HasEastDoor: 1
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 1
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 1
+    MonsterData:
+      Positions: 4
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 1
     HasNorthDoor: 1
     HasSouthDoor: 1
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 16
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 2
     HasNorthDoor: 0
     HasSouthDoor: 1
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   - Type: 0
     HasNorthDoor: 0
     HasSouthDoor: 0
     HasEastDoor: 0
     HasWestDoor: 0
+    MonsterData:
+      Positions: 0
   _entryPosition:
     X: 5
     Y: 5
