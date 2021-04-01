@@ -70,16 +70,20 @@ $(function() {
 <div class="title">IHealth.cs</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_i_health_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_combat.html">Combat</a></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="interface_combat_1_1_i_health.html">    3</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_combat_1_1_i_health.html">IHealth</a> : <a class="code" href="interface_combat_1_1_i_changing_value.html">IChangingValue</a></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    {</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="interface_combat_1_1_i_health.html#aff7c1e03772f994bbbe3058a3e91ddb9">    5</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="interface_combat_1_1_i_health.html#aff7c1e03772f994bbbe3058a3e91ddb9">IsAlive</a> { <span class="keyword">get</span>; }</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    }</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
+<a href="_i_health_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_combat.html">Combat</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="interface_combat_1_1_i_health.html">    5</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_combat_1_1_i_health.html">IHealth</a> : <a class="code" href="interface_combat_1_1_i_changing_value.html">IChangingValue</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="interface_combat_1_1_i_health.html#aff7c1e03772f994bbbe3058a3e91ddb9">    7</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="interface_combat_1_1_i_health.html#aff7c1e03772f994bbbe3058a3e91ddb9">IsAlive</a> { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="interface_combat_1_1_i_health.html#a8943c441cf83b90abd5ffb6a058c18f8">    8</a></span>&#160;        <span class="keyword">event</span> Action <a class="code" href="interface_combat_1_1_i_health.html#a8943c441cf83b90abd5ffb6a058c18f8">Died</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    }</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
 <div class="ttc" id="ainterface_combat_1_1_i_changing_value_html"><div class="ttname"><a href="interface_combat_1_1_i_changing_value.html">Combat.IChangingValue</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_changing_value_8cs_source.html#l00005">IChangingValue.cs:6</a></div></div>
-<div class="ttc" id="ainterface_combat_1_1_i_health_html"><div class="ttname"><a href="interface_combat_1_1_i_health.html">Combat.IHealth</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_health_8cs_source.html#l00003">IHealth.cs:4</a></div></div>
-<div class="ttc" id="ainterface_combat_1_1_i_health_html_aff7c1e03772f994bbbe3058a3e91ddb9"><div class="ttname"><a href="interface_combat_1_1_i_health.html#aff7c1e03772f994bbbe3058a3e91ddb9">Combat.IHealth.IsAlive</a></div><div class="ttdeci">bool IsAlive</div><div class="ttdef"><b>Definition:</b> <a href="_i_health_8cs_source.html#l00005">IHealth.cs:5</a></div></div>
+<div class="ttc" id="ainterface_combat_1_1_i_health_html"><div class="ttname"><a href="interface_combat_1_1_i_health.html">Combat.IHealth</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_health_8cs_source.html#l00005">IHealth.cs:6</a></div></div>
+<div class="ttc" id="ainterface_combat_1_1_i_health_html_a8943c441cf83b90abd5ffb6a058c18f8"><div class="ttname"><a href="interface_combat_1_1_i_health.html#a8943c441cf83b90abd5ffb6a058c18f8">Combat.IHealth.Died</a></div><div class="ttdeci">Action Died</div><div class="ttdef"><b>Definition:</b> <a href="_i_health_8cs_source.html#l00008">IHealth.cs:8</a></div></div>
+<div class="ttc" id="ainterface_combat_1_1_i_health_html_aff7c1e03772f994bbbe3058a3e91ddb9"><div class="ttname"><a href="interface_combat_1_1_i_health.html#aff7c1e03772f994bbbe3058a3e91ddb9">Combat.IHealth.IsAlive</a></div><div class="ttdeci">bool IsAlive</div><div class="ttdef"><b>Definition:</b> <a href="_i_health_8cs_source.html#l00007">IHealth.cs:7</a></div></div>
 <div class="ttc" id="anamespace_combat_html"><div class="ttname"><a href="namespace_combat.html">Combat</a></div><div class="ttdef"><b>Definition:</b> <a href="_combat_action_asset_8cs_source.html#l00004">CombatActionAsset.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

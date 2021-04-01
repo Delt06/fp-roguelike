@@ -1,0 +1,5 @@
+<map id="Combat.Health_OnDied_Base" name="Combat.Health_OnDied_Base">
+<area shape="rect" id="node1" title=" " alt="" coords="19,80,214,107"/>
+<area shape="rect" id="node3" href="$class_physics_utils_1_1_health___on_died___toggle_collision_detection.html" title=" " alt="" coords="5,155,228,196"/>
+<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="61,5,173,32"/>
+</map>
