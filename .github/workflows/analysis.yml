@@ -1,4 +1,4 @@
-﻿name: Build
+﻿name: Analysis
 
 on:
   push:
