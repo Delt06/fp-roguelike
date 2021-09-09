@@ -68,10 +68,8 @@ jobs:
           projectPath: ${{ env.PROJECT_PATH }}
           targetPlatform: ${{ matrix.targetPlatform }}
           buildMethod: Plugins.Editor.BuildUtilities.EmitProjectFiles
-
-      - run: ls
         
       - name: resharper
         uses: glassechidna/resharper-action@master
         with:
-          solution: workspace.sln
+          solution: ls ${{ env.PROJECT_PATH }} | grep ".sln$" | head -1 # find solution file name
