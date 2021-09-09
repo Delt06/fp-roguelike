@@ -61,23 +61,22 @@ jobs:
           key: build-Library-${{ matrix.targetPlatform }}
           restore-keys: |
             build-Library-
-            
-      name: Run code analysis
-        steps:
-            - uses: game-ci/unity-builder@v2
-              id: buildStep
-              with:
-                projectPath: ${{ env.PROJECT_PATH }}
-                targetPlatform: ${{ matrix.targetPlatform }}
-                buildMethod: Plugins.Editor.BuildUtilities.EmitProjectFiles
 
-              - name: Get solution file name
-                id: solutionFileName
-                run:
-                  echo "::set-output name=name::` ls $env.PROJECT_PATH | grep ".sln$" | head -1 `"
+      - uses: game-ci/unity-builder@v2
+        id: compile
+        name: Compile
+        with:
+          projectPath: ${{ env.PROJECT_PATH }}
+          targetPlatform: ${{ matrix.targetPlatform }}
+          buildMethod: Plugins.Editor.BuildUtilities.EmitProjectFiles
 
-              - name: Run Resharper
-                uses: glassechidna/resharper-action@master
-                with:
-                  solution: ${{ steps.solutionFileName.outputs.name }}
+        - name: Get solution file name
+          id: solutionFileName
+          run:
+            echo "::set-output name=name::` ls $env.PROJECT_PATH | grep ".sln$" | head -1 `"
+
+        - name: Run Resharper
+          uses: glassechidna/resharper-action@master
+          with:
+            solution: ${{ steps.solutionFileName.outputs.name }}
     
