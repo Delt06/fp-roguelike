@@ -70,3 +70,8 @@ jobs:
           buildMethod: Plugins.Editor.BuildUtilities.EmitProjectFiles
 
       - run: ls
+        
+      - name: resharper
+        uses: glassechidna/resharper-action@master
+        with:
+          solution: workspace.sln
