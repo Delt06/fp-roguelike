@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using JetBrains.Annotations;
+using UnityEditor;
 
 namespace Plugins.Editor
 {
@@ -18,6 +19,8 @@ namespace Plugins.Editor
 				throw new InvalidOperationException("Method not found.");
 
 			syncSolution.Invoke(null, null);
+
+			EditorApplication.Exit(0);
 		}
 	}
 }

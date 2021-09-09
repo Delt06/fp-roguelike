@@ -73,7 +73,7 @@ jobs:
       - name: Get solution file name
         id: solutionFileName
         run:
-          echo "::set-output name=name::` ls $env.PROJECT_PATH | grep ".sln$" | head -1 `"
+          printf "::set-output name=name::%s" `ls ${{ env.PROJECT_PATH }} | grep ".sln$" | head -1`
 
       - name: Run Resharper
         uses: glassechidna/resharper-action@master
