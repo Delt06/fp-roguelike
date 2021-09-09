@@ -70,13 +70,12 @@ jobs:
           targetPlatform: ${{ matrix.targetPlatform }}
           buildMethod: Plugins.Editor.BuildUtilities.EmitProjectFiles
 
-        - name: Get solution file name
-          id: solutionFileName
-          run:
-            echo "::set-output name=name::` ls $env.PROJECT_PATH | grep ".sln$" | head -1 `"
+      - name: Get solution file name
+        id: solutionFileName
+        run:
+          echo "::set-output name=name::` ls $env.PROJECT_PATH | grep ".sln$" | head -1 `"
 
-        - name: Run Resharper
-          uses: glassechidna/resharper-action@master
-          with:
-            solution: ${{ steps.solutionFileName.outputs.name }}
-    
+      - name: Run Resharper
+        uses: glassechidna/resharper-action@master
+        with:
+          solution: ${{ steps.solutionFileName.outputs.name }}
