@@ -25,7 +25,7 @@ jobs:
     needs: [checklicense]
     if: needs.checklicense.outputs.is_unity_license_set == 'false'
     name: Request activation file 🔑 (https://license.unity3d.com/manual)
-    runs-on: ${{ github.event.inputs.run-on || 'build-server' }}
+    runs-on: ubuntu-latest
     steps:
       # Request manual activation file
       - name: Request manual activation file
@@ -43,7 +43,7 @@ jobs:
     needs: [checklicense]
     if: needs.checklicense.outputs.is_unity_license_set == 'true'
     name: Build for ${{ matrix.targetPlatform }}
-    runs-on: ${{ github.event.inputs.run-on || 'build-server' }}
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
