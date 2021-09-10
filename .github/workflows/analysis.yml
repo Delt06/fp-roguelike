@@ -82,4 +82,4 @@ jobs:
       - run: mv ./jetbrains.unity.nupkg $RESHARPER_ROOT/jetbrains.unity.nupkg
       - run: ls $RESHARPER_ROOT
 
-      - run: InspectCode ${{ steps.solutionFileName.outputs.name }}
+      - run: inspectcode ${{ steps.solutionFileName.outputs.name }}
