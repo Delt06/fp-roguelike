@@ -80,5 +80,6 @@ jobs:
           version: '2021.2'
         
       - run: mv ./jetbrains.unity.nupkg $RESHARPER_ROOT/jetbrains.unity.nupkg
+      - run: ls $RESHARPER_ROOT
 
       - run: InspectCode ${{ steps.solutionFileName.outputs.name }}
