@@ -74,8 +74,12 @@ jobs:
         id: solutionFileName
         run:
           printf "::set-output name=name::%s" `ls ${{ env.PROJECT_PATH }} | grep ".sln$" | head -1`
+        
+      - run: mv ./jetbrains.unity.nupkg /resharper/jetbrains.unity.nupkg
 
       - name: Run Resharper
         uses: glassechidna/resharper-action@master
         with:
           solution: ${{ steps.solutionFileName.outputs.name }}
+          
+      - run: ls /resharper
