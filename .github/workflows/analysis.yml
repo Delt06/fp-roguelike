@@ -80,6 +80,11 @@ jobs:
           version: '2021.2'
         
       - run: mv ./jetbrains.unity.nupkg $RESHARPER_ROOT/jetbrains.unity.nupkg
-      - run: ls $RESHARPER_ROOT
 
-      - run: sh $RESHARPER_ROOT/inspectcode.sh --no-build ${{ steps.solutionFileName.outputs.name }}
+      - name: Run Resharper
+        run: sh $RESHARPER_ROOT/inspectcode.sh --no-build --output="resharper-output.xml" ${{ steps.solutionFileName.outputs.name }}
+        
+      - name: Create Resharper report annotations
+        uses: glassechidna/resharper-action@master
+        with:
+          report: resharper-output.xml
