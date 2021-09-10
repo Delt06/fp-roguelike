@@ -75,11 +75,10 @@ jobs:
         run:
           printf "::set-output name=name::%s" `ls ${{ env.PROJECT_PATH }} | grep ".sln$" | head -1`
         
-      - run: mv ./jetbrains.unity.nupkg /resharper/jetbrains.unity.nupkg
-
-      - name: Run Resharper
-        uses: glassechidna/resharper-action@master
+      - uses: goit/setup-resharper@v2
         with:
-          solution: ${{ steps.solutionFileName.outputs.name }}
-          
-      - run: ls /resharper
+          version: '2021.2'
+        
+      - run: mv ./jetbrains.unity.nupkg $RESHARPER_ROOT/jetbrains.unity.nupkg
+
+      - run: InspectCode ${{ steps.solutionFileName.outputs.name }}
