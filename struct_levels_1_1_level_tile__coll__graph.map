@@ -1,7 +1,7 @@
 <map id="Levels.LevelTile" name="Levels.LevelTile">
-<area shape="rect" id="node1" title=" " alt="" coords="111,243,229,269"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,102,52,129"/>
-<area shape="rect" id="node3" href="$struct_levels_1_1_generation_1_1_monsters_1_1_monster_data.html" title=" " alt="" coords="77,95,263,136"/>
-<area shape="rect" id="node4" title=" " alt="" coords="109,5,231,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="288,102,391,129"/>
+<area shape="rect" id="node1" title=" " alt="" coords="97,243,214,269"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,102,108,129"/>
+<area shape="rect" id="node3" title=" " alt="" coords="132,102,179,129"/>
+<area shape="rect" id="node4" href="$struct_levels_1_1_generation_1_1_monsters_1_1_monster_data.html" title=" " alt="" coords="203,95,390,136"/>
+<area shape="rect" id="node5" title=" " alt="" coords="235,5,358,32"/>
 </map>
