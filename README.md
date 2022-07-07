@@ -1,5 +1,5 @@
-# [FPS Roguelike](https://github.com/Delt06/fps-roguelike)
-A mobile FPS roguelike game (in portrait mode) with turn-based combat and procedurally generated levels.
+# [FP Roguelike](https://github.com/Delt06/fps-roguelike)
+A mobile first-person roguelike game (in portrait mode) with turn-based combat and procedurally generated levels.
 
 ## Documentation
 As a proof of concept, documentation is automatically generated from the source code and then published to GitHub Pages.
