@@ -1,5 +1,5 @@
 <map id="Combat.Moves.Move" name="Combat.Moves.Move">
-<area shape="rect" id="node1" title=" " alt="" coords="31,109,175,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,52,32"/>
-<area shape="rect" id="node3" href="$interface_combat_1_1_actions_1_1_i_combat_action.html" title=" " alt="" coords="77,5,279,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="31,108,175,133"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,52,31"/>
+<area shape="rect" id="node3" href="$interface_combat_1_1_actions_1_1_i_combat_action.html" title=" " alt="" coords="77,5,279,31"/>
 </map>

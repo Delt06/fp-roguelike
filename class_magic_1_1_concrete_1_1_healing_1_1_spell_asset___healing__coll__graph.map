@@ -1,7 +1,7 @@
 <map id="Magic.Concrete.Healing.SpellAsset_Healing" name="Magic.Concrete.Healing.SpellAsset_Healing">
-<area shape="rect" id="node1" title=" " alt="" coords="80,171,271,212"/>
-<area shape="rect" id="node2" href="$class_magic_1_1_spells_1_1_spell_asset.html" title=" " alt="" coords="133,95,218,121"/>
-<area shape="rect" id="node3" href="$class_scriptable_object.html" title=" " alt="" coords="5,5,124,32"/>
-<area shape="rect" id="node4" href="$interface_magic_1_1_spells_1_1_i_spell.html" title=" " alt="" coords="148,5,203,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="227,5,281,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="80,168,271,208"/>
+<area shape="rect" id="node2" href="$class_magic_1_1_spells_1_1_spell_asset.html" title=" " alt="" coords="133,93,218,119"/>
+<area shape="rect" id="node3" href="$class_scriptable_object.html" title=" " alt="" coords="5,5,124,31"/>
+<area shape="rect" id="node4" href="$interface_magic_1_1_spells_1_1_i_spell.html" title=" " alt="" coords="148,5,203,31"/>
+<area shape="rect" id="node5" title=" " alt="" coords="227,5,281,31"/>
 </map>

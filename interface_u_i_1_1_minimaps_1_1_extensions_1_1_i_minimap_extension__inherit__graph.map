@@ -1,9 +1,9 @@
 <map id="UI.Minimaps.Extensions.IMinimapExtension" name="UI.Minimaps.Extensions.IMinimapExtension">
-<area shape="rect" id="node1" title=" " alt="" coords="5,136,223,177"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension_base.html" title=" " alt="" coords="271,136,484,177"/>
-<area shape="rect" id="node3" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension___culling.html" title=" " alt="" coords="532,5,745,47"/>
-<area shape="rect" id="node4" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension___dead_culling.html" title=" " alt="" coords="532,71,745,112"/>
-<area shape="rect" id="node5" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension___exit_room.html" title=" " alt="" coords="532,136,745,177"/>
-<area shape="rect" id="node6" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension___fog_of_war.html" title=" " alt="" coords="532,201,745,243"/>
-<area shape="rect" id="node7" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_reference_point_icon.html" title=" " alt="" coords="532,267,745,308"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,133,223,173"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension_base.html" title=" " alt="" coords="271,133,484,173"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension___culling.html" title=" " alt="" coords="532,5,745,45"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension___dead_culling.html" title=" " alt="" coords="532,69,745,109"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension___exit_room.html" title=" " alt="" coords="532,133,745,173"/>
+<area shape="rect" id="node6" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension___fog_of_war.html" title=" " alt="" coords="532,197,745,237"/>
+<area shape="rect" id="node7" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_reference_point_icon.html" title=" " alt="" coords="532,261,745,301"/>
 </map>

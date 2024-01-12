@@ -1,6 +1,6 @@
 <map id="Assets/Scripts/Animations" name="Assets/Scripts/Animations">
-<area shape="rect" id="node2" href="dir_8c106198fdd1b1648046936668c94393.html" title="Characters" alt="" coords="139,63,224,111"/>
-<area shape="rect" id="node3" href="dir_be693fdc739bdd14b8b793790d01f803.html" title="Weapons" alt="" coords="38,63,114,111"/>
-<area shape="rect" id="clust2" href="dir_0456d4a0794895a605ea5c0b1324bca4.html" alt="" coords="27,52,347,121"/>
-<area shape="rect" id="clust1" href="dir_f13b41af88cf68434578284aaf699e39.html" title="Scripts" alt="" coords="16,16,357,132"/>
+<area shape="rect" id="node2" href="dir_8c106198fdd1b1648046936668c94393.html" title="Characters" alt="" coords="139,63,224,88"/>
+<area shape="rect" id="node3" href="dir_be693fdc739bdd14b8b793790d01f803.html" title="Weapons" alt="" coords="38,63,114,88"/>
+<area shape="rect" id="clust2" href="dir_0456d4a0794895a605ea5c0b1324bca4.html" alt="" coords="27,52,347,99"/>
+<area shape="rect" id="clust1" href="dir_f13b41af88cf68434578284aaf699e39.html" title="Scripts" alt="" coords="16,16,357,109"/>
 </map>

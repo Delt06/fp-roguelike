@@ -1,7 +1,7 @@
 <map id="Combat.CombatState" name="Combat.CombatState">
-<area shape="rect" id="node1" title=" " alt="" coords="151,109,298,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,103,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="127,5,237,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="261,5,300,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="336,5,383,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="151,108,298,133"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,103,31"/>
+<area shape="rect" id="node3" title=" " alt="" coords="127,5,237,31"/>
+<area shape="rect" id="node4" title=" " alt="" coords="261,5,300,31"/>
+<area shape="rect" id="node5" title=" " alt="" coords="336,5,383,31"/>
 </map>

@@ -1,8 +1,8 @@
 <map id="Combat.IChangingValue" name="Combat.IChangingValue">
-<area shape="rect" id="node1" title=" " alt="" coords="87,5,249,32"/>
-<area shape="rect" id="node2" href="$interface_combat_1_1_i_health.html" title=" " alt="" coords="48,80,160,107"/>
-<area shape="rect" id="node5" href="$interface_magic_1_1_i_mana.html" title=" " alt="" coords="191,80,287,107"/>
-<area shape="rect" id="node3" href="$interface_combat_1_1_i_modifiable_health.html" title=" " alt="" coords="5,155,176,181"/>
-<area shape="rect" id="node4" href="$class_combat_1_1_health.html" title=" " alt="" coords="37,229,145,256"/>
-<area shape="rect" id="node6" href="$class_magic_1_1_mana.html" title=" " alt="" coords="201,155,293,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="87,5,249,31"/>
+<area shape="rect" id="node2" href="$interface_combat_1_1_i_health.html" title=" " alt="" coords="48,79,160,104"/>
+<area shape="rect" id="node5" href="$interface_magic_1_1_i_mana.html" title=" " alt="" coords="191,79,287,104"/>
+<area shape="rect" id="node3" href="$interface_combat_1_1_i_modifiable_health.html" title=" " alt="" coords="5,152,176,177"/>
+<area shape="rect" id="node4" href="$class_combat_1_1_health.html" title=" " alt="" coords="37,225,145,251"/>
+<area shape="rect" id="node6" href="$class_magic_1_1_mana.html" title=" " alt="" coords="201,152,293,177"/>
 </map>

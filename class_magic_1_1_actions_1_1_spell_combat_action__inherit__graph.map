@@ -1,4 +1,4 @@
 <map id="Magic.Actions.SpellCombatAction" name="Magic.Actions.SpellCombatAction">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,187,121"/>
-<area shape="rect" id="node2" href="$interface_combat_1_1_actions_1_1_i_combat_action.html" title=" " alt="" coords="42,5,150,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,79,187,119"/>
+<area shape="rect" id="node2" href="$interface_combat_1_1_actions_1_1_i_combat_action.html" title=" " alt="" coords="42,5,150,31"/>
 </map>

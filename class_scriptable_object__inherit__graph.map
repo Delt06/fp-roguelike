@@ -1,14 +1,14 @@
 <map id="ScriptableObject" name="ScriptableObject">
-<area shape="rect" id="node1" title=" " alt="" coords="5,271,124,298"/>
-<area shape="rect" id="node2" href="$class_combat_1_1_actions_1_1_combat_action_asset.html" title=" " alt="" coords="172,71,371,112"/>
-<area shape="rect" id="node5" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset.html" title=" " alt="" coords="175,235,367,276"/>
-<area shape="rect" id="node10" href="$class_levels_1_1_level_preset.html" title=" " alt="" coords="204,301,339,327"/>
-<area shape="rect" id="node11" href="$class_magic_1_1_spells_1_1_spell_asset.html" title=" " alt="" coords="190,362,353,389"/>
-<area shape="rect" id="node3" href="$class_animations_1_1_weapons_1_1_combat_action_asset___set_trigger.html" title=" " alt="" coords="422,5,614,47"/>
-<area shape="rect" id="node4" href="$class_combat_1_1_actions_1_1_combat_action_asset___look_at_opponent.html" title=" " alt="" coords="419,71,617,112"/>
-<area shape="rect" id="node6" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___attack.html" title=" " alt="" coords="422,136,614,177"/>
-<area shape="rect" id="node7" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___simple.html" title=" " alt="" coords="422,201,614,243"/>
-<area shape="rect" id="node8" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___skip.html" title=" " alt="" coords="422,267,614,308"/>
-<area shape="rect" id="node9" href="$class_magic_1_1_moves_1_1_move_preset___cast_spell.html" title=" " alt="" coords="432,332,604,373"/>
-<area shape="rect" id="node12" href="$class_magic_1_1_concrete_1_1_healing_1_1_spell_asset___healing.html" title=" " alt="" coords="423,397,613,439"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,266,124,291"/>
+<area shape="rect" id="node2" href="$class_combat_1_1_actions_1_1_combat_action_asset.html" title=" " alt="" coords="172,69,371,109"/>
+<area shape="rect" id="node5" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset.html" title=" " alt="" coords="175,229,367,269"/>
+<area shape="rect" id="node10" href="$class_levels_1_1_level_preset.html" title=" " alt="" coords="204,294,339,319"/>
+<area shape="rect" id="node11" href="$class_magic_1_1_spells_1_1_spell_asset.html" title=" " alt="" coords="190,354,353,379"/>
+<area shape="rect" id="node3" href="$class_animations_1_1_weapons_1_1_combat_action_asset___set_trigger.html" title=" " alt="" coords="422,5,614,45"/>
+<area shape="rect" id="node4" href="$class_combat_1_1_actions_1_1_combat_action_asset___look_at_opponent.html" title=" " alt="" coords="419,69,617,109"/>
+<area shape="rect" id="node6" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___attack.html" title=" " alt="" coords="422,133,614,173"/>
+<area shape="rect" id="node7" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___simple.html" title=" " alt="" coords="422,197,614,237"/>
+<area shape="rect" id="node8" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___skip.html" title=" " alt="" coords="422,261,614,301"/>
+<area shape="rect" id="node9" href="$class_magic_1_1_moves_1_1_move_preset___cast_spell.html" title=" " alt="" coords="432,325,604,365"/>
+<area shape="rect" id="node12" href="$class_magic_1_1_concrete_1_1_healing_1_1_spell_asset___healing.html" title=" " alt="" coords="423,389,613,429"/>
 </map>

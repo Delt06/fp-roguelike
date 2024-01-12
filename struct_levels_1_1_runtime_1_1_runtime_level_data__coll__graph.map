@@ -1,12 +1,12 @@
 <map id="Levels.Runtime.RuntimeLevelData" name="Levels.Runtime.RuntimeLevelData">
-<area shape="rect" id="node1" title=" " alt="" coords="133,332,356,359"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,243,87,269"/>
-<area shape="rect" id="node3" href="$interface_levels_1_1_i_level_preset.html" title=" " alt="" coords="111,243,250,269"/>
-<area shape="rect" id="node4" href="$struct_levels_1_1_level_tile.html" title=" " alt="" coords="274,243,391,269"/>
-<area shape="rect" id="node5" title=" " alt="" coords="119,102,221,129"/>
-<area shape="rect" id="node6" title=" " alt="" coords="245,102,292,129"/>
-<area shape="rect" id="node7" href="$struct_levels_1_1_generation_1_1_monsters_1_1_monster_data.html" title=" " alt="" coords="317,95,503,136"/>
-<area shape="rect" id="node8" title=" " alt="" coords="349,5,471,32"/>
-<area shape="rect" id="node9" href="$class_levels_1_1_room.html" title=" " alt="" coords="475,243,574,269"/>
-<area shape="rect" id="node10" href="$class_mono_behaviour.html" title=" " alt="" coords="527,102,639,129"/>
+<area shape="rect" id="node1" title=" " alt="" coords="133,328,356,353"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,240,87,265"/>
+<area shape="rect" id="node3" href="$interface_levels_1_1_i_level_preset.html" title=" " alt="" coords="111,240,250,265"/>
+<area shape="rect" id="node4" href="$struct_levels_1_1_level_tile.html" title=" " alt="" coords="274,240,391,265"/>
+<area shape="rect" id="node5" title=" " alt="" coords="119,101,221,126"/>
+<area shape="rect" id="node6" title=" " alt="" coords="245,101,292,126"/>
+<area shape="rect" id="node7" href="$struct_levels_1_1_generation_1_1_monsters_1_1_monster_data.html" title=" " alt="" coords="317,93,503,133"/>
+<area shape="rect" id="node8" title=" " alt="" coords="349,5,471,31"/>
+<area shape="rect" id="node9" href="$class_levels_1_1_room.html" title=" " alt="" coords="475,240,574,265"/>
+<area shape="rect" id="node10" href="$class_mono_behaviour.html" title=" " alt="" coords="527,101,639,126"/>
 </map>

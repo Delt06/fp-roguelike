@@ -1,6 +1,6 @@
 <map id="UI.Minimaps.Extensions.MinimapReferencePointIcon" name="UI.Minimaps.Extensions.MinimapReferencePointIcon">
-<area shape="rect" id="node1" title=" " alt="" coords="27,155,240,196"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension_base.html" title=" " alt="" coords="55,80,212,107"/>
-<area shape="rect" id="node3" href="$class_mono_behaviour.html" title=" " alt="" coords="5,5,117,32"/>
-<area shape="rect" id="node4" href="$interface_u_i_1_1_minimaps_1_1_extensions_1_1_i_minimap_extension.html" title=" " alt="" coords="141,5,272,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="27,152,240,192"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_minimaps_1_1_extensions_1_1_minimap_extension_base.html" title=" " alt="" coords="55,79,212,104"/>
+<area shape="rect" id="node3" href="$class_mono_behaviour.html" title=" " alt="" coords="5,5,117,31"/>
+<area shape="rect" id="node4" href="$interface_u_i_1_1_minimaps_1_1_extensions_1_1_i_minimap_extension.html" title=" " alt="" coords="141,5,272,31"/>
 </map>

@@ -1,8 +1,8 @@
 <map id="Combat.Moves.Presets.MovePreset" name="Combat.Moves.Presets.MovePreset">
-<area shape="rect" id="node1" title=" " alt="" coords="172,104,364,145"/>
-<area shape="rect" id="node3" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___attack.html" title=" " alt="" coords="412,5,604,47"/>
-<area shape="rect" id="node4" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___simple.html" title=" " alt="" coords="412,71,604,112"/>
-<area shape="rect" id="node5" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___skip.html" title=" " alt="" coords="412,136,604,177"/>
-<area shape="rect" id="node6" href="$class_magic_1_1_moves_1_1_move_preset___cast_spell.html" title=" " alt="" coords="422,201,594,243"/>
-<area shape="rect" id="node2" href="$class_scriptable_object.html" title=" " alt="" coords="5,111,124,138"/>
+<area shape="rect" id="node1" title=" " alt="" coords="172,101,364,141"/>
+<area shape="rect" id="node3" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___attack.html" title=" " alt="" coords="412,5,604,45"/>
+<area shape="rect" id="node4" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___simple.html" title=" " alt="" coords="412,69,604,109"/>
+<area shape="rect" id="node5" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset___skip.html" title=" " alt="" coords="412,133,604,173"/>
+<area shape="rect" id="node6" href="$class_magic_1_1_moves_1_1_move_preset___cast_spell.html" title=" " alt="" coords="422,197,594,237"/>
+<area shape="rect" id="node2" href="$class_scriptable_object.html" title=" " alt="" coords="5,109,124,134"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="UI.JoystickMovementInputProvider" name="UI.JoystickMovementInputProvider">
-<area shape="rect" id="node1" title=" " alt="" coords="54,80,231,121"/>
-<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="5,5,117,32"/>
-<area shape="rect" id="node3" href="$interface_controls_1_1_i_movement_input_provider.html" title=" " alt="" coords="142,5,306,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="54,79,231,119"/>
+<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="5,5,117,31"/>
+<area shape="rect" id="node3" href="$interface_controls_1_1_i_movement_input_provider.html" title=" " alt="" coords="142,5,306,31"/>
 </map>

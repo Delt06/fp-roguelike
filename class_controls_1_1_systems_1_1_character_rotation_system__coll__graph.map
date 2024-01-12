@@ -1,4 +1,4 @@
 <map id="Controls.Systems.CharacterRotationSystem" name="Controls.Systems.CharacterRotationSystem">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,188,121"/>
-<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="41,5,153,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,79,188,119"/>
+<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="41,5,153,31"/>
 </map>

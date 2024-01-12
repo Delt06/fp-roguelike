@@ -1,6 +1,6 @@
 <map id="Animations.Weapons.CombatActionAsset_SetTrigger" name="Animations.Weapons.CombatActionAsset_SetTrigger">
-<area shape="rect" id="node1" title=" " alt="" coords="37,155,229,196"/>
-<area shape="rect" id="node2" href="$class_combat_1_1_actions_1_1_combat_action_asset.html" title=" " alt="" coords="63,80,202,107"/>
-<area shape="rect" id="node3" href="$class_scriptable_object.html" title=" " alt="" coords="5,5,124,32"/>
-<area shape="rect" id="node4" href="$interface_combat_1_1_actions_1_1_i_combat_action.html" title=" " alt="" coords="148,5,256,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="37,152,229,192"/>
+<area shape="rect" id="node2" href="$class_combat_1_1_actions_1_1_combat_action_asset.html" title=" " alt="" coords="63,79,202,104"/>
+<area shape="rect" id="node3" href="$class_scriptable_object.html" title=" " alt="" coords="5,5,124,31"/>
+<area shape="rect" id="node4" href="$interface_combat_1_1_actions_1_1_i_combat_action.html" title=" " alt="" coords="148,5,256,31"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="Combat.Moves.Presets.MovePreset_Simple" name="Combat.Moves.Presets.MovePreset_Simple">
-<area shape="rect" id="node1" title=" " alt="" coords="23,171,215,212"/>
-<area shape="rect" id="node2" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset.html" title=" " alt="" coords="73,95,165,121"/>
-<area shape="rect" id="node3" href="$class_scriptable_object.html" title=" " alt="" coords="5,5,124,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="148,5,203,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="23,168,215,208"/>
+<area shape="rect" id="node2" href="$class_combat_1_1_moves_1_1_presets_1_1_move_preset.html" title=" " alt="" coords="73,93,165,119"/>
+<area shape="rect" id="node3" href="$class_scriptable_object.html" title=" " alt="" coords="5,5,124,31"/>
+<area shape="rect" id="node4" title=" " alt="" coords="148,5,203,31"/>
 </map>

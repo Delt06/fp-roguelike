@@ -1,6 +1,6 @@
 <map id="Levels.Generation.TileRect" name="Levels.Generation.TileRect">
-<area shape="rect" id="node1" title=" " alt="" coords="68,213,247,240"/>
-<area shape="rect" id="node2" href="$struct_levels_1_1_generation_1_1_tile_position.html" title=" " alt="" coords="58,109,257,136"/>
-<area shape="rect" id="node3" href="$class_i_equatable.html" title=" " alt="" coords="5,5,179,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="203,5,242,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="68,211,247,236"/>
+<area shape="rect" id="node2" href="$struct_levels_1_1_generation_1_1_tile_position.html" title=" " alt="" coords="58,108,257,133"/>
+<area shape="rect" id="node3" href="$class_i_equatable.html" title=" " alt="" coords="5,5,179,31"/>
+<area shape="rect" id="node4" title=" " alt="" coords="203,5,242,31"/>
 </map>

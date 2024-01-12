@@ -1,5 +1,5 @@
 <map id="Combat.Moves.ICombatMoveMaker" name="Combat.Moves.ICombatMoveMaker">
-<area shape="rect" id="node1" title=" " alt="" coords="144,5,337,47"/>
-<area shape="rect" id="node2" href="$class_combat_1_1_moves_1_1_manual_move_maker.html" title=" " alt="" coords="5,95,228,121"/>
-<area shape="rect" id="node3" href="$class_combat_1_1_moves_1_1_random_move_maker.html" title=" " alt="" coords="252,95,480,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="144,5,337,45"/>
+<area shape="rect" id="node2" href="$class_combat_1_1_moves_1_1_manual_move_maker.html" title=" " alt="" coords="5,93,228,119"/>
+<area shape="rect" id="node3" href="$class_combat_1_1_moves_1_1_random_move_maker.html" title=" " alt="" coords="252,93,480,119"/>
 </map>

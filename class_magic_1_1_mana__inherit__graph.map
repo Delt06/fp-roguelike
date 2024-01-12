@@ -1,6 +1,6 @@
 <map id="Magic.Mana" name="Magic.Mana">
-<area shape="rect" id="node1" title=" " alt="" coords="70,155,162,181"/>
-<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="5,80,117,107"/>
-<area shape="rect" id="node3" href="$interface_magic_1_1_i_mana.html" title=" " alt="" coords="141,80,200,107"/>
-<area shape="rect" id="node4" href="$interface_combat_1_1_i_changing_value.html" title=" " alt="" coords="114,5,227,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="70,152,162,177"/>
+<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="5,79,117,104"/>
+<area shape="rect" id="node3" href="$interface_magic_1_1_i_mana.html" title=" " alt="" coords="141,79,200,104"/>
+<area shape="rect" id="node4" href="$interface_combat_1_1_i_changing_value.html" title=" " alt="" coords="114,5,227,31"/>
 </map>

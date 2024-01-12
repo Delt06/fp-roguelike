@@ -1,5 +1,5 @@
 <map id="PhysicsUtils.Health_OnDied_ToggleCollisionDetection" name="PhysicsUtils.Health_OnDied_ToggleCollisionDetection">
-<area shape="rect" id="node1" title=" " alt="" coords="5,155,228,196"/>
-<area shape="rect" id="node2" href="$class_combat_1_1_health___on_died___base.html" title=" " alt="" coords="43,80,190,107"/>
-<area shape="rect" id="node3" href="$class_mono_behaviour.html" title=" " alt="" coords="61,5,173,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,152,228,192"/>
+<area shape="rect" id="node2" href="$class_combat_1_1_health___on_died___base.html" title=" " alt="" coords="43,79,190,104"/>
+<area shape="rect" id="node3" href="$class_mono_behaviour.html" title=" " alt="" coords="61,5,173,31"/>
 </map>

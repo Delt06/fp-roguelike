@@ -1,6 +1,6 @@
 <map id="Combat.IHealth" name="Combat.IHealth">
-<area shape="rect" id="node1" title=" " alt="" coords="35,80,147,107"/>
-<area shape="rect" id="node3" href="$interface_combat_1_1_i_modifiable_health.html" title=" " alt="" coords="5,155,176,181"/>
-<area shape="rect" id="node2" href="$interface_combat_1_1_i_changing_value.html" title=" " alt="" coords="34,5,147,32"/>
-<area shape="rect" id="node4" href="$class_combat_1_1_health.html" title=" " alt="" coords="37,229,145,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="35,79,147,104"/>
+<area shape="rect" id="node3" href="$interface_combat_1_1_i_modifiable_health.html" title=" " alt="" coords="5,152,176,177"/>
+<area shape="rect" id="node2" href="$interface_combat_1_1_i_changing_value.html" title=" " alt="" coords="34,5,147,31"/>
+<area shape="rect" id="node4" href="$class_combat_1_1_health.html" title=" " alt="" coords="37,225,145,251"/>
 </map>

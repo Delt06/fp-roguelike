@@ -1,5 +1,5 @@
 <map id="Combat.Moves.RandomMoveMaker" name="Combat.Moves.RandomMoveMaker">
-<area shape="rect" id="node1" title=" " alt="" coords="22,80,250,107"/>
-<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="5,5,117,32"/>
-<area shape="rect" id="node3" href="$interface_combat_1_1_moves_1_1_i_combat_move_maker.html" title=" " alt="" coords="141,5,280,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="22,79,250,104"/>
+<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="5,5,117,31"/>
+<area shape="rect" id="node3" href="$interface_combat_1_1_moves_1_1_i_combat_move_maker.html" title=" " alt="" coords="141,5,280,31"/>
 </map>

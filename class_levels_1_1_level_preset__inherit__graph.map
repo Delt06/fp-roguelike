@@ -1,5 +1,5 @@
 <map id="Levels.LevelPreset" name="Levels.LevelPreset">
-<area shape="rect" id="node1" title=" " alt="" coords="63,80,197,107"/>
-<area shape="rect" id="node2" href="$class_scriptable_object.html" title=" " alt="" coords="5,5,124,32"/>
-<area shape="rect" id="node3" href="$interface_levels_1_1_i_level_preset.html" title=" " alt="" coords="149,5,245,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="63,79,197,104"/>
+<area shape="rect" id="node2" href="$class_scriptable_object.html" title=" " alt="" coords="5,5,124,31"/>
+<area shape="rect" id="node3" href="$interface_levels_1_1_i_level_preset.html" title=" " alt="" coords="149,5,245,31"/>
 </map>

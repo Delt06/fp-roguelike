@@ -1,6 +1,6 @@
 <map id="Magic.Spells.SpellAsset" name="Magic.Spells.SpellAsset">
-<area shape="rect" id="node1" title=" " alt="" coords="38,80,201,107"/>
-<area shape="rect" id="node4" href="$class_magic_1_1_concrete_1_1_healing_1_1_spell_asset___healing.html" title=" " alt="" coords="24,155,215,196"/>
-<area shape="rect" id="node2" href="$class_scriptable_object.html" title=" " alt="" coords="5,5,124,32"/>
-<area shape="rect" id="node3" href="$interface_magic_1_1_spells_1_1_i_spell.html" title=" " alt="" coords="148,5,203,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="38,79,201,104"/>
+<area shape="rect" id="node4" href="$class_magic_1_1_concrete_1_1_healing_1_1_spell_asset___healing.html" title=" " alt="" coords="24,152,215,192"/>
+<area shape="rect" id="node2" href="$class_scriptable_object.html" title=" " alt="" coords="5,5,124,31"/>
+<area shape="rect" id="node3" href="$interface_magic_1_1_spells_1_1_i_spell.html" title=" " alt="" coords="148,5,203,31"/>
 </map>

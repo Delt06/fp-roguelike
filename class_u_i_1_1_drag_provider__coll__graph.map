@@ -1,9 +1,9 @@
 <map id="UI.DragProvider" name="UI.DragProvider">
-<area shape="rect" id="node1" title=" " alt="" coords="199,132,313,159"/>
-<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="22,5,134,32"/>
-<area shape="rect" id="node3" href="$class_i_drag_handler.html" title=" " alt="" coords="29,56,127,83"/>
-<area shape="rect" id="node4" href="$class_i_pointer_down_handler.html" title=" " alt="" coords="5,107,151,133"/>
-<area shape="rect" id="node5" href="$class_i_pointer_up_handler.html" title=" " alt="" coords="13,157,143,184"/>
-<area shape="rect" id="node6" href="$class_i_pointer_exit_handler.html" title=" " alt="" coords="11,208,145,235"/>
-<area shape="rect" id="node7" href="$interface_controls_1_1_i_drag_provider.html" title=" " alt="" coords="27,259,129,285"/>
+<area shape="rect" id="node1" title=" " alt="" coords="199,129,313,155"/>
+<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="22,5,134,31"/>
+<area shape="rect" id="node3" href="$class_i_drag_handler.html" title=" " alt="" coords="29,55,127,80"/>
+<area shape="rect" id="node4" href="$class_i_pointer_down_handler.html" title=" " alt="" coords="5,104,151,129"/>
+<area shape="rect" id="node5" href="$class_i_pointer_up_handler.html" title=" " alt="" coords="13,153,143,179"/>
+<area shape="rect" id="node6" href="$class_i_pointer_exit_handler.html" title=" " alt="" coords="11,203,145,228"/>
+<area shape="rect" id="node7" href="$interface_controls_1_1_i_drag_provider.html" title=" " alt="" coords="27,252,129,277"/>
 </map>
